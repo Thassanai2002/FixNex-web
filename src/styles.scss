@@ -2,3 +2,121 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Prompt", sans-serif;
+}
+
+// ตั้งค่าฟอนต์ให้กับทุกคลาสที่อาจเกี่ยวข้อง
+.p-card,
+.p-button,
+.p-button-label {
+  font-family: "Prompt", sans-serif;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.p-menubar {
+  background-color: rgb(156, 156, 156);
+  border: none;
+  outline: none;
+}
+
+.background-156 {
+  background-color: rgb(156, 156, 156);
+  border: none;
+  outline: none;
+}
+
+.background-black {
+  background-color: rgb(0, 0, 0);
+}
+
+.button-card {
+  .custom-button-white {
+    border-radius: 5px; /* ความโค้งของขอบ */
+    background-color: white; /* พื้นหลังสีขาว */
+  }
+
+  .custom-button-white .p-button-text {
+    color: black; /* ตัวหนังสือสีดำ */
+  }
+
+  .custom-button-white .p-button {
+    border-color: black; /* ขอบปุ่มสีดำ */
+  }
+
+  .custom-button-red {
+    border-radius: 5px; /* ความโค้งของขอบ */
+    background-color: rgb(255, 0, 0); /* พื้นหลังสีขาว */
+  }
+
+  .custom-button-red .p-button-text {
+    color: rgb(0, 0, 0); /* ตัวหนังสือสีดำ */
+  }
+
+  .custom-button-red .p-button {
+    border-color: rgb(255, 0, 0); /* ขอบปุ่มสีดำ */
+  }
+}
+
+.content {
+  display: flex; /* ใช้ flexbox เพื่อจัดตำแหน่ง */
+  margin: 0.5rem; /* ปรับระยะห่างตามต้องการ */
+  // justify-content: center;
+  // justify-items: center;
+}
+
+.item-center {
+  justify-content: center;
+  justify-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+.png {
+  width: 43vw; /* ปรับขนาดความกว้างให้เป็น 80% ของความกว้างหน้าจอ */
+  height: auto; /* ปรับขนาดความสูงตามอัตราส่วนของรูปภาพ */
+}
+
+.center {
+  text-align: center;
+  h3 {
+    margin: 0rem;
+    font-size: 70px; /* เปลี่ยนค่า 50px เป็นขนาดที่ต้องการ */
+    color: red;
+  }
+}
+
+.fixed-card {
+  position: fixed;
+}
+
+.p-card {
+  background-color: rgb(156, 156, 156);
+}
+
+.png-card {
+  width: 100%; /* ปรับขนาดความกว้างให้เป็น 80% ของความกว้างหน้าจอ */
+  height: auto; /* ปรับขนาดความสูงตามอัตราส่วนของรูปภาพ */
+}
+
+.font-card {
+  h2,
+  h1 {
+    color: #000;
+  }
+}
+
+.text-left-underline {
+  text-align: left; // จัดข้อความให้อยู่ทางซ้าย
+  text-decoration: underline; // เพิ่มขีดใต้ข้อความ
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
