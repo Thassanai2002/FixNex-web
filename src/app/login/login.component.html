@@ -1,0 +1,98 @@
+<div class="container bg-red h-screen h-full">
+  <div>
+    <div class="content item-center text-center">
+      <h1 class="text-white">Login</h1>
+    </div>
+
+    <div class="margin bg-white bg-login h-screen h-full">
+      <div class="margin">
+        <br />
+        <form [formGroup]="signUp" class="flex flex-column">
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Username</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="Username"
+                class="width100"
+              />
+            </div>
+          </div>
+
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Password</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="Password"
+                class="width100"
+              />
+            </div>
+          </div>
+        </form>
+
+        <div class="margin">
+          <div class="flex flex-column text-right">
+            <small id="Forget account?"> Forget account? </small>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="item-center text-center">
+            <p-button
+              label="Login"
+              styleClass="custom-button-blue-login"
+            ></p-button>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="flex flex-column text-center">
+            <small id="Login with Social Media">
+              Login with Social Media
+            </small>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="item-center text-center">
+            <p-button
+              label="Continue to Google Gmail"
+              styleClass="custom-button-google-login"
+            >
+              <img src="assets/PNG/google-Photoroom.png" class="img-icon" />
+            </p-button>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="item-center text-center">
+            <p-button
+              label="Continue to facebook"
+              styleClass="custom-button-facebook-login"
+            >
+              <img src="assets/PNG/facebook.png" class="img-icon" />
+            </p-button>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="flex flex-column text-center">
+            <small id="Don’t have account?">
+              Don’t have account?
+            </small>
+            <small class="text-bule">
+              Sign Up
+            </small>
+          </div>
+        </div><br>
+
+      </div>
+    </div>
+
+  </div>
+</div>
