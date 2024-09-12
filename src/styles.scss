@@ -64,14 +64,12 @@ body {
 
 .content {
   display: flex; /* ใช้ flexbox เพื่อจัดตำแหน่ง */
-  margin: 0.5rem; /* ปรับระยะห่างตามต้องการ */
-  // justify-content: center;
-  // justify-items: center;
+  margin: 0.7rem; /* ปรับระยะห่างตามต้องการ */
 }
 
 .item-center {
   justify-content: center;
-  justify-items: center;
+  // justify-items: center;
 }
 
 .text-center {
@@ -119,4 +117,85 @@ body {
 .card {
   display: flex;
   justify-content: space-between;
+}
+
+.bg-red {
+  background-image: url("assets/PNG/bg-red.png");
+  background-size: contain;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+  border-top-left-radius: 30px; /* ความโค้งของมุมซ้ายบน */
+  border-top-right-radius: 30px; /* ความโค้งของมุมขวาบน */
+  border-bottom-left-radius: 30px; /* ความโค้งของมุมซ้ายล่าง */
+  border-bottom-right-radius: 30px; /* ความโค้งของมุมขวาล่าง */
+}
+
+.bg-login {
+  margin-left: 15px; /* ระยะห่างจากขอบซ้าย */
+  margin-right: 15px; /* ระยะห่างจากขอบขวา */
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.width100 {
+  width: 100% !important;
+}
+
+.margin {
+  margin: 0.7rem;
+}
+
+.text-right {
+  text-align: right; /* ทำให้ข้อความชิดขวา */
+}
+
+.custom-button-blue-login {
+  width: 90%;
+  height: 59px;
+  border-radius: 12px; /* ความโค้งของขอบ */
+  background-color: #1ce6da; /* สีพื้นหลัง */
+  color: black; /* สีตัวหนังสือ */
+  border-color: #1ce6da; /* สีขอบ */
+  font-size: 22px; /* ขนาดตัวหนังสือ */
+  border: 1px solid #1ce6da; /* ขอบปุ่ม */
+}
+
+.custom-button-google-login {
+  width: 90%;
+  height: 59px;
+  border-radius: 12px; /* ความโค้งของขอบ */
+  background-color: #ffffff; /* สีพื้นหลัง */
+  color: black; /* สีตัวหนังสือ */
+  border-color: #000000; /* สีขอบ */
+  font-size: 15px; /* ขนาดตัวหนังสือ */
+  border: 1px solid #000000; /* ขอบปุ่ม */
+}
+
+.custom-button-facebook-login {
+  width: 90%;
+  height: 55px;
+  border-radius: 12px; /* ความโค้งของขอบ */
+
+  background-color: #ffffff; /* สีพื้นหลัง */
+  color: black; /* สีตัวหนังสือ */
+  border-color: #000000; /* สีขอบ */
+  font-size: 15px; /* ขนาดตัวหนังสือ */
+  border: 1px solid #000000; /* ขอบปุ่ม */
+}
+
+.margin-top-30px {
+  margin-top: 30px;
+}
+
+.img-icon {
+  width: 5vw; /* ปรับขนาดความกว้างให้เป็น 80% ของความกว้างหน้าจอ */
+  height: auto; /* ปรับขนาดความสูงตามอัตราส่วนของรูปภาพ */
+}
+
+.text-bule {
+  color: #006eff;
 }
