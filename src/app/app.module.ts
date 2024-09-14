@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { GalleriaModule } from 'primeng/galleria';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LogoComponent } from './logo/logo.component';
     FormsModule,
     InputTextModule,
     FloatLabelModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

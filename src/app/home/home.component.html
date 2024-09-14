@@ -1,141 +1,164 @@
-<div>
-  <p-menubar [model]="items" class="container bg-image h-screen h-full">
-    <img src="assets/PNG/Logo.png" class="logo" />
-  </p-menubar>
-</div>
-
-<div class="content item-center">
-  <div class="content">
-    <img src="assets/PNG/fixnex.png" class="png" />
+<div class="container bg-red item-center">
+  <!-- <div>
+    <p-menubar [model]="items" class="container bg-image h-screen h-full">
+      <img src="assets/PNG/Logo.png" class="logo" />
+    </p-menubar>
+  </div> -->
+  <div class="content item-center center text-white">
+    <h1>FITNEX</h1>
   </div>
-  <div class="content">
-    <img src="assets/PNG/fixnex.png" class="png" />
-  </div>
-</div>
 
-<div class="text-center">
-  <div class="center">
-    <h3>FITNEX</h3>
-  </div>
-</div>
+  <div class="bg-white width-100">
+    <div class="content item-center">
+      <!-- <p-galleria
+        [value]="images"
+        [responsiveOptions]="responsiveOptions"
+        [numVisible]="3"
+        [circular]="true"
+        [autoPlay]="true"
+        [showThumbnails]="false"
+        class="margin-top-50px"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item" alt="Image" style="width: 100%; display: block" />
+        </ng-template>
+      </p-galleria> -->
+      <p-galleria
+      class="margin-top-40px"
+      [value]="images"
+      [autoPlay]="true"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      [numVisible]="5"
+      [containerStyle]="{ 'max-width': '640px' }">
+          <ng-template pTemplate="item" let-item>
+              <img [src]="item" style="width: 100%;" />
+          </ng-template>
+      </p-galleria>
 
-<div class="item-center content">
-  <div class="content text-center">
-    <p-card p-card class="font-card">
-      <img src="assets/PNG/fixnex.png" class="png-card" />
-      <h1>แนะนำ</h1>
-      <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
-      <div class="button-card card">
-        <p-button
-          label="เพิ่มเติม"
-          [text]="true"
-          [raised]="true"
-          severity="secondary"
-          class="custom-button-white"
-        />
-        <p-button
-          label="ทดลอง"
-          [text]="true"
-          [raised]="true"
-          class="custom-button-red"
-        />
-      </div>
-    </p-card>
-  </div>
-</div>
-
-<div class="item-center content">
-  <div class="content text-center">
-    <p-card p-card class="font-card">
-      <img src="assets/PNG/fixnex.png" class="png-card" />
-      <h1>แนะนำ</h1>
-      <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
-      <div class="button-card card">
-        <p-button
-          label="เพิ่มเติม"
-          [text]="true"
-          [raised]="true"
-          severity="secondary"
-          class="custom-button-white"
-        />
-        <p-button
-          label="ทดลอง"
-          [text]="true"
-          [raised]="true"
-          class="custom-button-red"
-        />
-      </div>
-    </p-card>
-  </div>
-</div>
-
-<div class="item-center content">
-  <div class="content text-center">
-    <p-card p-card class="font-card">
-      <img src="assets/PNG/fixnex.png" class="png-card" />
-      <h1>แนะนำ</h1>
-      <h2>คอสออกกำลังกาย</h2>
-      <div class="button-card card">
-        <p-button
-          label="เพิ่มเติม"
-          [text]="true"
-          [raised]="true"
-          severity="secondary"
-          class="custom-button-white"
-        />
-        <p-button
-          label="ทดลอง"
-          [text]="true"
-          [raised]="true"
-          class="custom-button-red"
-        />
-      </div>
-    </p-card>
-  </div>
-</div>
-
-<div class="item-center content">
-  <div class="content text-center">
-    <p-card p-card class="font-card">
-      <img src="assets/PNG/fixnex.png" class="png-card" />
-      <h1>คำนวณ</h1>
-      <h2>สารอาหาร</h2>
-      <div class="button-card card">
-        <p-button
-          label="เพิ่มเติม"
-          [text]="true"
-          [raised]="true"
-          severity="secondary"
-          class="custom-button-white"
-        />
-        <p-button
-          label="ทดลอง"
-          [text]="true"
-          [raised]="true"
-          class="custom-button-red"
-        />
-      </div>
-    </p-card>
-  </div>
-</div>
-
-<div class="background-156">
-  <div class="content">
-    <div>
-      <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-      <p>เกี่ยวกับเรา</p>
-      <p>ติดต่อเรา</p>
-      <p>ทำไมต้องเลือกเรา</p>
     </div>
-  </div>
 
-  <div class="content">
-    <div>
-      <h3 class="text-left-underline">สมาชิก</h3>
-      <p>สิทธิพิเศษของสมาชิก</p>
-      <p>กฎระเบียบการใช้งาน</p>
-      <p>โปรโมชั่น</p>
-      <p>สมัครสมาชิก</p>
+    <div class="item-center content">
+      <div class="content text-center">
+        <p-card p-card class="font-card">
+          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <h1>แนะนำ</h1>
+          <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
+          <div class="button-card card">
+            <p-button
+              label="เพิ่มเติมSend"
+              [text]="true"
+              [raised]="true"
+              severity="secondary"
+              class="custom-button-white"
+              (onClick)="testsend()"
+            />
+            <p-button
+              label="ทดลองAPI"
+              [text]="true"
+              [raised]="true"
+              class="custom-button-red"
+              (onClick)="testapi()"
+            />
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="item-center content">
+      <div class="content text-center">
+        <p-card p-card class="font-card">
+          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <h1>แนะนำ</h1>
+          <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
+          <div class="button-card card">
+            <p-button
+              label="เพิ่มเติม"
+              [text]="true"
+              [raised]="true"
+              severity="secondary"
+              class="custom-button-white"
+            />
+            <p-button
+              label="ทดลอง"
+              [text]="true"
+              [raised]="true"
+              class="custom-button-red"
+            />
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="item-center content">
+      <div class="content text-center">
+        <p-card p-card class="font-card">
+          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <h1>แนะนำ</h1>
+          <h2>คอสออกกำลังกาย</h2>
+          <div class="button-card card">
+            <p-button
+              label="เพิ่มเติม"
+              [text]="true"
+              [raised]="true"
+              severity="secondary"
+              class="custom-button-white"
+            />
+            <p-button
+              label="ทดลอง"
+              [text]="true"
+              [raised]="true"
+              class="custom-button-red"
+            />
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="item-center content">
+      <div class="content text-center">
+        <p-card p-card class="font-card">
+          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <h1>คำนวณ</h1>
+          <h2>สารอาหาร</h2>
+          <div class="button-card card">
+            <p-button
+              label="เพิ่มเติม"
+              [text]="true"
+              [raised]="true"
+              severity="secondary"
+              class="custom-button-white"
+            />
+            <p-button
+              label="ทดลอง"
+              [text]="true"
+              [raised]="true"
+              class="custom-button-red"
+            />
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="background-156">
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+          <p>เกี่ยวกับเรา</p>
+          <p>ติดต่อเรา</p>
+          <p>ทำไมต้องเลือกเรา</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">สมาชิก</h3>
+          <p>สิทธิพิเศษของสมาชิก</p>
+          <p>กฎระเบียบการใช้งาน</p>
+          <p>โปรโมชั่น</p>
+          <p>สมัครสมาชิก</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
