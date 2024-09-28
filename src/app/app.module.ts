@@ -13,13 +13,15 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { GalleriaModule } from 'primeng/galleria';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    LogoComponent
+    LogoComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
