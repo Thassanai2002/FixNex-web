@@ -23,7 +23,8 @@
           <img [src]="item" alt="Image" style="width: 100%; display: block" />
         </ng-template>
       </p-galleria> -->
-      <p-galleria
+
+      <!-- <p-galleria
       class="margin-top-40px"
       [value]="images"
       [autoPlay]="true"
@@ -34,8 +35,23 @@
           <ng-template pTemplate="item" let-item>
               <img [src]="item" style="width: 100%;" />
           </ng-template>
-      </p-galleria>
+      </p-galleria> -->
 
+      <p-galleria
+        class="margin-top-40px"
+        [value]="images"
+        [circular]="true"
+        [autoPlay]="true"
+        [showIndicators]="true"
+        [showThumbnails]="false"
+        [changeItemOnIndicatorHover]="true"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{ 'max-width': '100%' }"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item" class="galleria-image" />
+        </ng-template>
+      </p-galleria>
     </div>
 
     <div class="item-center content">
