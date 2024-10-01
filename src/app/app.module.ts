@@ -14,14 +14,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { ProfileComponent } from './profile/profile.component';
-
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CheckboxModule } from 'primeng/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     LogoComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,9 @@ import { ProfileComponent } from './profile/profile.component';
     InputTextModule,
     FloatLabelModule,
     ReactiveFormsModule,
-    GalleriaModule
+    GalleriaModule,
+    RadioButtonModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,9 +31,15 @@ export class HomeComponent {
     }
   ];
 
+  // Proper typing for the position variable
+  position: 'top' | 'bottom' | 'left' | 'right' = 'bottom';  // Initial value
+
+  showIndicatorsOnItem: boolean = false; // Checkbox toggle for indicators inside the image
+
   items: MenuItem[] | undefined;
 
   constructor(private HemoService: HemoService) { }
+
   ngOnInit() {
     this.items = [
       {
