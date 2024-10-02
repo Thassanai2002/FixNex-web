@@ -12,13 +12,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { CalfoodComponent } from './calfood/calfood.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    LogoComponent
+    LogoComponent,
+    CalfoodComponent
   ],
   imports: [
     BrowserModule,
