@@ -3,11 +3,16 @@
 @import "primeicons/primeicons.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+.container {
+  min-height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
+  flex-direction: column;
+  justify-content: space-between; /* กระจายคอนเทนต์ในแนวตั้ง */
+}
+
 body {
   font-family: "Prompt", sans-serif;
 }
 
-// ตั้งค่าฟอนต์ให้กับทุกคลาสที่อาจเกี่ยวข้อง
 .p-card,
 .p-button,
 .p-button-label {
@@ -50,7 +55,7 @@ body {
 
   .custom-button-red {
     border-radius: 5px; /* ความโค้งของขอบ */
-    background-color: rgb(255, 0, 0); /* พื้นหลังสีขาว */
+    background-color: #1ce6da; /* พื้นหลังสีขาว */
   }
 
   .custom-button-red .p-button-text {
@@ -58,7 +63,7 @@ body {
   }
 
   .custom-button-red .p-button {
-    border-color: rgb(255, 0, 0); /* ขอบปุ่มสีดำ */
+    border-color: #1ce6da; /* ขอบปุ่มสีดำ */
   }
 }
 
@@ -92,8 +97,12 @@ body {
     font-size: 70px; /* เปลี่ยนค่า 50px เป็นขนาดที่ต้องการ */
     color: red;
   }
-}
 
+  h1 {
+    margin: 0rem;
+    font-size: 50px; /* เปลี่ยนค่า 50px เป็นขนาดที่ต้องการ */
+  }
+}
 .fixed-card {
   position: fixed;
 }
@@ -203,6 +212,10 @@ body {
   border: 1px solid #000000; /* ขอบปุ่ม */
 }
 
+.margin-top-40px {
+  margin-top: 40px;
+}
+
 .margin-top-30px {
   margin-top: 30px;
 }
@@ -214,4 +227,14 @@ body {
 
 .text-bule {
   color: #006eff;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.galleria-image {
+  width: 100%;         /* ทำให้กว้างเต็มพื้นที่ */
+  height: 300px;      /* ปรับความสูงตามที่ต้องการ */
+  object-fit: cover;   /* ให้ตัดรูปให้พอดีกับกรอบ */
 }

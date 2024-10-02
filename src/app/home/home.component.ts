@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { HemoService } from './service/hemo.service';
+import { Sendmodle } from './interface/send';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,36 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
+  images: string[] = [
+    'assets/PNG/fixnex.png',
+    'assets/PNG/google-Photoroom.png',
+    'assets/PNG/facebook.png'
+  ];
+
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1024px',
+      numVisible: 3
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1
+    }
+  ];
+
+  // Proper typing for the position variable
+  position: 'top' | 'bottom' | 'left' | 'right' = 'bottom';  // Initial value
+
+  showIndicatorsOnItem: boolean = false; // Checkbox toggle for indicators inside the image
+
   items: MenuItem[] | undefined;
+
+  constructor(private HemoService: HemoService) { }
 
   ngOnInit() {
     this.items = [
@@ -56,5 +87,22 @@ export class HomeComponent {
         icon: 'pi pi-envelope',
       },
     ];
+  }
+
+  public testapi(): void {
+    this.HemoService.testapi().subscribe((data) => {
+      console.log(data.message);
+    })
+  }
+
+  public testsend(): void {
+    let modle: Sendmodle = {
+      fname: 'test',
+      lname: 'test',
+      id: 1
+    }
+    this.HemoService.testsend(modle).subscribe((data) => {
+      console.log(data);
+    })
   }
 }

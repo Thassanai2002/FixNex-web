@@ -12,13 +12,17 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
-
+import { GalleriaModule } from 'primeng/galleria';
+import { ProfileComponent } from './profile/profile.component';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CheckboxModule } from 'primeng/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    LogoComponent
+    LogoComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,10 @@ import { LogoComponent } from './logo/logo.component';
     FormsModule,
     InputTextModule,
     FloatLabelModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GalleriaModule,
+    RadioButtonModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
