@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LogoComponent } from './logo/logo.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CalfoodComponent } from './calfood/calfood.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logo', component: LogoComponent},
   { path: 'profile', component: ProfileComponent},
+  { path: 'calfood', component: CalfoodComponent}
 ];
 
 @NgModule({
