@@ -25,20 +25,20 @@
         </div>
       </div>
 
-      <div class="background-156">
-        <div class="content">
+      <div class="background-156c">
+        <div class="content text-center">
           <form name="form">
-            <div class="row mt-5">
-              <div class="col-4 text-right">
+            <div class="row mt-5 align-items-center">
+              <div class="col-4 d-flex justify-content-end">
                 <h3 class="text-black cal-label">เพศ</h3>
               </div>
-              <div class="col-7">
-                <div class="cal-radio-wrapper">
-                  <div class="cal-radio">
+              <div class="col-8">
+                <div class="cal-radio-wrapper d-flex">
+                  <div class="cal-radio mr3">
                     <input type="radio" name="gender" [(ngModel)]="gender" value="male"> 
                     <label>ชาย</label>
                   </div>
-                  <div class="cal-radio ml-3">
+                  <div class="cal-radio">
                     <input type="radio" name="gender" [(ngModel)]="gender" value="female">
                     <label>หญิง</label>
                   </div>
@@ -47,7 +47,7 @@
             </div>
           
             <div class="row mt-3">
-              <div class="col-4 text-right">
+              <div class="col-4 text-left">
                 <h3 class="text-black cal-label">อายุ</h3>
               </div>
               <div class="col-7">
@@ -58,7 +58,7 @@
             </div>
           
             <div class="row mt-3">
-              <div class="col-4 text-right">
+              <div class="col-4 text-left">
                 <h3 class="text-black cal-label">ความสูง</h3>
               </div>
               <div class="col-7">
@@ -72,7 +72,7 @@
             </div>
           
             <div class="row mt-3">
-              <div class="col-4 text-right">
+              <div class="col-4 text-left">
                 <h3 class="text-black cal-label">น้ำหนัก</h3>
               </div>
               <div class="col-7">
@@ -86,7 +86,7 @@
             </div>
           
             <div class="row mt-3">
-              <div class="col-4 text-right">
+              <div class="col-4 text-left">
                 <h3 class="text-black cal-label">ระดับการออกกำลังกายของคุณ</h3>
               </div>
               <div class="col-7">
@@ -103,7 +103,7 @@
             </div>
           
             <div class="row mt-3">
-              <div class="col-4 text-right">
+              <div class="col-4 text-left">
                 <h3 class="text-black cal-label">เป้าหมาย</h3>
               </div>
               <div class="col-7">
@@ -116,36 +116,89 @@
                 </div>
               </div>
             </div>
+
+            &nbsp;
           
             <div class="row mt-5">
               <div class="col-12 text-center">
                 <button class="btn btn-primary btn-cal" (click)="CalcDCI()">คำนวณ</button>
               </div>
-            </div>
-          
-            <div id="result" class="cal-result mt-5 bg-black" *ngIf="bmr">
-              <h2 class="text-white">
+            </div>            
+          </form>                    
+        </div>
+      </div>
+
+      <hr class="solid">
+
+      <div class="background-156c">
+        <div class="content text-center">
+          <form name="form">
+            <div id="result" class="cal-result mt-5 bg-black">
+              <h2 class="text-black">
                 <strong>ข้อมูลส่วนตัวและการออกกำลังกาย</strong>
               </h2>
               <div class="mt-4">
                 <div class="result-wrapper">
-                  <p class="text-white">BMR (Basal Metabolic Rate)</p>
+                  <p class="text-black">BMR (Basal Metabolic Rate)</p>
                   <div class="result">
                     <p class="text-primary">{{bmr | number: '1.0-0'}} กิโลแคลอรี่</p>
                   </div>
                 </div>
                 <div class="result-wrapper">
-                  <p class="text-white">TDEE (Total Daily Energy Expenditure)</p>
+                  <p class="text-black">TDEE (Total Daily Energy Expenditure)</p>
                   <div class="result">
                     <p class="text-primary">{{tdee | number: '1.0-0'}} กิโลแคลอรี่</p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="row mt-5">
+              <div class="col-lg-6 offset-lg-1 mt-5 mt-lg-0">
+                <h3 class="text-black"><strong>โปรแกรมอาหารต่อวัน</strong></h3>
+                <table class="cal-table table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>ปริมาณ(กรัม)</th>
+                      <th>แคล</th>
+                      <th>สัดส่วน</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-black">โปรตีน</td>
+                      <td id="protein" class="text-primary">{{ protein.toFixed(2) }}</td>
+                      <td id="protein_cal" class="text-primary">{{ proteinCal.toFixed(2) }}</td>
+                      <td class="text-primary"><span id="protein_percent">{{ proteinPercent.toFixed(2) }}</span> %</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">คาร์โบไฮเดรต</td>
+                      <td id="carb" class="text-primary">{{ carb.toFixed(2) }}</td>
+                      <td id="carb_cal" class="text-primary">{{ carbCal.toFixed(2) }}</td>
+                      <td class="text-primary"><span id="carb_percent">{{ carbPercent.toFixed(2) }}</span> %</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">ไขมัน</td>
+                      <td id="fat" class="text-primary">{{ fat.toFixed(2) }}</td>
+                      <td id="fat_cal" class="text-primary">{{ fatCal.toFixed(2) }}</td>
+                      <td class="text-primary"><span id="fat_percent">{{ fatPercent.toFixed(2) }}</span> %</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">รวมแคลลอรี่</td>
+                      <td></td>
+                      <td></td>
+                      <td id="total" class="text-primary">{{ totalCalories.toFixed(2) }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>            
           </form>                    
         </div>
       </div>
-  
+
+      <hr class="solid">
+
       <div class="background-156">
         <div class="content">
           <div>
