@@ -16,6 +16,7 @@ import { GalleriaModule } from 'primeng/galleria';
 import { ProfileComponent } from './profile/profile.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
+import { CalfoodComponent } from './calfood/calfood.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     LoginComponent,
     LogoComponent,
     ProfileComponent,
+    CalfoodComponent,
   ],
   imports: [
     BrowserModule,
