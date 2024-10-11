@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-calfood',
   templateUrl: './calfood.component.html',
-  styleUrls: ['./calfood.component.scss']
+  styleUrls: ['./calfood.component.scss'],
 })
 export class CalfoodComponent {
   gender: string | null = null;
@@ -28,8 +28,18 @@ export class CalfoodComponent {
 
   objective: number | null = null;
 
+  public ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
+
   CalcDCI() {
-    if (!this.gender || !this.age || !this.height || !this.weight || !this.objective) {
+    if (
+      !this.gender ||
+      !this.age ||
+      !this.height ||
+      !this.weight ||
+      !this.objective
+    ) {
       return;
     }
 
@@ -39,9 +49,9 @@ export class CalfoodComponent {
 
     // BMR calculation for males and females
     if (this.gender === 'male') {
-      this.bmr = 66 + (13.7 * weightInKg) + (5 * heightInCm) - (6.8 * age);
+      this.bmr = 66 + 13.7 * weightInKg + 5 * heightInCm - 6.8 * age;
     } else if (this.gender === 'female') {
-      this.bmr = 655 + (9.6 * weightInKg) + (1.8 * heightInCm) - (4.7 * age);
+      this.bmr = 655 + 9.6 * weightInKg + 1.8 * heightInCm - 4.7 * age;
     }
 
     // Ensure BMR is not null before calculating TDEE
@@ -51,11 +61,11 @@ export class CalfoodComponent {
     }
 
     this.showNutritionTable = true;
-
   }
 
   calculateMacronutrients() {
-    if (this.tdee === null || this.weight === null || this.objective === null) return;
+    if (this.tdee === null || this.weight === null || this.objective === null)
+      return;
 
     let protein = 0;
     let fat = 0;

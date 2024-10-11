@@ -1,3 +1,4 @@
+import { HemoService } from './../home/service/hemo.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
@@ -10,12 +11,31 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
   public signUp!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder
+    ,private HemoService: HemoService
+  ) {}
 
   public ngOnInit(): void {
     this.signUp = this.formBuilder.group({
-      Username: [{ value: null, disabled: false }],
-      Password: [{ value: null, disabled: false }],
+      user_name: [{ value: null, disabled: false }],
+      email: [{ value: null, disabled: false }],
+      password: [{ value: null, disabled: false }],
+      phone: [{ value: null, disabled: false }],
+      vip_level: [{ value: '1', disabled: false }],
+      join_date: [{ value: new Date(), disabled: false }],
     });
   }
+
+  // save(){
+  //   this.HemoService.save(this.signUp.value)
+  // }
+
+  public save(): void {
+
+    this.HemoService.save(this.signUp.value).subscribe((data) => {
+      console.log(data);
+
+    })
+  }
+
 }
