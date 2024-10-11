@@ -237,7 +237,7 @@ body {
   margin-top: 30px;
 }
 
-.margin-button-30px{
+.margin-button-30px {
   margin-bottom: 40px;
 }
 
@@ -255,11 +255,26 @@ body {
 }
 
 .galleria-image {
-  width: 100%;         /* ทำให้กว้างเต็มพื้นที่ */
-  height: 300px;      /* ปรับความสูงตามที่ต้องการ */
-  object-fit: cover;   /* ให้ตัดรูปให้พอดีกับกรอบ */
+  width: 100%; /* ทำให้กว้างเต็มพื้นที่ */
+  height: 300px; /* ปรับความสูงตามที่ต้องการ */
+  object-fit: cover; /* ให้ตัดรูปให้พอดีกับกรอบ */
 }
 
 .hr.solid {
   border-top: 3px solid #000000;
+}
+
+.line-height-08 {
+  line-height: 0.5; /* ลดระยะห่างระหว่างบรรทัด */
+}
+
+.vip-badge {
+  display: inline-block;
+  background-color: #e0e0e0; /* สีพื้นหลัง */
+  color: #333; /* สีของตัวอักษร */
+  padding: 10px 20px; /* ขนาดของ padding */
+  border-radius: 15px; /* ความโค้งของมุม */
+  font-weight: bold;
+  margin-top: 10px; /* ระยะห่างด้านบน */
+  font-size: 1.3rem; /* ขนาดตัวอักษร */
 }
