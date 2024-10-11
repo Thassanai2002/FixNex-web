@@ -54,39 +54,13 @@
       </p-galleria>
     </div>
 
-    <div class="item-center content">
-      <div class="content text-center">
-        <p-card p-card class="font-card">
-          <img src="assets/PNG/fixnex.png" class="png-card" />
-          <h1>แนะนำ</h1>
-          <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
-          <div class="button-card card">
-            <p-button
-              label="เพิ่มเติมSend"
-              [text]="true"
-              [raised]="true"
-              severity="secondary"
-              class="custom-button-white"
-              (onClick)="testsend()"
-            />
-            <p-button
-              label="ทดลองAPI"
-              [text]="true"
-              [raised]="true"
-              class="custom-button-red"
-              (onClick)="testapi()"
-            />
-          </div>
-        </p-card>
-      </div>
-    </div>
 
     <div class="item-center content">
       <div class="content text-center">
         <p-card p-card class="font-card">
-          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <img src="assets/PNG/FoodInfo1.png" class="png-card" />
           <h1>แนะนำ</h1>
-          <h2>อาหารเสริมที่เหมาะสำหรับคุณ</h2>
+          <h2>อาหารเสริมที่เหมาะกับคุณ</h2>
           <div class="button-card card">
             <p-button
               label="เพิ่มเติม"
@@ -94,6 +68,7 @@
               [raised]="true"
               severity="secondary"
               class="custom-button-white"
+              (click)="gofoodInfo()"
             />
             <p-button
               label="ทดลอง"
@@ -119,6 +94,7 @@
               [raised]="true"
               severity="secondary"
               class="custom-button-white"
+              (click)="goprogramInfo()"
             />
             <p-button
               label="ทดลอง"
@@ -134,7 +110,7 @@
     <div class="item-center content">
       <div class="content text-center">
         <p-card p-card class="font-card">
-          <img src="assets/PNG/fixnex.png" class="png-card" />
+          <img src="assets/PNG/calInfo.jpg" class="png-card" />
           <h1>คำนวณ</h1>
           <h2>สารอาหาร</h2>
           <div class="button-card card">
@@ -144,12 +120,14 @@
               [raised]="true"
               severity="secondary"
               class="custom-button-white"
+              (click)="gocalInfo()"
             />
             <p-button
               label="ทดลอง"
               [text]="true"
               [raised]="true"
               class="custom-button-red"
+              (click)="gocalfood()"
             />
           </div>
         </p-card>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { HemoService } from './service/hemo.service';
 import { Sendmodle } from './interface/send';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { Sendmodle } from './interface/send';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
 
   images: string[] = [
     'assets/PNG/fixnex.png',
@@ -38,9 +40,11 @@ export class HomeComponent {
 
   items: MenuItem[] | undefined;
 
-  constructor(private HemoService: HemoService) { }
+  constructor(private HemoService: HemoService, private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.items = [
       {
         label: 'Home',
@@ -91,7 +95,8 @@ export class HomeComponent {
 
   public testapi(): void {
     this.HemoService.testapi().subscribe((data) => {
-      console.log(data.message);
+      console.log(data);
+      console.log("kuy");
     })
   }
 
@@ -105,4 +110,21 @@ export class HomeComponent {
       console.log(data);
     })
   }
+
+  public gofoodInfo(): void {
+    this.router.navigate(['/foodInfo']);
+  }
+
+  public goprogramInfo(): void {
+    this.router.navigate(['/programInfo']);
+  }
+
+  public gocalInfo(): void {
+    this.router.navigate(['/calInfo']);
+  }
+
+  public gocalfood(): void {
+    this.router.navigate(['/calfood']);
+  }
+
 }
