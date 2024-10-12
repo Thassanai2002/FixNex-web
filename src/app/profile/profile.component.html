@@ -5,14 +5,61 @@
 
   <div class="bg-white width-100">
     <div class="content item-center">
-
       <div class="margin-top-30px text-center line-height-08">
-        <i class="pi pi-user line-height" style="font-size: 6.0rem; color: red;"></i>
-        <div><h1><strong>{{ user_name }}</strong></h1></div>
-        <div ><h2 class="vip-badge"><strong>VIP {{ vip_level }}</strong></h2></div>
+        <i
+          class="pi pi-user line-height"
+          style="font-size: 6rem; color: red"
+        ></i>
+        <div>
+          <h1>
+            <strong>{{ user_name }}</strong>
+          </h1>
+        </div>
+        <div>
+          <h2 class="vip-badge">
+            <strong>VIP {{ vip_level }}</strong>
+          </h2>
+        </div>
       </div>
-
     </div>
+
+    <hr style="border: none; height: 2px; background-color: #000; margin: 10px 0" />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการจองเทรนเนอร์</h2>
+    </div>
+
+    <div *ngFor="let rental of rentals" class="content item-center">
+      <ng-container *ngIf="rentals.length > 0; else noRentals">
+        <p-card p-card>
+          <div
+            class="p-card-content"
+            style="display: flex; align-items: center; height: 100px"
+          >
+            <div style="flex: 1">
+              <img
+                [src]="getImagePath(rental.trainer_id)"
+                alt="Image"
+                style="width: 100%; height: auto; object-fit: cover"
+              />
+            </div>
+            <div style="flex: 2; padding-left: 1rem">
+              <p>ชื่อ : {{ rental.trainer.trainer_name }} <br /></p>
+              <p>
+                วันที่จอง : {{ rental.rental_date | date : "dd-MM-yyyy" }}
+                <br />
+              </p>
+              <p>ระยะเวลา : {{ rental.duration }} นาที<br /></p>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+      <ng-template #noRentals>
+        <p>No rentals available</p>
+      </ng-template>
+    </div>
+
+    <hr style="border: none; height: 2px; background-color: #000; margin: 10px 0" />
 
     <div class="background-156">
       <div class="content">

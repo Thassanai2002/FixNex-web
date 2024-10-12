@@ -1,4 +1,9 @@
+import { Trainer } from "./TrainerRantals";
+
 export interface Profile {
+  rentals: any;
+  user: any;
+  rental: Trainer;
   user_id: number;
   user_name: string;
   email: string;
