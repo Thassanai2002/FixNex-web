@@ -3,6 +3,10 @@
 @import "primeicons/primeicons.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+p{
+  color: #000;
+}
+
 .container {
   min-height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
   flex-direction: column;
@@ -281,4 +285,13 @@ body {
   font-weight: bold;
   margin-top: 10px; /* ระยะห่างด้านบน */
   font-size: 1.3rem; /* ขนาดตัวอักษร */
+}
+
+.p-card .p-card-content {
+  padding: 0; /* ปิด padding */
+  width: 80vw;
+}
+
+.line-height-07 {
+  line-height: 0.7; /* ลดระยะห่างระหว่างบรรทัด */
 }

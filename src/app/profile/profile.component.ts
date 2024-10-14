@@ -28,6 +28,7 @@ export class ProfileComponent {
   rental: any;
   trainer_name!: string;
   picture!: any;
+  enrollments!: any;
   // trainer_name!: string;
   // trainer_name!: string;
 
@@ -41,11 +42,12 @@ export class ProfileComponent {
   ngOnInit() {
     window.scrollTo(0, 0);
 
-    let user_id = 2;
+    let user_id = 1;
 
     this.ProfileService.getProfile(user_id).subscribe((data) => {
       this.user = data.user;
       this.rentals = data.rentals; // เก็บข้อมูล rentals เป็นอาร์เรย์
+      this.enrollments = data.enrollments; // เก็บข้อมูล enrollments เป็นอาร์เรย์
       console.log(data); // ตรวจสอบข้อมูลที่ได้จาก API
 
       if (data) {
