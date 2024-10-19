@@ -1,0 +1,109 @@
+<div class="container bg-red item-center">
+  <div class="content item-center center text-white">
+    <h2>Order</h2>
+  </div>
+
+  <div class="bg-white width-100">
+    <div class="content item-center">
+      <div class="margin-top-30px text-center line-height-08">
+        <i
+          class="pi pi-user line-height"
+          style="font-size: 6rem; color: red"
+        ></i>
+        <div>
+          <h1>
+            <strong>{{ this.state.user.user_name }}</strong>
+          </h1>
+        </div>
+        <div>
+          <h2 class="vip-badge">
+            <strong>VIP {{ this.state.user.vip_level }}</strong>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการสั่งซื้อ</h2>
+    </div>
+
+    <div *ngFor="let item of this.state.criteriaData" class="content item-center">
+      <ng-container *ngIf="this.state.criteriaData.length > 0">
+        <p-card p-card>
+          <div
+            class="p-card-content"
+            style="display: flex; align-items: center; height: 150px"
+          >
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                height: 100%;
+              "
+            >
+              <img
+                [src]="'/assets/PNG/FoodInfo1.png'"
+                alt="Image"
+                style="max-width: 100%; max-height: 100%; object-fit: cover"
+              />
+            </div>
+
+            <div style="flex: 2; padding-left: 1rem">
+              <p>
+                <strong>{{ item.product.product_name }}</strong>
+              </p>
+              <p>ราคาต่อชื้น <strong>:</strong> {{ item.product.unit_price }}</p>
+              <p>จำนวน <strong>:</strong> {{ item.quantity }} ชิ้น</p>
+
+              <p>ราคารวม <strong>:</strong> {{ item.price }} บาท</p>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการจองเทรนเนอร์</h2>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการลงคอส</h2>
+    </div>
+
+    <div class="background-156">
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+          <p>เกี่ยวกับเรา</p>
+          <p>ติดต่อเรา</p>
+          <p>ทำไมต้องเลือกเรา</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">สมาชิก</h3>
+          <p>สิทธิพิเศษของสมาชิก</p>
+          <p>กฎระเบียบการใช้งาน</p>
+          <p>โปรโมชั่น</p>
+          <p>สมัครสมาชิก</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
