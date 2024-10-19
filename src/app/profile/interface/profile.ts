@@ -1,6 +1,7 @@
 import { Trainer } from "./TrainerRantals";
 
 export interface Profile {
+  orders: any;
   enrollments: any;
   rentals: any;
   user: any;
