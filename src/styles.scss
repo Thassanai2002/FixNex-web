@@ -35,6 +35,17 @@ body {
   outline: none;
 }
 
+.background-156c {
+  background-color: rgb(156, 156, 156);
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .background-black {
   background-color: rgb(0, 0, 0);
 }
@@ -237,4 +248,8 @@ body {
   width: 100%;         /* ทำให้กว้างเต็มพื้นที่ */
   height: 300px;      /* ปรับความสูงตามที่ต้องการ */
   object-fit: cover;   /* ให้ตัดรูปให้พอดีกับกรอบ */
+}
+
+.hr.solid {
+  border-top: 3px solid #000000;
 }
