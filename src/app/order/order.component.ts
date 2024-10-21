@@ -21,7 +21,6 @@ export class OrderComponent {
   }
 
   ngOnInit() {
-    console.log(this.state.criteriaData);
-
+    console.log(this.state.data);
   }
 }

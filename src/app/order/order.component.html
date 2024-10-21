@@ -1,6 +1,6 @@
 <div class="container bg-red item-center">
   <div class="content item-center center text-white">
-    <h2>Order</h2>
+    <h2>คำสั่งซื้อ</h2>
   </div>
 
   <div class="bg-white width-100">
@@ -28,11 +28,11 @@
     />
 
     <div class="content item-center line-height-1">
-      <h2>ประวัติการสั่งซื้อ</h2>
+      <h2>รหัสการสั่งซื้อ # {{ this.state.data[0].order_id }}</h2>
     </div>
 
-    <div *ngFor="let item of this.state.criteriaData" class="content item-center">
-      <ng-container *ngIf="this.state.criteriaData.length > 0">
+    <div *ngFor="let item of this.state.data" class="content item-center">
+      <ng-container *ngIf="this.state.data.length > 0">
         <p-card p-card>
           <div
             class="p-card-content"
@@ -67,22 +67,6 @@
           </div>
         </p-card>
       </ng-container>
-    </div>
-
-    <hr
-      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
-    />
-
-    <div class="content item-center line-height-1">
-      <h2>ประวัติการจองเทรนเนอร์</h2>
-    </div>
-
-    <hr
-      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
-    />
-
-    <div class="content item-center line-height-1">
-      <h2>ประวัติการลงคอส</h2>
     </div>
 
     <div class="background-156">

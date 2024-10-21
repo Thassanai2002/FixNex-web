@@ -77,7 +77,7 @@ export class ProfileComponent {
 
   goPageOrder(orderItems: any) {
     this.state.user = this.user; // เก็บข้อมูลผู้ใช้
-    this.state.criteriaData = orderItems; // เก็บ orderItems
+    this.state.data = orderItems; // เก็บ orderItems
 
     console.log(this.state);
 
