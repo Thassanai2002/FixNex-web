@@ -22,6 +22,7 @@ import { ProgramInformationComponent } from './program-information/program-infor
 import { CalInfoComponent } from './cal-info/cal-info.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { OrderComponent } from './order/order.component';
+import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { OrderComponent } from './order/order.component';
     ProgramInformationComponent,
     CalInfoComponent,
     OrderComponent,
+    RecommendFoodComponent
 
   ],
   imports: [
