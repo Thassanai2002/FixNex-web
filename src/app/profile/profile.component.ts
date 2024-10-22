@@ -4,6 +4,7 @@ import { ProfileService } from './service/profile.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TrainerRantals } from './interface/TrainerRantals';
+import { StateDataInterface } from '../shared/interfaces/interfaceAll';
 
 @Component({
   selector: 'app-profile',
@@ -29,15 +30,22 @@ export class ProfileComponent {
   trainer_name!: string;
   picture!: any;
   enrollments!: any;
-  // trainer_name!: string;
-  // trainer_name!: string;
+  orders!: any;
+  state = {} as StateDataInterface<any>;
 
   constructor(
     private ProfileService: ProfileService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder
-  ) {}
+  ) {
+    this.route.queryParams.forEach(() => {
+      this.state =
+        (this.router.getCurrentNavigation()?.extras
+          ?.state as StateDataInterface<any>) ||
+        ({} as StateDataInterface<any>);
+    });
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);
@@ -48,38 +56,32 @@ export class ProfileComponent {
       this.user = data.user;
       this.rentals = data.rentals; // เก็บข้อมูล rentals เป็นอาร์เรย์
       this.enrollments = data.enrollments; // เก็บข้อมูล enrollments เป็นอาร์เรย์
+      this.orders = data.orders;
       console.log(data); // ตรวจสอบข้อมูลที่ได้จาก API
 
       if (data) {
-        // data.user
         this.user_name = data.user.user_name;
         this.email = data.user.email;
         this.phone = data.user.phone;
         this.vip_level = data.user.vip_level;
-
-        // แสดงข้อมูลการเช่า
-        if (this.rentals.length > 0) {
-          this.rentals.forEach((rental: TrainerRantals) => {
-
-            this.trainer_name = rental.trainer.trainer_name;
-            console.log('Trainer Name:', rental.trainer.trainer_name); // แสดง trainer_name
-            console.log('Duration:', rental.duration); // แสดง duration
-            console.log('Trainer ID:', rental.trainer_id); // แสดง trainer_id
-          });
-        } else {
-          console.log('No rentals available'); // แสดงเมื่อไม่มีการเช่า
-        }
       }
     });
+  }
 
-    // this.form = this.formBuilder.group({
-    //   user_name: [{ value: null, disabled: false }],
-    //   email: [{ value: null, disabled: false }],
-    //   password: [{ value: null, disabled: false }],
-    //   phone: [{ value: null, disabled: false }],
-    //   vip_level: [{ value: '1', disabled: false }],
-    //   join_date: [{ value: new Date(), disabled: false }],
-    // });
+  // goPageOrder(orderItems: any) {
+  //   this.state.user = this.user;
+  //   this.state.criteriaData = orderItems;
+  //   console.log(this.state);
+  //   this.router.navigate(['/oderItem', this.state]);
+  // }
+
+  goPageOrder(orderItems: any) {
+    this.state.user = this.user; // เก็บข้อมูลผู้ใช้
+    this.state.data = orderItems; // เก็บ orderItems
+
+    console.log(this.state);
+
+    this.router.navigate(['/oderItem'], { state: this.state }); // ส่ง state ในการนำทาง
   }
 
   getImagePath(trainerId: number): string {
@@ -95,5 +97,21 @@ export class ProfileComponent {
       default:
         return '/assets/PNG/Boss.jpg'; // รูปสำหรับ trainer_id อื่น ๆ
     }
+  }
+
+  getImageOrder(productId: number): string {
+    return '/assets/PNG/FoodInfo1.png';
+    // switch (trainerId) {
+    //   case 1:
+    //     return '/assets/PNG/napat.jpg'; // รูปสำหรับ trainer_id = 1
+    //   case 2:
+    //     return '/assets/PNG/jack.jpg'; // รูปสำหรับ trainer_id = 2
+    //   case 3:
+    //     return '/assets/PNG/Tamazon.jpg'; // รูปสำหรับ trainer_id = 3
+    //   case 4:
+    //     return '/assets/PNG/kit.jpg'; // รูปสำหรับ trainer_id = 3
+    //   default:
+    //     return '/assets/PNG/Boss.jpg'; // รูปสำหรับ trainer_id อื่น ๆ
+    // }
   }
 }
