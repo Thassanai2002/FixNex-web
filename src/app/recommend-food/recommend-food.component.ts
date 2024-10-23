@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RecommendFoodComponent {
 
   images: string[] = [
-    'assets/PNG/FoodInfo1.png',
+    'assets/PNG/FoodInfo2.png',
     'assets/PNG/fixnex.png',
     'assets/PNG/google-Photoroom.png',
     'assets/PNG/facebook.png'
