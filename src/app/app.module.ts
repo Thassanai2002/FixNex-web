@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CalfoodComponent } from './calfood/calfood.component';
+import { FoodInformationComponent } from './food-information/food-information.component';
+import { ProgramInformationComponent } from './program-information/program-information.component';
+import { CalInfoComponent } from './cal-info/cal-info.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { OrderComponent } from './order/order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +30,11 @@ import { CalfoodComponent } from './calfood/calfood.component';
     LogoComponent,
     ProfileComponent,
     CalfoodComponent,
+    FoodInformationComponent,
+    ProgramInformationComponent,
+    CalInfoComponent,
+    OrderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +49,8 @@ import { CalfoodComponent } from './calfood/calfood.component';
     ReactiveFormsModule,
     GalleriaModule,
     RadioButtonModule,
-    CheckboxModule
+    CheckboxModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

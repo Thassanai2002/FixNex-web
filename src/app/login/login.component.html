@@ -15,7 +15,7 @@
               <input
                 type="text"
                 pInputText
-                formControlName="Username"
+                formControlName="user_name"
                 class="width100"
               />
             </div>
@@ -28,7 +28,7 @@
               <input
                 type="text"
                 pInputText
-                formControlName="Password"
+                formControlName="password"
                 class="width100"
               />
             </div>
@@ -46,6 +46,7 @@
             <p-button
               label="Login"
               styleClass="custom-button-blue-login"
+              (onClick)="save()"
             ></p-button>
           </div>
         </div>

@@ -1,1 +1,190 @@
-<p>profile works!</p>
+<div class="container bg-red item-center">
+  <div class="content item-center center text-white">
+    <h2>บัญชีผู้ใช้</h2>
+  </div>
+
+  <div class="bg-white width-100">
+    <div class="content item-center">
+      <div class="margin-top-30px text-center line-height-08">
+        <i
+          class="pi pi-user line-height"
+          style="font-size: 6rem; color: red"
+        ></i>
+        <div>
+          <h1>
+            <strong>{{ user_name }}</strong>
+          </h1>
+        </div>
+        <div>
+          <h2 class="vip-badge">
+            <strong>VIP {{ vip_level }}</strong>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการสั่งซื้อ</h2>
+    </div>
+
+    <div *ngFor="let order of orders" class="content item-center">
+      <ng-container *ngIf="orders.length > 0">
+        <p-card (click)="goPageOrder(order.orderItems)" p-card>
+          <div
+            class="p-card-content"
+            style="display: flex; align-items: center; height: 150px"
+          >
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                height: 100%;
+              "
+            >
+              <img
+                [src]="getImageOrder(1)"
+                alt="Image"
+                style="max-width: 100%; max-height: 100%; object-fit: cover"
+              />
+            </div>
+
+            <div style="flex: 2; padding-left: 1rem">
+              <p>
+                <strong>รหัสการสั่งซื้อ : # {{ order.order_id }}</strong>
+              </p>
+              <p>สถานะ <strong>:</strong> {{ order.status }}</p>
+              <p>ราคารวม <strong>:</strong> {{ order.total_amount }} บาท</p>
+
+              <p>วันที่จอง <strong>:</strong> {{ order.oder_date | date : "dd-MM-yyyy" }}</p>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการจองเทรนเนอร์</h2>
+    </div>
+
+    <div *ngFor="let rental of rentals" class="content item-center">
+      <ng-container *ngIf="rentals.length > 0">
+        <p-card p-card>
+          <div
+            class="p-card-content"
+            style="display: flex; align-items: center; height: 150px"
+          >
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                height: 100%;
+              "
+            >
+              <img
+                [src]="getImagePath(rental.trainer_id)"
+                alt="Image"
+                style="max-width: 100%; max-height: 100%; object-fit: cover"
+              />
+            </div>
+            <div style="flex: 2; padding-left: 1rem">
+              <p>
+                <strong>{{ rental.trainer.trainer_name }}</strong
+                ><br />
+              </p>
+              <p>
+                วันที่จอง <strong>:</strong> {{ rental.rental_date | date : "dd-MM-yyyy" }}
+                <br />
+              </p>
+              <p>ระยะเวลา <strong>:</strong> {{ rental.duration }} นาที<br /></p>
+              <p>ความถนัด <strong>:</strong> {{ rental.trainer.specialty }}<br /></p>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+    </div>
+
+    <hr
+      style="border: none; height: 2px; background-color: #000; margin: 10px 0"
+    />
+
+    <div class="content item-center line-height-1">
+      <h2>ประวัติการลงคอส</h2>
+    </div>
+
+    <div *ngFor="let enrollment of enrollments" class="content item-center">
+      <ng-container *ngIf="enrollments.length > 0; else noRentals">
+        <p-card p-card>
+          <div
+            class="p-card-content"
+            style="display: flex; align-items: center; height: 150px"
+          >
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                height: 100%;
+              "
+            >
+              <img
+                [src]="getImagePath(enrollment.program_id)"
+                style="max-width: 100%; max-height: 100%; object-fit: cover"
+              />
+            </div>
+            <div style="flex: 2; padding-left: 1rem">
+              <p>
+                <strong>{{ enrollment.program.program_name }}</strong>
+              </p>
+              <p>
+                {{ enrollment.program.goal }}
+                <br />
+              </p>
+              <p>วัน <strong>:</strong> {{ enrollment.enrollment_date }} น.<br /></p>
+              <p>ระยะเวลา <strong>:</strong> {{ enrollment.program.duration }} สัปดาห์<br /></p>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+      <ng-template #noRentals>
+        <p>No rentals available</p>
+      </ng-template>
+    </div>
+
+    <div class="background-156">
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+          <p>เกี่ยวกับเรา</p>
+          <p>ติดต่อเรา</p>
+          <p>ทำไมต้องเลือกเรา</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <h3 class="text-left-underline">สมาชิก</h3>
+          <p>สิทธิพิเศษของสมาชิก</p>
+          <p>กฎระเบียบการใช้งาน</p>
+          <p>โปรโมชั่น</p>
+          <p>สมัครสมาชิก</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
