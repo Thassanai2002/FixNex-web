@@ -8,6 +8,7 @@ import { CalfoodComponent } from './calfood/calfood.component';
 import { FoodInformationComponent } from './food-information/food-information.component';
 import { ProgramInformationComponent } from './program-information/program-information.component';
 import { CalInfoComponent } from './cal-info/cal-info.component';
+import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'calfood', component: CalfoodComponent},
   { path: 'foodInfo', component: FoodInformationComponent},
   { path: 'programInfo', component: ProgramInformationComponent},
-  { path: 'calInfo', component: CalInfoComponent}
+  { path: 'calInfo', component: CalInfoComponent},
+  { path: 'recfood', component: RecommendFoodComponent}
 
 
 ];
