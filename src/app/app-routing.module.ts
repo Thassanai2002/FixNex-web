@@ -8,8 +8,8 @@ import { CalfoodComponent } from './calfood/calfood.component';
 import { FoodInformationComponent } from './food-information/food-information.component';
 import { ProgramInformationComponent } from './program-information/program-information.component';
 import { CalInfoComponent } from './cal-info/cal-info.component';
+import { OrderComponent } from './order/order.component';
 import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
-
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -19,10 +19,9 @@ const routes: Routes = [
   { path: 'calfood', component: CalfoodComponent},
   { path: 'foodInfo', component: FoodInformationComponent},
   { path: 'programInfo', component: ProgramInformationComponent},
+  { path: 'oderItem', component: OrderComponent},
   { path: 'calInfo', component: CalInfoComponent},
   { path: 'recfood', component: RecommendFoodComponent}
-
-
 ];
 
 @NgModule({
