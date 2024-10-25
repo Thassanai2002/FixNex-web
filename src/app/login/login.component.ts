@@ -9,14 +9,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  public signUp!: FormGroup;
+  public signIn!: FormGroup;
 
   constructor(private formBuilder: FormBuilder
     ,private HemoService: HemoService
   ) {}
 
   public ngOnInit(): void {
-    this.signUp = this.formBuilder.group({
+    this.signIn = this.formBuilder.group({
       user_name: [{ value: null, disabled: false }],
       email: [{ value: null, disabled: false }],
       password: [{ value: null, disabled: false }],
@@ -27,12 +27,12 @@ export class LoginComponent {
   }
 
   // save(){
-  //   this.HemoService.save(this.signUp.value)
+  //   this.HemoService.save(this.signIn.value)
   // }
 
   public save(): void {
 
-    this.HemoService.save(this.signUp.value).subscribe((data) => {
+    this.HemoService.save(this.signIn.value).subscribe((data) => {
       console.log(data);
 
     })
