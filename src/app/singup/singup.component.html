@@ -1,0 +1,90 @@
+<div class="container bg-red">
+  <div>
+    <div class="content item-center text-center">
+      <h1 class="text-white">Sign Up</h1>
+    </div>
+
+    <div class="margin bg-white bg-login">
+      <div class="margin">
+        <br />
+        <form [formGroup]="signUp" class="flex flex-column">
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Username</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="user_name"
+                class="width100"
+                placeholder="Enter your username"
+              />
+            </div>
+          </div>
+
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Phone number</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="phone"
+                class="width100"
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Email</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="email"
+                class="width100"
+                placeholder="Enter your @gmail.com"
+              />
+            </div>
+          </div>
+
+          <div class="margin">
+            <div class="flex flex-column">
+              <label for="desc"><strong>Password</strong></label
+              ><br />
+              <input
+                type="text"
+                pInputText
+                formControlName="password"
+                class="width100"
+                placeholder="Enter your password"
+              />
+            </div>
+          </div>
+        </form>
+
+        <div class="margin margin-top-30px">
+          <div class="item-center text-center">
+            <p-button
+              label="Sign Up"
+              styleClass="custom-button-blue-login"
+              (click)="saveSignup()"
+            ></p-button>
+          </div>
+        </div>
+
+        <div class="margin margin-top-30px">
+          <div class="item-center text-center">
+            <p-button
+              label="Back"
+              styleClass="custom-button-white-signup"
+            ></p-button>
+          </div>
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
