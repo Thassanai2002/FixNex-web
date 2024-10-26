@@ -10,6 +10,7 @@ import { ProgramInformationComponent } from './program-information/program-infor
 import { CalInfoComponent } from './cal-info/cal-info.component';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
+import { TrainingComponent } from './training/training.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'programInfo', component: ProgramInformationComponent},
   { path: 'oderItem', component: OrderComponent},
   { path: 'calInfo', component: CalInfoComponent},
-  { path: 'singup', component: SingupComponent}
+  { path: 'singup', component: SingupComponent},
+  {path: 'training', component:TrainingComponent},
 ];
 
 @NgModule({

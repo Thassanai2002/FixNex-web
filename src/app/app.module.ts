@@ -23,6 +23,11 @@ import { CalInfoComponent } from './cal-info/cal-info.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
+import { TrainingComponent } from './training/training.component';
+import { DropdownModule } from 'primeng/dropdown';
+import { DividerModule } from 'primeng/divider';
+import { ImageModule } from 'primeng/image';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +41,7 @@ import { SingupComponent } from './singup/singup.component';
     CalInfoComponent,
     OrderComponent,
     SingupComponent,
+    TrainingComponent,
 
   ],
   imports: [
@@ -52,7 +58,10 @@ import { SingupComponent } from './singup/singup.component';
     GalleriaModule,
     RadioButtonModule,
     CheckboxModule,
-    SidebarModule
+    SidebarModule,
+    DropdownModule,
+    DividerModule,
+    ImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

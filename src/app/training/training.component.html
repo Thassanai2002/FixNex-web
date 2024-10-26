@@ -1,0 +1,209 @@
+<div class="grid container h-screen">
+    
+    <div class="col-12">
+        <div class=" flex justify-content-center">
+          <h2>คอร์สออกกำลังกาย</h2>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="grid">
+            <div class="col-12 p-4 border-round-top-3xl surface-0 h-screen">
+                <div class="flex justify-content-center">
+                    <p-galleria
+                    class="margin-top-40px"
+                    [value]="images"
+                    [circular]="true"
+                    [autoPlay]="true"
+                    [showIndicators]="true"
+                    [showThumbnails]="false"
+                    [changeItemOnIndicatorHover]="true"
+                    [responsiveOptions]="responsiveOptions"
+                    [containerStyle]="{ 'max-width': '100%' }">
+                    <ng-template pTemplate="item" let-item>
+                      <img [src]="item" class="galleria-image" />
+                    </ng-template>
+                  </p-galleria>
+                </div>
+
+                <div class="fitnex-banner">
+                    <div class="text-container">
+                      <div class="text-left">
+                        <div class="flex-container">เลือกคอร์สที่เหมาะกับคุณ</div>
+                        <div class="flex-container2">แล้วมาเป็นครอบครัว <span class="text-right">FITNEX</span></div>
+                      </div>
+                    </div>
+                </div>
+
+                <form [formGroup]="form" class="flex justify-content-center">
+                    <div class="flex flex-column gap-2 mt-4">
+                        <label for="goal">เป้าหมาย <select id="goal" class="dropdown">
+                            <option value="muscle">เพิ่มกล้ามเนื้อ</option>
+                            <option value="weight-loss">ลดน้ำหนัก</option>
+                            <option value="endurance">เพิ่มความอดทน</option>
+                            <option value="flexibility">เพิ่มความยืดหยุ่น</option>
+                          </select>
+                        </label>
+                    </div>
+                </form>
+                <div class="grid">
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p-divider type="solid" />
+
+                <div class=" flex justify-content-center pt-5 ">
+                    <h2 class="font-color">ได้รับความนิยม</h2>
+                </div>
+
+                <div class="grid">
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-4 border-round-top-3xl ">
+                            <div class="card flex justify-content-center">
+                                <p-card header="เพิ่มกล้ามเนื้อ" subheader="BODYPUMP" [style]="{ width: '300px' }">
+                                    <ng-template pTemplate="header">
+                                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                                    </ng-template>
+                                    <ng-template pTemplate="footer">
+                                        <div class="flex justify-content-center gap-2 mt-4">
+                                            <p-button label="Save" class="w-full" styleClass="w-full" />
+                                        </div>
+                                    </ng-template>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p-divider type="solid" />
+
+                <div class=" flex justify-content-center pt-5 ">
+                    <h2 class="font-color">เทรนเนอร์ส่วนตัว</h2>
+                </div>
+
+                <div class="grid flex flex-column justify-content-center">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                </div>
+
+                <div class="grid flex justify-content-center gap-2 mt-4">
+                    <p-button label="ลงทะเบียน" (click)="visibleModal=false" styleClass="p-button-rounded p-button-warning mr-2 mb-2"></p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
