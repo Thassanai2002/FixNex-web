@@ -10,6 +10,8 @@ import { ProgramInformationComponent } from './program-information/program-infor
 import { CalInfoComponent } from './cal-info/cal-info.component';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path: 'programInfo', component: ProgramInformationComponent},
   { path: 'oderItem', component: OrderComponent},
   { path: 'calInfo', component: CalInfoComponent},
-  { path: 'singup', component: SingupComponent}
+  { path: 'singup', component: SingupComponent},
+  { path: 'product', component: ProductPageComponent},
+  { path: 'recfood', component: RecommendFoodComponent}
 ];
 
 @NgModule({

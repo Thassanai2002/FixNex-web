@@ -23,6 +23,8 @@ import { CalInfoComponent } from './cal-info/cal-info.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
+import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,8 @@ import { SingupComponent } from './singup/singup.component';
     CalInfoComponent,
     OrderComponent,
     SingupComponent,
+    RecommendFoodComponent,
+    ProductPageComponent
 
   ],
   imports: [
