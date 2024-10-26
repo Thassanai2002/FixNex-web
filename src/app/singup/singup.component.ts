@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SingUpService } from '../singup/service/sing-up.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
@@ -12,34 +12,47 @@ export class SingupComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private SingUpService: SingUpService
-  ) {}
+    private SingUpService: SingUpService,
+    private router: Router
+  ) {
+    window.scrollTo(0, 0);
+  }
 
   public ngOnInit(): void {
     this.signUp = this.formBuilder.group({
-      user_name: [{ value: null, disabled: false }],
-      phone: [{ value: null, disabled: false }],
-      email: [{ value: null, disabled: false }],
-      password: [{ value: null, disabled: false }],
-      vip_level: [{ value: 0, disabled: false }],
-      join_date: [{ value: new Date(), disabled: false }],
+      user_name: [{ value: null, disabled: false }, Validators.required],
+      phone: [{ value: null, disabled: false }, Validators.required],
+      email: [
+        { value: null, disabled: false },
+        [Validators.required, Validators.email],
+      ],
+      password: [{ value: null, disabled: false }, Validators.required],
+      vip_level: [{ value: null, disabled: false }],
+      join_date: [{ value: null, disabled: false }],
     });
   }
 
-  // saveSignup(): void {
-  //   this.SingUpService.saveUser(this.signUp.value).subscribe((data) => {});
-  // }
-
   saveSignup(): void {
-    this.SingUpService.saveUser(this.signUp.value).subscribe(
-      (data) => {
-        console.log('User registered successfully!');
-        this.signUp.reset();
-      },
-      (error) => {
-        console.log(error.message); // แสดงข้อความข้อผิดพลาดที่ backend ส่งมา
-      }
-    );
+    this.signUp.value.join_date = new Date();
+    this.signUp.value.vip_level = 0;
+    console.log(this.signUp.value);
+    if (this.signUp.valid) {
+      console.log('กรอกข้อมูลครบ');
+      this.SingUpService.saveUser(this.signUp.value).subscribe(
+        (data) => {
+          console.log('สมัครสมาชิกสําเร็จ');
+          this.signUp.reset();
+        },
+        (error) => {
+          console.log(error.error.message);
+        }
+      );
+    } else {
+      console.log('กรุณากรอกข้อมูลให้ครบ');
+    }
   }
 
+  gologin() {
+    this.router.navigate(['/login']);
+  }
 }
