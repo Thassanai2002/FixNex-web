@@ -2,21 +2,25 @@ import { HemoService } from './../home/service/hemo.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  public signUp!: FormGroup;
+  public signIn!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder
-    ,private HemoService: HemoService
-  ) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private HemoService: HemoService,
+    private router: Router
+  ) {
+    window.scrollTo(0, 0);
+  }
 
   public ngOnInit(): void {
-    this.signUp = this.formBuilder.group({
+    this.signIn = this.formBuilder.group({
       user_name: [{ value: null, disabled: false }],
       email: [{ value: null, disabled: false }],
       password: [{ value: null, disabled: false }],
@@ -27,15 +31,16 @@ export class LoginComponent {
   }
 
   // save(){
-  //   this.HemoService.save(this.signUp.value)
+  //   this.HemoService.save(this.signIn.value)
   // }
 
   public save(): void {
-
-    this.HemoService.save(this.signUp.value).subscribe((data) => {
+    this.HemoService.save(this.signIn.value).subscribe((data) => {
       console.log(data);
-
-    })
+    });
   }
 
+  goSignup () {
+    this.router.navigate(['/singup']);
+  }
 }

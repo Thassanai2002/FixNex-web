@@ -7,7 +7,7 @@
     <div class="margin bg-white bg-login h-screen h-full">
       <div class="margin">
         <br />
-        <form [formGroup]="signUp" class="flex flex-column">
+        <form [formGroup]="signIn" class="flex flex-column">
           <div class="margin">
             <div class="flex flex-column">
               <label for="desc"><strong>Username</strong></label
@@ -86,7 +86,7 @@
             <small id="Don’t have account?">
               Don’t have account?
             </small>
-            <small class="text-bule">
+            <small class="text-bule" (click)="goSignup()">
               Sign Up
             </small>
           </div>
