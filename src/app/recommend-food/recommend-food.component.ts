@@ -3,10 +3,11 @@ import { MenuItem } from 'primeng/api';
 import { RecfoodService } from './service/recfood.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-recommend-food',
   templateUrl: './recommend-food.component.html',
-  styleUrl: './recommend-food.component.scss'
+  styleUrl: './recommend-food.component.scss',
 })
 export class RecommendFoodComponent {
 
@@ -14,7 +15,8 @@ export class RecommendFoodComponent {
     'assets/PNG/FoodInfo2.png',
     'assets/PNG/fixnex.png',
     'assets/PNG/google-Photoroom.png',
-    'assets/PNG/facebook.png'
+    'assets/PNG/facebook.png',
+    'assets/PNG/whey.png'
   ];
 
   responsiveOptions: any[] = [

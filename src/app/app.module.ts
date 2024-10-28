@@ -27,6 +27,9 @@ import { TrainingComponent } from './training/training.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
 import { ImageModule } from 'primeng/image';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,8 @@ import { ImageModule } from 'primeng/image';
     OrderComponent,
     SingupComponent,
     TrainingComponent,
+    RecommendFoodComponent,
+    ProductPageComponent
 
   ],
   imports: [
@@ -62,6 +67,7 @@ import { ImageModule } from 'primeng/image';
     DropdownModule,
     DividerModule,
     ImageModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
