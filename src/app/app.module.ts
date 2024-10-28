@@ -23,8 +23,11 @@ import { CalInfoComponent } from './cal-info/cal-info.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
-import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { TrainingComponent } from './training/training.component';
+import { DropdownModule } from 'primeng/dropdown';
+import { DividerModule } from 'primeng/divider';
+import { ImageModule } from 'primeng/image';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +41,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
     CalInfoComponent,
     OrderComponent,
     SingupComponent,
-    RecommendFoodComponent,
-    ProductPageComponent
+    TrainingComponent,
 
   ],
   imports: [
@@ -57,7 +59,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
     RadioButtonModule,
     CheckboxModule,
     SidebarModule,
-    MatGridListModule
+    DropdownModule,
+    DividerModule,
+    ImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
