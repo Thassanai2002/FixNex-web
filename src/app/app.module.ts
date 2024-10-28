@@ -56,7 +56,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     GalleriaModule,
     RadioButtonModule,
     CheckboxModule,
-    SidebarModule
+    SidebarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
