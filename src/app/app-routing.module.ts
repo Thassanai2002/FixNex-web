@@ -11,23 +11,26 @@ import { CalInfoComponent } from './cal-info/cal-info.component';
 import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
 import { TrainingComponent } from './training/training.component';
+import { TrainerComponent } from './trainer/trainer.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'logo', component: LogoComponent},
-  { path: 'profile', component: ProfileComponent},
-  { path: 'calfood', component: CalfoodComponent},
-  { path: 'foodInfo', component: FoodInformationComponent},
-  { path: 'programInfo', component: ProgramInformationComponent},
-  { path: 'oderItem', component: OrderComponent},
-  { path: 'calInfo', component: CalInfoComponent},
-  { path: 'singup', component: SingupComponent},
-  {path: 'training', component:TrainingComponent},
+  { path: 'logo', component: LogoComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'calfood', component: CalfoodComponent },
+  { path: 'foodInfo', component: FoodInformationComponent },
+  { path: 'programInfo', component: ProgramInformationComponent },
+  { path: 'oderItem', component: OrderComponent },
+  { path: 'calInfo', component: CalInfoComponent },
+  { path: 'singup', component: SingupComponent },
+  { path: 'training', component: TrainingComponent },
+  { path: 'trainer', component: TrainerComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

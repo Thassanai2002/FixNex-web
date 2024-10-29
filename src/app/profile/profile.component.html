@@ -1,9 +1,9 @@
-<div class="container bg-red item-center">
+<div class="grid container h-screen">
   <div class="content item-center center text-white">
     <h2>บัญชีผู้ใช้</h2>
   </div>
 
-  <div class="bg-white width-100">
+  <div class="col-12 p-4 border-round-top-3xl surface-0 h-screen">
     <div class="content item-center">
       <div class="margin-top-30px text-center line-height-08">
         <i
@@ -62,7 +62,10 @@
               <p>สถานะ <strong>:</strong> {{ order.status }}</p>
               <p>ราคารวม <strong>:</strong> {{ order.total_amount }} บาท</p>
 
-              <p>วันที่จอง <strong>:</strong> {{ order.oder_date | date : "dd-MM-yyyy" }}</p>
+              <p>
+                วันที่จอง <strong>:</strong>
+                {{ order.oder_date | date : "dd-MM-yyyy" }}
+              </p>
             </div>
           </div>
         </p-card>
@@ -106,11 +109,16 @@
                 ><br />
               </p>
               <p>
-                วันที่จอง <strong>:</strong> {{ rental.rental_date | date : "dd-MM-yyyy" }}
+                วันที่จอง <strong>:</strong>
+                {{ rental.rental_date | date : "dd-MM-yyyy" }}
                 <br />
               </p>
-              <p>ระยะเวลา <strong>:</strong> {{ rental.duration }} นาที<br /></p>
-              <p>ความถนัด <strong>:</strong> {{ rental.trainer.specialty }}<br /></p>
+              <p>
+                ระยะเวลา <strong>:</strong> {{ rental.duration }} นาที<br />
+              </p>
+              <p>
+                ความถนัด <strong>:</strong> {{ rental.trainer.specialty }}<br />
+              </p>
             </div>
           </div>
         </p-card>
@@ -155,8 +163,13 @@
                 {{ enrollment.program.goal }}
                 <br />
               </p>
-              <p>วัน <strong>:</strong> {{ enrollment.enrollment_date }} น.<br /></p>
-              <p>ระยะเวลา <strong>:</strong> {{ enrollment.program.duration }} สัปดาห์<br /></p>
+              <p>
+                วัน <strong>:</strong> {{ enrollment.enrollment_date }} น.<br />
+              </p>
+              <p>
+                ระยะเวลา <strong>:</strong>
+                {{ enrollment.program.duration }} สัปดาห์<br />
+              </p>
             </div>
           </div>
         </p-card>
