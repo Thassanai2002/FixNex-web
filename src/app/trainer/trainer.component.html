@@ -1,0 +1,129 @@
+<div class="grid container h-screen">
+
+    <div class="col-12">
+        <div class=" flex justify-content-center">
+          <h2>เทรนเนอร์ส่วนตัว</h2>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="grid">
+            <div class="col-12 p-4 border-round-top-3xl surface-0 h-screen">
+                <div class="grid flex flex-column justify-content-center">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                </div>
+
+                <div class="fitnex-banner gap-2 mt-4">
+                    <div class="text-container">
+                      <div class="text-left">
+                        <div class="flex-container">เริ่มต้นเส้นทางสุขภาพที่ดี</div>
+                        <div class="flex-container2">ให้เทรนเนอร์ของเราช่วยคุณ <span class="text-right">บรรลุเป้าหมาย</span></div>
+                      </div>
+                    </div>
+                </div>
+
+                <form [formGroup]="form" class="flex justify-content-center">
+                    <div class="flex flex-column gap-2 mt-4">
+                        <label for="goal">เป้าหมาย <p-dropdown 
+                            formControlName="bodypump"
+                            placeholder="เลือกเป้าหาย" />
+                        </label>
+                    </div>
+                </form>
+
+                <div class="margin margin-top-30px">
+                    <div class="item-center text-center">
+                      <p-button
+                        label="ลงทะเบียน"
+                        styleClass="custom-button-blue-login"
+                        (click)="visibleModal=false"
+                      ></p-button>
+                    </div>
+                </div>
+
+                <div class=" flex justify-content-center pt-5 ">
+                    <h2 class="font-color">เทรนเนอร์ที่ได้รับการรับรอง</h2>
+                </div>
+
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายกฤษฎา นลินรัตน์พิพัฒน์</p>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายกฤษฎา นลินรัตน์พิพัฒน์</p>
+                </p-card>
+                
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายกฤษฎา นลินรัตน์พิพัฒน์</p>
+                </p-card>
+
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายกฤษตฤณ จันทวงศ์</p>
+                </p-card>
+
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายคุณภัทร บัวประดิษฐ์</p>
+                </p-card>
+
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายทัศไนย แตงพรม</p>
+                </p-card>
+
+                <p-card class="grid flex justify-content-center gap-2 mt-4">
+                    <p-image 
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?cs=srgb&dl=pexels-pixabay-414029.jpg&fm=jpg"
+                        alt="Image"
+                        width="60%">
+                    </p-image>
+                    <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายธนนท์ ไทยกูล</p>
+                </p-card>
+            </div>
+            <div class="background-156">
+                <div class="content">
+                  <div>
+                    <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+                    <p>เกี่ยวกับเรา</p>
+                    <p>ติดต่อเรา</p>
+                    <p>ทำไมต้องเลือกเรา</p>
+                  </div>
+                </div>
+          
+                <div class="content">
+                  <div>
+                    <h3 class="text-left-underline">สมาชิก</h3>
+                    <p>สิทธิพิเศษของสมาชิก</p>
+                    <p>กฎระเบียบการใช้งาน</p>
+                    <p>โปรโมชั่น</p>
+                    <p>สมัครสมาชิก</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
