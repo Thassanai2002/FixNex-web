@@ -27,9 +27,10 @@ import { TrainingComponent } from './training/training.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
 import { ImageModule } from 'primeng/image';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { TrainerComponent } from './trainer/trainer.component';
+import { DialogComponent } from './shared/dialog/dialog.component';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // เพิ่มการ import นี้
 
 @NgModule({
   declarations: [
@@ -45,8 +46,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     OrderComponent,
     SingupComponent,
     TrainingComponent,
-    RecommendFoodComponent,
-    ProductPageComponent
+    TrainerComponent,
+    DialogComponent,
 
   ],
   imports: [
@@ -67,7 +68,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     DropdownModule,
     DividerModule,
     ImageModule,
-    MatGridListModule
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
