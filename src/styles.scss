@@ -575,3 +575,33 @@ label {
   justify-content: center; /* จัดให้อยู่กลางแนวนอน */
   font-weight: bold;
 }
+
+.cancel-button {
+  background-color: white;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.confirm-button {
+  background-color: #3edbf0; /* สีฟ้าอ่อน */
+  color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-weight: bold;
+}
+
+.header-dialog {
+  color: black;
+  border: none;
+  font-weight: bold;
+  margin: 0; /* ปรับให้เป็น 0 เพื่อลดระยะห่าง */
+  padding: 0; /* ลด padding ถ้ามี */
+}
+
+.header-dialog h2 {
+  margin-top: 0; /* ลดระยะห่างด้านบนของ h2 */
+}
+
