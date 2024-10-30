@@ -24,16 +24,43 @@
             </p-galleria>
           </div>
 
-        <mat-grid-list cols="3" rowHeight="50px" gutterSize="0px">
-            @for (tile of tiles; track tile) {
-              <mat-grid-tile
-                [colspan]="tile.cols"
-                [rowspan]="tile.rows"
-                [style.background]="tile.color"
-                [style.fontSize]="tile.fontSize"
-                [style.color]="tile.textColor">{{tile.text}}</mat-grid-tile>
-            }
-        </mat-grid-list> 
+        <p-splitter 
+          [style]="{ height: '120px', border: 'none' }" 
+          [panelSizes]="[40, 30, 30]" 
+          [panelStyle]="{ backgroundColor: '#c6c6c6' }"
+          [gutterSize]="0" 
+          styleClass="mb-5">
+          <ng-template pTemplate>
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div class="tile-content">
+                    <div style="flex-grow: 1;" class="flex align-items-center justify-content-center">
+                        <h4 style="color:black">PROMOTION</h4>
+                    </div>
+                    <div style="flex-grow: 1;" class="flex align-items-center justify-content-center">
+                        <h4 style="color:red">ลดราคาสูงสุด ถึง</h4>
+                    </div>
+                </div>
+            </div>
+           </ng-template>
+           <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="flex-grow: 1;" class="flex align-items-center justify-content-center">
+                            <h1 style="color: red;">50%</h1>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div class="tile-content">
+                            <img src="assets/PNG/optigoldwhey2.png" class="tile-image"/>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-splitter>  
           
         <div class="item-center content">
             <div class="content text-center">
@@ -41,46 +68,71 @@
             </div>
         </div>
 
-        <mat-grid-list cols="3" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/megamass.png" class="tile-image" />
-                    <p class="tile-text">Mega Mass Pro 1350<br>
-                        <strong>2800 ฿</strong></p>
+        <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/megamass.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Mega Mass Pro 1350<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/supermass.png" class="tile-image" />
-                    <p class="tile-text">Super Mass Gainer<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/supermass.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Super Mass Gainer<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
+            </ng-template>
+            <ng-template pTemplate>
+              <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                 <div class="tile-content">
-                    <img src="assets/PNG/gainfast.png" class="tile-image" />
-                    <p class="tile-text">Gain Fast<br>
-                        <strong>2800 ฿</strong></p>
+                    <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                        <img src="assets/PNG/gainfast.png" class="tile-image" />
+                    </div>
+                    <p class="tile-text" style="margin-top: 10px;">Gain<br> Fast<br>
+                        <strong>2800 ฿</strong>
+                    </p>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
-        
-        <mat-grid-list cols="2" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/baammass.png" class="tile-image" />
-                    <p class="tile-text">BAAM!! Mass<br>
-                        <strong>2800 ฿</strong></p>
+            </div>
+            </ng-template>
+        </p-splitter>
+
+        <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/baammass.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">BAAM!! Mass<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/elitemass.png" class="tile-image" />
-                    <p class="tile-text">Elite Mass<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/elitemass.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Elite Mass<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>  
+            </ng-template>
+        </p-splitter>  
 
         <hr class="solid">     
 
@@ -90,46 +142,71 @@
             </div>
         </div>
 
-        <mat-grid-list cols="3" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/dymatize.png" class="tile-image" />
-                    <p class="tile-text">Dymatize ISO 100<br>
-                        <strong>2800 ฿</strong></p>
+        <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/dymatize.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Dymatize ISO 100<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/optigold.png" class="tile-image" />
-                    <p class="tile-text">Optimum Nutrition Gold<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/optigold.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Optimum Nutrition Gold<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/scitec.png" class="tile-image" />
-                    <p class="tile-text">Scitec Nutrition 100% Whey<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/scitec.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Scitec Nutrition 100% Whey<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
-        
-        <mat-grid-list cols="2" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/bpisports.png" class="tile-image" />
-                    <p class="tile-text">BPI Sports Best Protein<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+        </p-splitter>  
+
+        <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/bpisports.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">BPI Sports<br> Best Protein<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/baamiso.png" class="tile-image" />
-                    <p class="tile-text">BAAM!! ISO ABSOLUTE ZERO<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/baamiso.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">BAAM!! ISO<br> ABSOLUTE ZERO<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </ng-template>
+        </p-splitter>  
 
         <hr class="solid">  
 
@@ -139,47 +216,71 @@
             </div>
         </div>
 
-        <mat-grid-list cols="3" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/bsnsyntha.png" class="tile-image" />
-                    <p class="tile-text">BSN Syntha-6<br>
-                        <strong>2800 ฿</strong></p>
+        <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/bsnsyntha.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">BSN<br> Syntha-6<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/myprotein.png" class="tile-image" />
-                    <p class="tile-text">MyProtein Impact Whey Protein<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/myprotein.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">MyProtein Impact<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/cellucor.png" class="tile-image" />
-                    <p class="tile-text">Cellucor Cor-Performance Whey<br>
-                        <strong>2800 ฿</strong></p>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/cellucor.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Cellucor<br> Whey<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
-        
-        <mat-grid-list cols="2" rowHeight="3:5">
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/eas100.png" class="tile-image" />
-                    <p class="tile-text">EAS 100% Whey Protein<br>
-                        <strong>2800 ฿</strong></p>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="tile-content">
-                    <img src="assets/PNG/vegasport.png" class="tile-image" />
-                    <p class="tile-text">Vega Sport Premium Protein<br>
-                        <strong>2800 ฿</strong></p>
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </ng-template>
+        </p-splitter>  
 
+        <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/eas100.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">EAS 100% Whey Protein<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/vegasport.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Vega Sport Premium Protein<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
+                </div>
+            </ng-template>
+        </p-splitter>
     </div>
     <div class="background-156">
         <div class="content">

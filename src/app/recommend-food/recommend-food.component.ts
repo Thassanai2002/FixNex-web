@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { RecfoodService } from './service/recfood.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {MatGridListModule} from '@angular/material/grid-list';
 
 export interface Tile {
   color: string;
@@ -19,12 +18,6 @@ export interface Tile {
   styleUrl: './recommend-food.component.scss',
 })
 export class RecommendFoodComponent {
-
-  tiles: Tile[] = [
-    {text: 'PROMOTION', cols: 2, rows: 1, color: '#9c9c9c', fontSize: '20px', textColor: 'black'},
-    {text: '50%', cols: 1, rows: 2, color: '#9c9c9c', fontSize: '30px', textColor: 'red'},
-    {text: 'ลดราคาสูงสุด ถึง', cols: 2, rows: 1, color: '#9c9c9c', fontSize: '20px', textColor: 'red'}
-  ];
 
   images: string[] = [
     'assets/PNG/FoodInfo2.png',
