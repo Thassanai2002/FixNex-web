@@ -50,7 +50,7 @@ export class ProfileComponent {
   ngOnInit() {
     window.scrollTo(0, 0);
 
-    let user_id = 1;
+    let user_id = 2;
 
     this.ProfileService.getProfile(user_id).subscribe((data) => {
       this.user = data.user;
