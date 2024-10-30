@@ -1,9 +1,11 @@
-<div class="container bg-red item-center">
-    <div class="content item-center center text-white">
-        <h2>อาหารเสริม</h2>
+<div class="grid container h-screen">
+    <div class="col-12">
+        <div class="content item-center center text-white">
+            <h2>อาหารเสริม</h2>
+        </div>
     </div>
 
-    <div class="bg-white width-100">
+    <div class="col-12 border-round-top-3xl surface-0 h-screen">
         <div class="content item-center">
             <p-galleria
               class="margin-top-40px"
@@ -21,65 +23,181 @@
               </ng-template>
             </p-galleria>
           </div>
-          
-        <div class="background-156">
-            <div class="content">
-                <div>
-                    <h1 class="text-left-bold">PROMOTION</h1>
-                    <h1 class="text-left-bold">ลดราคาสูงสุดถึง</h1>
-                </div>
-            </div>
-        </div>  
 
+        <mat-grid-list cols="3" rowHeight="50px" gutterSize="0px">
+            @for (tile of tiles; track tile) {
+              <mat-grid-tile
+                [colspan]="tile.cols"
+                [rowspan]="tile.rows"
+                [style.background]="tile.color"
+                [style.fontSize]="tile.fontSize"
+                [style.color]="tile.textColor">{{tile.text}}</mat-grid-tile>
+            }
+        </mat-grid-list> 
+          
         <div class="item-center content">
             <div class="content text-center">
-                <h2 style="color: grey;">ขายดี</h2>
+                <h2 style="color: grey;">เพิ่มกล้ามเนื้อ</h2>
             </div>
         </div>
 
-        <mat-grid-list cols="3" rowHeight="1:1">
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-            <mat-grid-tile><img src="assets/PNG/whey.png" class="png" /></mat-grid-tile>
-          </mat-grid-list>          
+        <mat-grid-list cols="3" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/megamass.png" class="tile-image" />
+                    <p class="tile-text">Mega Mass Pro 1350<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/supermass.png" class="tile-image" />
+                    <p class="tile-text">Super Mass Gainer<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/gainfast.png" class="tile-image" />
+                    <p class="tile-text">Gain Fast<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+        <mat-grid-list cols="2" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/baammass.png" class="tile-image" />
+                    <p class="tile-text">BAAM!! Mass<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/elitemass.png" class="tile-image" />
+                    <p class="tile-text">Elite Mass<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>  
 
         <hr class="solid">     
 
         <div class="item-center content">
             <div class="content text-center">
-                <h2 style="color: grey;">โปรโมชั่นพิเศษ</h2>
+                <h2 style="color: grey;">ลดไขมัน</h2>
             </div>
         </div>
+
+        <mat-grid-list cols="3" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/dymatize.png" class="tile-image" />
+                    <p class="tile-text">Dymatize ISO 100<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/optigold.png" class="tile-image" />
+                    <p class="tile-text">Optimum Nutrition Gold<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/scitec.png" class="tile-image" />
+                    <p class="tile-text">Scitec Nutrition 100% Whey<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+        <mat-grid-list cols="2" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/bpisports.png" class="tile-image" />
+                    <p class="tile-text">BPI Sports Best Protein<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/baamiso.png" class="tile-image" />
+                    <p class="tile-text">BAAM!! ISO ABSOLUTE ZERO<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
 
         <hr class="solid">  
 
         <div class="item-center content">
             <div class="content text-center">
-                <h2 style="color: grey;">สำหรับลูกค้า VIP</h2>
+                <h2 style="color: grey;">คงสภาพ</h2>
             </div>
         </div>
 
-        <div class="background-156">
-            <div class="content">
-                <div>
-                    <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-                    <p>เกี่ยวกับเรา</p>
-                    <p>ติดต่อเรา</p>
-                    <p>ทำไมต้องเลือกเรา</p>
+        <mat-grid-list cols="3" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/bsnsyntha.png" class="tile-image" />
+                    <p class="tile-text">BSN Syntha-6<br>
+                        <strong>2800 ฿</strong></p>
                 </div>
-            </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/myprotein.png" class="tile-image" />
+                    <p class="tile-text">MyProtein Impact Whey Protein<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/cellucor.png" class="tile-image" />
+                    <p class="tile-text">Cellucor Cor-Performance Whey<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+        <mat-grid-list cols="2" rowHeight="3:5">
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/eas100.png" class="tile-image" />
+                    <p class="tile-text">EAS 100% Whey Protein<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="tile-content">
+                    <img src="assets/PNG/vegasport.png" class="tile-image" />
+                    <p class="tile-text">Vega Sport Premium Protein<br>
+                        <strong>2800 ฿</strong></p>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
 
-            <div class="content">
-                <div>
-                    <h3 class="text-left-underline">สมาชิก</h3>
-                    <p>สิทธิพิเศษของสมาชิก</p>
-                    <p>กฎระเบียบการใช้งาน</p>
-                    <p>โปรโมชั่น</p>
-                    <p>สมัครสมาชิก</p>
-                </div>
+    </div>
+    <div class="background-156">
+        <div class="content">
+            <div>
+                <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+                <p>เกี่ยวกับเรา</p>
+                <p>ติดต่อเรา</p>
+                <p>ทำไมต้องเลือกเรา</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div>
+                <h3 class="text-left-underline">สมาชิก</h3>
+                <p>สิทธิพิเศษของสมาชิก</p>
+                <p>กฎระเบียบการใช้งาน</p>
+                <p>โปรโมชั่น</p>
+                <p>สมัครสมาชิก</p>
             </div>
         </div>
     </div>

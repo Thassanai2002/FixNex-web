@@ -1,9 +1,9 @@
-<div class="rid container h-screen">
+<div class="grid container h-screen">
   <div class="content item-center center text-white">
     <h2>คำนวณสารอาหาร</h2>
   </div>
 
-  <div class="col-12 p-4 border-round-top-3xl surface-0 h-screen">
+  <div class="col-12 border-round-top-3xl surface-0 h-screen">
     <div class="contentlogo item-center">
       <div class="contentlogo">
         <img
@@ -32,7 +32,7 @@
       <div class="content text-center">
         <form name="form">
           <div class="row mt-5 align-items-center">
-            <div class="col-4 d-flex justify-content-end">
+            <div class="col-4 text-left">
               <h3 class="text-black cal-label">เพศ</h3>
             </div>
             <div class="col-12">
@@ -164,16 +164,22 @@
 
           <div class="row mt-5">
             <div class="col-12 text-center">
-              <button class="btn btn-primary btn-cal" (click)="CalcDCI()">
-                คำนวณ
-              </button>
+              <p-button
+              label="คำนวณ"
+              styleClass="custom-button-blue-login"
+              (click)="CalcDCI()">
+              </p-button>
             </div>
           </div>
         </form>
       </div>
     </div>
 
+    &nbsp;
+
     <hr class="solid" />
+
+    &nbsp;
 
     <div class="background-156c">
       <div class="content text-center">
@@ -271,26 +277,58 @@
       </div>
     </div>
 
+    &nbsp;
+
     <hr class="solid" />
 
-    <div class="background-156">
-      <div class="content">
-        <div>
-          <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-          <p>เกี่ยวกับเรา</p>
-          <p>ติดต่อเรา</p>
-          <p>ทำไมต้องเลือกเรา</p>
-        </div>
+    <div class="item-center content">
+      <div class="content text-center">
+          <h2 style="color: grey;">แนะนำสำหรับคุณ</h2>
       </div>
+    </div>
 
-      <div class="content">
-        <div>
-          <h3 class="text-left-underline">สมาชิก</h3>
-          <p>สิทธิพิเศษของสมาชิก</p>
-          <p>กฎระเบียบการใช้งาน</p>
-          <p>โปรโมชั่น</p>
-          <p>สมัครสมาชิก</p>
-        </div>
+    <mat-grid-list cols="3" rowHeight="3:5">
+      <mat-grid-tile>
+          <div class="tile-content">
+            <img src="assets/PNG/optigold.png" class="tile-image" />
+            <p class="tile-text">Optimum Nutrition Gold<br>
+                <strong>2800 ฿</strong></p>
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <div class="tile-content">
+              <img src="assets/PNG/optigold.png" class="tile-image" />
+              <p class="tile-text">Optimum Nutrition Gold<br>
+                  <strong>2800 ฿</strong></p>
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <div class="tile-content">
+            <img src="assets/PNG/optigold.png" class="tile-image" />
+            <p class="tile-text">Optimum Nutrition Gold<br>
+                <strong>2800 ฿</strong></p>
+          </div>
+      </mat-grid-tile>
+  </mat-grid-list>
+
+  </div>
+  <div class="background-156">
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+        <p>เกี่ยวกับเรา</p>
+        <p>ติดต่อเรา</p>
+        <p>ทำไมต้องเลือกเรา</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">สมาชิก</h3>
+        <p>สิทธิพิเศษของสมาชิก</p>
+        <p>กฎระเบียบการใช้งาน</p>
+        <p>โปรโมชั่น</p>
+        <p>สมัครสมาชิก</p>
       </div>
     </div>
   </div>
