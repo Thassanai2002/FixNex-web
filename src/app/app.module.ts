@@ -28,6 +28,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
 import { ImageModule } from 'primeng/image';
 import { TrainerComponent } from './trainer/trainer.component';
+import { CoursetrainComponent } from './coursetrain/coursetrain.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TrainerComponent } from './trainer/trainer.component';
     SingupComponent,
     TrainingComponent,
     TrainerComponent,
+    CoursetrainComponent,
 
   ],
   imports: [

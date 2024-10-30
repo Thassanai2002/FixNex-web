@@ -12,6 +12,7 @@ import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainerComponent } from './trainer/trainer.component';
+import { CoursetrainComponent } from './coursetrain/coursetrain.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,8 +28,8 @@ const routes: Routes = [
   { path: 'singup', component: SingupComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'trainer', component: TrainerComponent },
+  { path: 'coursetrain', component: CoursetrainComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
