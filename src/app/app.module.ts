@@ -27,7 +27,7 @@ import { TrainingComponent } from './training/training.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
 import { ImageModule } from 'primeng/image';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 
