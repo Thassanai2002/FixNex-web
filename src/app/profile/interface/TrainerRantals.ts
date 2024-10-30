@@ -7,6 +7,6 @@ export interface TrainerRantals {
   rental_id: number;
   user_id: number;
   trainer_id: number;
-  rental_date: Date; // ถ้าคุณจะใช้ Date ควรมั่นใจว่า data นี้มีประเภทที่ตรงกัน
+  rental_date: string; // ถ้าคุณจะใช้ Date ควรมั่นใจว่า data นี้มีประเภทที่ตรงกัน
   duration: number;
 }
