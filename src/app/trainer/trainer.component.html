@@ -25,15 +25,15 @@
                       </div>
                     </div>
                 </div>
-
-                <form [formGroup]="form" class="flex justify-content-center">
-                    <div class="flex flex-column gap-2 mt-4">
-                        <label for="goal">เป้าหมาย <p-dropdown 
-                            formControlName="bodypump"
-                            placeholder="เลือกเป้าหาย" />
-                        </label>
-                    </div>
-                </form>
+                
+                <div class="card flex justify-content-center gap-2 mt-4">
+                    <label for="goal">เป้าหมาย <p-dropdown 
+                        [options]="goals" 
+                        [(ngModel)]="selectedGoal" 
+                        optionLabel="name"
+                        placeholder="เลือกเป้าหมาย" />
+                    </label>
+                </div>
 
                 <div class="margin margin-top-30px">
                     <div class="item-center text-center">
@@ -81,7 +81,7 @@
                     </p-image>
                     <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายคุณภัทร บัวประดิษฐ์</p>
                     <p class="font grid justify-content-center gap-2 mt-4">ความถนัด รักษากล้ามเนื้อ</p>
-                    <p class="font grid justify-content-center gap-2 mt-4">ประสบการณ์ ได้เข้าร่วม Asia Yoga Championship 2015</p>
+                    <p class="font grid justify-content-center gap-2 mt-4">ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ISSA (International Sports Sciences Association)</p>
                 </p-card>
 
                 <p-card class="grid flex justify-content-center gap-2 mt-4">
@@ -92,6 +92,7 @@
                     </p-image>
                     <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายทัศไนย แตงพรม</p>
                     <p class="font grid justify-content-center gap-2 mt-4">ความถนัด การลดไขมัน</p>
+                    <p class="font grid justify-content-center gap-2 mt-4">ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส NSCA (National Strength and Conditioning Association)</p>
                 </p-card>
 
                 <p-card class="grid flex justify-content-center gap-2 mt-4">
@@ -102,6 +103,7 @@
                     </p-image>
                     <p class="font grid justify-content-center gap-2 mt-4">ชื่อ-นามสกุล นายธนนท์ ไทยกูล</p>
                     <p class="font grid justify-content-center gap-2 mt-4">ความถนัด เพิ่มกล้ามเนื้อ<p>
+                    <p class="font grid justify-content-center gap-2 mt-4">ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ACE((American Council on Exercise)</p>
                 </p-card>
             </div>
             <div class="background-156">
