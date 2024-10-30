@@ -28,6 +28,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
 import { ImageModule } from 'primeng/image';
 import { TrainerComponent } from './trainer/trainer.component';
+import { DialogComponent } from './shared/dialog/dialog.component';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // เพิ่มการ import นี้
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { TrainerComponent } from './trainer/trainer.component';
     SingupComponent,
     TrainingComponent,
     TrainerComponent,
+    DialogComponent,
 
   ],
   imports: [
@@ -64,6 +68,8 @@ import { TrainerComponent } from './trainer/trainer.component';
     DropdownModule,
     DividerModule,
     ImageModule,
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

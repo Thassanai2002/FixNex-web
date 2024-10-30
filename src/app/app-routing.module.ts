@@ -12,7 +12,7 @@ import { OrderComponent } from './order/order.component';
 import { SingupComponent } from './singup/singup.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainerComponent } from './trainer/trainer.component';
-
+import { DialogComponent } from './shared/dialog/dialog.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'singup', component: SingupComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'trainer', component: TrainerComponent },
+  { path: 'Dialog', component: DialogComponent },
 ];
 
 @NgModule({
