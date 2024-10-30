@@ -31,37 +31,35 @@
     <div class="background-156c">
       <div class="content text-center">
         <form name="form">
-          <div class="row mt-5 align-items-center">
-            <div class="col-4 text-left">
+          <div class="row mt-3">
               <h3 class="text-black cal-label">เพศ</h3>
-            </div>
-            <div class="col-12">
-              <div class="cal-radio-wrapper d-flex">
-                <div class="cal-radio mr3">
+            <div class="col-7">
+              <div class="cal-radio-wrapper">
+                <div class="cal-radio mr3 gender-toggle">
                   <input
                     type="radio"
+                    id="male"
                     name="gender"
                     [(ngModel)]="gender"
                     value="male"
                   />
-                  <label>ชาย</label>
-
+                  <label for="male" class="toggle-option">ชาย</label>
+                
                   <input
                     type="radio"
+                    id="female"
                     name="gender"
                     [(ngModel)]="gender"
                     value="female"
                   />
-                  <label>หญิง</label>
+                  <label for="female" class="toggle-option">หญิง</label>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row mt-3">
-            <div class="col-4 text-left">
               <h3 class="text-black cal-label">อายุ</h3>
-            </div>
             <div class="col-7">
               <div class="cal-input-wrapper">
                 <input
@@ -69,15 +67,14 @@
                   class="form-control"
                   type="text"
                   [(ngModel)]="age"
+                  style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
                 />
               </div>
             </div>
           </div>
 
           <div class="row mt-3">
-            <div class="col-4 text-left">
-              <h3 class="text-black cal-label">ความสูง</h3>
-            </div>
+              <h3 class="text-black cal-label">ความสูง (ซม.)</h3>
             <div class="col-7">
               <div class="d-flex">
                 <div class="cal-input-wrapper">
@@ -86,17 +83,15 @@
                     class="form-control"
                     type="text"
                     [(ngModel)]="height"
+                    style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
                   />
                 </div>
-                <h3 class="text-black cal-label ml-3">ซม.</h3>
               </div>
             </div>
           </div>
 
           <div class="row mt-3">
-            <div class="col-4 text-left">
-              <h3 class="text-black cal-label">น้ำหนัก</h3>
-            </div>
+              <h3 class="text-black cal-label">น้ำหนัก (กก.)</h3>
             <div class="col-7">
               <div class="d-flex">
                 <div class="cal-input-wrapper">
@@ -105,22 +100,20 @@
                     class="form-control"
                     type="text"
                     [(ngModel)]="weight"
+                    style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
                   />
                 </div>
-                <h3 class="text-black cal-label ml-3">กก.</h3>
               </div>
             </div>
           </div>
 
           <div class="row mt-3">
-            <div class="col-4 text-left">
               <h3 class="text-black cal-label">ระดับการออกกำลังกายของคุณ</h3>
-            </div>
             <div class="col-7">
               <div class="select-wrapper cal-select-wrapper">
                 <select
                   name="exercise"
-                  class="select form-control"
+                  class="select form-control custom-select"
                   [(ngModel)]="activityFactor"
                 >
                   <option value="1.25">น้อย หรือไม่ค่อยออกกำลังกาย</option>
@@ -142,14 +135,12 @@
           </div>
 
           <div class="row mt-3">
-            <div class="col-4 text-left">
               <h3 class="text-black cal-label">เป้าหมาย</h3>
-            </div>
             <div class="col-7">
               <div class="select-wrapper cal-select-wrapper">
                 <select
                   name="objective"
-                  class="select form-control"
+                  class="select form-control custom-select"
                   [(ngModel)]="objective"
                 >
                   <option value="1">เพิ่มกล้ามเนื้อ</option>
@@ -287,7 +278,7 @@
       </div>
     </div>
 
-    <mat-grid-list cols="3" rowHeight="3:5">
+    <mat-grid-list cols="3" rowHeight="1:2">
       <mat-grid-tile>
           <div class="tile-content">
             <img src="assets/PNG/optigold.png" class="tile-image" />

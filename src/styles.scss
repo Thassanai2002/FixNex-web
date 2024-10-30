@@ -51,7 +51,6 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
   height: 100%;
 }
 
@@ -593,4 +592,43 @@ label {
   font-size: 16px;
   color: #333;
   text-align: center;
+}
+
+.custom-select {
+  border: 1px solid black;
+  border-radius: 10px;               
+  padding: 10px 12px;                
+  font-size: 14px;                 
+  width: 100%;                       
+  transition: all 0.3s ease;          
+}
+
+.gender-toggle {
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gender-toggle input[type="radio"] {
+  display: none;
+}
+
+.gender-toggle .toggle-option {
+  padding: 53px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #f0f0f0;
+  color: red;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.gender-toggle .toggle-option:hover {
+  background-color: red;
+  color: white;
+}
+
+.gender-toggle input[type="radio"]:checked + label {
+  background-color: red;
+  color: white;
 }
