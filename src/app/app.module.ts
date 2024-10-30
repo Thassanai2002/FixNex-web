@@ -31,6 +31,8 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // เพิ่มการ import นี้
+import { CoursetrainComponent } from './coursetrain/coursetrain.component';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     TrainingComponent,
     TrainerComponent,
     DialogComponent,
+    CoursetrainComponent,
 
   ],
   imports: [
