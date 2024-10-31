@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 interface Goal {
   name: string;
-  code: string;
 }
 
 @Component({
@@ -12,6 +11,7 @@ interface Goal {
   styleUrl: './trainer.component.scss'
 })
 export class TrainerComponent {
+  public name!: string;
   public form!: FormGroup;
   public visibleModal = false;
 
@@ -20,11 +20,11 @@ export class TrainerComponent {
 
     ngOnInit() {
         this.goals = [
-            { name: 'มีรูปร่างที่ดี', code: 'NY' },
-            { name: 'ความยืดหยุ่น', code: 'RM' },
-            { name: 'รักษากล้ามเนื้อ', code: 'LDN' },
-            { name: 'การลดไขมัน', code: 'IST' },
-            { name: 'เพิ่มกล้ามเนื้อ', code: 'PRS' }
+            { name: 'มีรูปร่างที่ดี' },
+            { name: 'ความยืดหยุ่น'},
+            { name: 'รักษากล้ามเนื้อ'},
+            { name: 'การลดไขมัน'},
+            { name: 'เพิ่มกล้ามเนื้อ'}
         ];
     }
 }

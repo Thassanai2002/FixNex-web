@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './coursetrain.component.scss'
 })
 export class CoursetrainComponent {
+  public name!: string;
   public visibleModal = false;
 
 }

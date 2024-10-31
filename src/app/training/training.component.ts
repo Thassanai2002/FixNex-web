@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './training.component.scss'
 })
 export class TrainingComponent {
+  public name!: string;
   public form!: FormGroup;
   public visibleModal = false;
 
