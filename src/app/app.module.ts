@@ -34,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { SplitterModule } from 'primeng/splitter';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,9 @@ import { SplitterModule } from 'primeng/splitter';
     ImageModule,
     DialogModule,
     BrowserAnimationsModule,
-    SplitterModule
+    SplitterModule,
+    DataViewModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

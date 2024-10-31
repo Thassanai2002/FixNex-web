@@ -4,6 +4,45 @@
     </div>
 
     <div class="col-12 border-round-top-3xl surface-0 h-screen">
+
+        <div class="item-center content">
+            <div class="product-card">
+                <div class="image-container">
+                    <div style="border: 2px solid black; padding: 5px; ">
+                        <img src="assets/PNG/optigold.png" class="main-image" />
+                    </div>
+                </div>
+            
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="price">{{ product.price | currency: 'THB' }}</p>
+                <p class="stock-info">สินค้าคงเหลือ {{ product.stock }} ชิ้น</p>
+            
+                <div class="thumbnail-gallery">
+                    <div style="border: 2px solid black; padding: 5px; ">
+                        <img src="assets/PNG/optigold.png" class="thumbnail" />
+                    </div>
+                    <div style="border: 2px solid black; padding: 5px; ">
+                        <img src="assets/PNG/optigold.png" class="thumbnail" />
+                    </div>
+                    <div style="border: 2px solid black; padding: 5px; ">
+                        <img src="assets/PNG/optigold.png" class="thumbnail" />
+                    </div>
+                </div>
+            
+                <div class="quantity-selector">
+                <span>จำนวนซื้อ</span>
+                <button (click)="decrementQuantity()">-</button>
+                <input [(ngModel)]="product.quantity" type="number" />
+                <button (click)="incrementQuantity()">+</button>
+                <span>ชิ้น</span>
+                </div>
+            
+                <div class="buttons">
+                <button class="cart-button">ลงตะกร้า</button>
+                <button class="buy-now-button">ซื้อสินค้า</button>
+                </div>
+            </div>      
+        </div>              
           
         <hr class="solid">  
 
@@ -17,7 +56,7 @@
 
         <div class="item-center content">
             <div class="content text-center">
-                <h2 style="color: grey;">Optimum Nutrition Whey Protein Gold</h2>
+                <h2>Optimum Nutrition Whey Protein Gold</h2>
             </div>
         </div>
 
@@ -28,6 +67,45 @@
                 <h2 style="color: grey;">ควรใช้ร่วมกัน</h2>
             </div>
         </div>
+
+        <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/dymatize.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Dymatize ISO 100<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/optigold.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Optimum Nutrition Gold<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <div class="tile-content">
+                        <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
+                            <img src="assets/PNG/scitec.png" class="tile-image" />
+                        </div>
+                        <p class="tile-text" style="margin-top: 10px;">Scitec Nutrition 100% Whey<br>
+                            <strong>2800 ฿</strong>
+                        </p>
+                    </div>
+                </div>
+            </ng-template>
+        </p-splitter>
 
     </div>
     <div class="background-156">

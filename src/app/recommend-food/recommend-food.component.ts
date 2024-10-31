@@ -22,8 +22,8 @@ export class RecommendFoodComponent {
   images: string[] = [
     'assets/PNG/FoodInfo2.png',
     'assets/PNG/fixnex.png',
-    'assets/PNG/google-Photoroom.png',
-    'assets/PNG/facebook.png',
+    'assets/PNG/fruitbowl.png',
+    'assets/PNG/programInfo.jpg',
   ];
 
   responsiveOptions: any[] = [
