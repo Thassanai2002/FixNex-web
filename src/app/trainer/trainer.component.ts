@@ -17,6 +17,7 @@ interface Goal {
   styleUrl: './trainer.component.scss',
 })
 export class TrainerComponent {
+  public name!: string;
   public form!: FormGroup;
   public visibleModal = false;
   confirmSubscription: boolean = false;
