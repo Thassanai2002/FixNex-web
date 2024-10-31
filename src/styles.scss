@@ -17,7 +17,7 @@ p {
 
 body {
   font-family: "Prompt", sans-serif;
-  background: #FA1A1A;
+  background: linear-gradient(#FA1A1A 0%, #000000 100%);
   background-attachment: fixed;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-center-bold {
@@ -132,8 +132,7 @@ body {
   }
 
   h2 {
-    margin: 0rem;
-    font-size: 40px;
+    font-size: 26px;
   }
 }
 .fixed-card {
@@ -189,6 +188,10 @@ body {
 
 .text-white {
   color: #ffffff !important;
+}
+
+.text-black {
+  color: #000000;
 }
 
 .width100 {
@@ -609,3 +612,126 @@ label {
 .header-dialog h2 {
   margin-top: 0; /* ลดระยะห่างด้านบนของ h2 */
 }
+
+.p-bold {
+  font-weight: bold;
+}
+
+strong {
+  font-weight: normal; /* เปลี่ยนเป็นตัวอักษรปกติ */
+}
+
+/* ของmenu */
+.font-size-30-menu {
+  font-size: 30px;
+}
+
+.font-size-60-icon {
+  font-size: 60px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
+.font-size-34 {
+  font-size: 34px;
+}
+
+.menubar {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.menu-button {
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  margin-top: -40px;
+}
+
+.p-sidebar {
+  position: fixed;
+  transition: transform .3s;
+  display: flex;
+  flex-direction: column;
+  background-color: #FA1A1A;
+  color: #ffffff;
+}
+
+.px-4 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ml-2-font {
+  margin-left: 1.5rem !important;
+}
+
+.max-w-full {
+  max-width: 100% !important;
+}
+
+.transition-duration-150 {
+  transition-duration: 150ms !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.border-round {
+  border-radius: var(--border-radius) !important;
+}
+
+.list-none {
+  list-style: none !important;
+  padding-left: 0; /* ตั้งค่าขอบซ้ายให้เป็น 0 เพื่อให้ชิดซ้าย */
+  margin-left: 0; /* ตั้งค่าชิดซ้ายเต็มที่ */
+}
+
+.flex {
+  display: flex !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.png-menu {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+/* ของmenu */

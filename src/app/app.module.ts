@@ -32,6 +32,7 @@ import { DialogComponent } from './shared/dialog/dialog.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // เพิ่มการ import นี้
 import { CoursetrainComponent } from './coursetrain/coursetrain.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { CoursetrainComponent } from './coursetrain/coursetrain.component';
     TrainerComponent,
     DialogComponent,
     CoursetrainComponent,
+    MenuComponent,
 
   ],
   imports: [
@@ -72,7 +74,7 @@ import { CoursetrainComponent } from './coursetrain/coursetrain.component';
     DividerModule,
     ImageModule,
     DialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

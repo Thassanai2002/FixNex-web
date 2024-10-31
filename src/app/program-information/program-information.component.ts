@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './program-information.component.scss'
 })
 export class ProgramInformationComponent {
+  public name!: string;
 
   constructor(
     private router: Router,

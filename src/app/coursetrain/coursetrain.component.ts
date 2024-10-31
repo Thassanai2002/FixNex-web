@@ -10,6 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrl: './coursetrain.component.scss',
 })
 export class CoursetrainComponent {
+  public name!: string;
   public visibleModal = false;
   state = {} as StateDataInterface<any>;
   progarm_data: any;
