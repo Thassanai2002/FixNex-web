@@ -62,11 +62,11 @@ export class TrainingComponent {
     this.router.navigate(['/trainer'], { state: this.state });
   }
 
-  goPageCoursetrain(header: any, program_id: number) {
+  goPageCoursetrain(header: any, program_id: number, src: any) {
     this.state.user = this.user_id; // เก็บข้อมูลผู้ใช้
     this.state.header = header; // เก็บ orderItems
     this.state.data = program_id; // เก็บ orderItems
-
+    this.state.src = src;
     console.log(this.state);
 
     this.router.navigate(['/coursetrain'], { state: this.state }); // ส่ง state ในการนำทาง
