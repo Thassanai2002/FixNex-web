@@ -30,10 +30,6 @@ export class LoginComponent {
     });
   }
 
-  // save(){
-  //   this.HemoService.save(this.signIn.value)
-  // }
-
   public save(): void {
     this.HemoService.save(this.signIn.value).subscribe((data) => {
       console.log(data);
