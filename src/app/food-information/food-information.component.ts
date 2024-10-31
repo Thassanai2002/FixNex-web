@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './food-information.component.scss'
 })
 export class FoodInformationComponent {
+  public name!: string;
 
   constructor(
     private router: Router,

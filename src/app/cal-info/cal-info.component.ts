@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './cal-info.component.scss'
 })
 export class CalInfoComponent {
+  public name!: string;
 
   constructor(
     private router: Router,

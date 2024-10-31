@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  public name!: string;
 
 
   images: string[] = [

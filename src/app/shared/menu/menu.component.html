@@ -1,0 +1,70 @@
+<p-sidebar #sidebarRef [(visible)]="sidebarVisible" styleClass="side-bar">
+    <span class="pi pi-search"></span>
+    <ng-template pTemplate="headless">
+      <div class="flex flex-column h-full">
+        <div class="flex align-items-center justify-content-start px-4 pt-3 flex-shrink-0">
+          <div class="flex align-items-center">
+            <span class="pi pi-user font-size-60-icon material-symbols-outlined text-center"></span>
+          </div>
+          <div class="flex-column ml-2-font max-w-full">
+            <div class="align-items-center font-bold font-size-34">Welcome</div>
+          </div>
+        </div>
+        <div class="overflow-y-auto mt-4">
+          <ul class="list-none p-0 m-0 overflow-hidden">
+            <li (click)="goToPage('home')">
+              <a pRipple
+                class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple ">
+                <span class="pi pi-home material-symbols-outlined font-size-32"></span>
+                <span class="font-medium ml-2">หน้าหลัก</span>
+              </a>
+            </li>
+            <li (click)="goToPage('menu')">
+                <a pRipple
+                  class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple">
+                  <span class="pi pi-shopping-cart material-symbols-outlined font-size-32"></span>
+                  <span class="font-medium ml-2">สั่งซื้ออาหารเสริม</span>
+                </a>
+              </li>
+            <li (click)="goToPage('training')">
+              <a pRipple
+                class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple">
+                <span class="pi pi-flag material-symbols-outlined font-size-32"></span>
+                <span class="font-medium ml-2">คอร์สออกกำลังกาย</span>
+              </a>
+            </li>
+            <li (click)="goToPage('calfood')">
+              <a pRipple class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple">
+                <span class="pi pi-clipboard material-symbols-outlined font-size-32" ></span>
+                <span class="font-medium ml-2" >คำนวณสารอาหาร</span>
+              </a>
+            </li>
+            <li (click)="goToPage('profile')">
+              <a pRipple
+                class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple">
+                <span class="pi pi-user material-symbols-outlined font-size-32"></span>
+                <span class="font-medium ml-2">บัญชีผู้ใช้</span>
+              </a>
+            </li>
+            <li (click)="goToPage('logout')">
+              <a pRipple
+                class="flex align-items-center cursor-pointer p-3 border-round transition-duration-150 p-ripple">
+                <span class="pi pi-sign-out material-symbols-outlined font-size-32"></span>
+                <span class="font-medium ml-2">ออกจากระบบ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="mt-auto flex align-items-center justify-content-center">
+                <img src="assets/PNG/Logo.png" class="png-menu" />
+        </div>
+      </div>
+    </ng-template>
+  </p-sidebar>
+  <div class="flex flex-wrap">
+    <button (click)=" sidebarVisible=true" class="menubar">
+        <span class="pi pi-bars font-size-30-menu"></span>
+    </button>
+  </div>
+  

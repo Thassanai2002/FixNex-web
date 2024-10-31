@@ -12,6 +12,7 @@ import { StateDataInterface } from '../shared/interfaces/interfaceAll';
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
+  public name!: string;
   // user_id!: number;
   user_name!: string;
   email!: string;

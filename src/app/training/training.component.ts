@@ -9,6 +9,7 @@ import { StateDataInterface } from '../shared/interfaces/interfaceAll';
   styleUrl: './training.component.scss',
 })
 export class TrainingComponent {
+  public name!: string;
   public form!: FormGroup;
   public visibleModal = false;
   state = {} as StateDataInterface<any>;

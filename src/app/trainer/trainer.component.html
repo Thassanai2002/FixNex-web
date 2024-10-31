@@ -1,8 +1,12 @@
 <div class="grid container h-screen">
   <div class="col-12">
-    <div class="flex justify-content-center">
-      <h2>เทรนเนอร์ส่วนตัว</h2>
-    </div>
+      <div><app-menu [name]="name"></app-menu></div>
+  </div>
+
+  <div class="col-12">
+      <div class="text-center font-bold text-white center">
+        <h2>เทรนเนอร์ส่วนตัว</h2>
+      </div>
   </div>
 
   <div class="col-12">
@@ -60,100 +64,166 @@
           <h2 class="font-color">เทรนเนอร์ที่ได้รับการรับรอง</h2>
         </div>
 
-        <p-card class="grid flex justify-content-center gap-2 mt-4">
-          <p-image
-            src="https://scontent-bkk1-1.xx.fbcdn.net/v/t1.15752-9/462558174_1702899867169436_5551357010290417340_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iN_EGM0SZ3AQ7kNvgGCBlyG&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=AksG7wu9duQQl6vqzhphOYt&oh=03_Q7cD1QG3c78Soqpj0H8XequY0Qyrd-KK1M_WtS_dr7Xey3GY6w&oe=67494356"
-            alt="Image"
-            width="60%"
-          >
-          </p-image>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ชื่อ-นามสกุล นายกฤษฎา นลินรัตน์พิพัฒน์
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ความถนัด มีรูปร่างที่ดี
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ประสบการณ์ ได้เข้าร่วมแข่งขันเพาะกายของ TBPA
-          </p>
-        </p-card>
+        <p-card p-card class="grid flex justify-content-center gap-2 mt-4">
+          <div
+              class="p-card-content"
+              style="display: flex; align-items: center; height: 150px">
+                  <div
+                      style="
+                      flex: 1;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      overflow: hidden;
+                      height: 100%;">
+                      <img
+                      src="https://scontent-bkk1-1.xx.fbcdn.net/v/t1.15752-9/462558174_1702899867169436_5551357010290417340_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iN_EGM0SZ3AQ7kNvgGCBlyG&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=AksG7wu9duQQl6vqzhphOYt&oh=03_Q7cD1QG3c78Soqpj0H8XequY0Qyrd-KK1M_WtS_dr7Xey3GY6w&oe=67494356"
+                      alt="Image"
+                      style="max-width: 100%; max-height: 100%; object-fit: cover"
+                      />
+                  </div>
+                  <div style="flex: 2; padding-left: 1rem">
+                      <p class="p-bold">
+                          ชื่อ-นามสกุล <strong>: นายกฤษฎา นลินรัตน์พิพัฒน์</strong>
+                      </p>
+                      <p class="p-bold">
+                          ความถนัด <strong>: มีรูปร่างที่ดี</strong>
+                      </p>
+                      <p class="p-bold">
+                          ประสบการณ์ <strong>: ได้เข้าร่วมแข่งขันเพาะกายของ TBPA</strong>
+                      </p>
+                  </div>
+          </div>
+      </p-card>
 
-        <p-card class="grid flex justify-content-center gap-2 mt-4">
-          <p-image
-            src="https://scontent-bkk1-1.xx.fbcdn.net/v/t1.15752-9/462544439_429348650191863_2503507149779019038_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=yqakOtXqO_oQ7kNvgFeP1w2&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=Ax8j8aNJnQPQ7NipZhUrVjW&oh=03_Q7cD1QF7p9ZY55i8XoStxRmJddeeERyQuKud3-68wu4uadgn5w&oe=67489A75"
-            alt="Image"
-            width="60%"
-          >
-          </p-image>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ชื่อ-นามสกุล นายกฤษตฤณ จันทวงศ์
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ความถนัด ความยืดหยุ่น
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ประสบการณ์ ได้เข้าร่วม Asia Yoga Championship 2015
-          </p>
-        </p-card>
+      <p-card p-card class="grid flex justify-content-center gap-2 mt-4">
+          <div
+              class="p-card-content"
+              style="display: flex; align-items: center; height: 150px">
+                  <div
+                      style="
+                      flex: 1;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      overflow: hidden;
+                      height: 100%;">
+                      <img
+                      src="https://scontent-bkk1-1.xx.fbcdn.net/v/t1.15752-9/462544439_429348650191863_2503507149779019038_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=yqakOtXqO_oQ7kNvgFeP1w2&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=Ax8j8aNJnQPQ7NipZhUrVjW&oh=03_Q7cD1QF7p9ZY55i8XoStxRmJddeeERyQuKud3-68wu4uadgn5w&oe=67489A75"
+                      alt="Image"
+                      style="max-width: 100%; max-height: 100%; object-fit: cover"
+                      />
+                  </div>
+                  <div style="flex: 2; padding-left: 1rem">
+                      <p class="p-bold">
+                          ชื่อ-นามสกุล <strong>: นายกฤษตฤณ จันทวงศ์</strong>
+                      </p>
+                      <p class="p-bold">
+                          ความถนัด <strong>: ความยืดหยุ่น</strong>
+                      </p>
+                      <p class="p-bold">
+                          ประสบการณ์ <strong>: ได้เข้าร่วม Asia Yoga Championship 2015</strong>
+                      </p>
+                  </div>
+          </div>
+      </p-card>
 
-        <p-card class="grid flex justify-content-center gap-2 mt-4">
-          <p-image
-            src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462535423_1567476983854693_5363226668808956378_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mYvu05xnVYgQ7kNvgEmfGme&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AtUfHXiAIWfhRYWtz4YNDfw&oh=03_Q7cD1QH3g5GoEV7dAtOSEpNzI8O-F5SS6uTM7_7lj-mIwpGtOQ&oe=67489E5D"
-            alt="Image"
-            width="60%"
-          >
-          </p-image>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ชื่อ-นามสกุล นายคุณภัทร บัวประดิษฐ์
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ความถนัด รักษากล้ามเนื้อ
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ISSA
-            (International Sports Sciences Association)
-          </p>
-        </p-card>
+      <p-card p-card class="grid flex justify-content-center gap-2 mt-4">
+          <div
+              class="p-card-content"
+              style="display: flex; align-items: center; height: 150px">
+                  <div
+                      style="
+                      flex: 1;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      overflow: hidden;
+                      height: 100%;">
+                      <img
+                      src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462535423_1567476983854693_5363226668808956378_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mYvu05xnVYgQ7kNvgEmfGme&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AtUfHXiAIWfhRYWtz4YNDfw&oh=03_Q7cD1QH3g5GoEV7dAtOSEpNzI8O-F5SS6uTM7_7lj-mIwpGtOQ&oe=67489E5D"
+                      alt="Image"
+                      style="max-width: 100%; max-height: 100%; object-fit: cover"
+                      />
+                  </div>
+                  <div style="flex: 2; padding-left: 1rem">
+                      <p class="p-bold">
+                          ชื่อ-นามสกุล <strong>: นายคุณภัทร บัวประดิษฐ์</strong>
+                      </p>
+                      <p class="p-bold">
+                          ความถนัด <strong>: รักษากล้ามเนื้อ</strong>
+                      </p>
+                      <p class="p-bold">
+                          ประสบการณ์ <strong>: ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ISSA </strong>
+                      </p>
+                  </div>
+          </div>
+      </p-card>
 
-        <p-card class="grid flex justify-content-center gap-2 mt-4">
-          <p-image
-            src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462553902_2293763364318819_3273452400014647285_n.png?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ke7TA_RnPQgQ7kNvgEKZFM6&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AtUfHXiAIWfhRYWtz4YNDfw&oh=03_Q7cD1QG3cBNYFkysvIq4_NpoUFwshtTU4P8MjSJ2nTaqXc9M_Q&oe=6748BEBD"
-            alt="Image"
-            width="60%"
-          >
-          </p-image>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ชื่อ-นามสกุล นายทัศไนย แตงพรม
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ความถนัด การลดไขมัน
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส NSCA (National
-            Strength and Conditioning Association)
-          </p>
-        </p-card>
+      <p-card p-card class="grid flex justify-content-center gap-2 mt-4">
+          <div
+              class="p-card-content"
+              style="display: flex; align-items: center; height: 150px">
+                  <div
+                      style="
+                      flex: 1;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      overflow: hidden;
+                      height: 100%;">
+                      <img
+                      src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462553902_2293763364318819_3273452400014647285_n.png?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ke7TA_RnPQgQ7kNvgEKZFM6&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AtUfHXiAIWfhRYWtz4YNDfw&oh=03_Q7cD1QG3cBNYFkysvIq4_NpoUFwshtTU4P8MjSJ2nTaqXc9M_Q&oe=6748BEBD"
+                      alt="Image"
+                      style="max-width: 100%; max-height: 100%; object-fit: cover"
+                      />
+                  </div>
+                  <div style="flex: 2; padding-left: 1rem">
+                      <p class="p-bold">
+                          ชื่อ-นามสกุล <strong>: นายทัศไนย แตงพรม</strong>
+                      </p>
+                      <p class="p-bold">
+                          ความถนัด <strong>: การลดไขมัน</strong>
+                      </p>
+                      <p class="p-bold">
+                          ประสบการณ์ <strong>: ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส NSCA </strong>
+                      </p>
+                  </div>
+          </div>
+      </p-card>
 
-        <p-card class="grid flex justify-content-center gap-2 mt-4">
-          <p-image
-            src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462548712_891282326277699_2465624277196415201_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=sW4L2e7cTCYQ7kNvgEIcryx&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AfAT_cHD7bD6PdGQZuztc-N&oh=03_Q7cD1QGvoeqkB5_0ocf1Ty4343QJJXrXId__Y47epRfdKaQaNw&oe=6748C00A"
-            alt="Image"
-            width="60%"
-          >
-          </p-image>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ชื่อ-นามสกุล นายธนนท์ ไทยกูล
-          </p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ความถนัด เพิ่มกล้ามเนื้อ
-          </p>
-          <p></p>
-          <p class="font grid justify-content-center gap-2 mt-4">
-            ประสบการณ์ ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ACE(American
-            Council on Exercise)
-          </p>
-        </p-card>
-      </div>
+      <p-card p-card class="grid flex justify-content-center gap-2 mt-4">
+          <div
+              class="p-card-content"
+              style="display: flex; align-items: center; height: 150px">
+                  <div
+                      style="
+                      flex: 1;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      overflow: hidden;
+                      height: 100%;">
+                      <img
+                      src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/462548712_891282326277699_2465624277196415201_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=sW4L2e7cTCYQ7kNvgEIcryx&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=AfAT_cHD7bD6PdGQZuztc-N&oh=03_Q7cD1QGvoeqkB5_0ocf1Ty4343QJJXrXId__Y47epRfdKaQaNw&oe=6748C00A"
+                      alt="Image"
+                      style="max-width: 100%; max-height: 100%; object-fit: cover"
+                      />
+                  </div>
+                  <div style="flex: 2; padding-left: 1rem">
+                      <p class="p-bold">
+                          ชื่อ-นามสกุล <strong>: นายธนนท์ ไทยกูล</strong>
+                      </p>
+                      <p class="p-bold">
+                          ความถนัด <strong>: เพิ่มกล้ามเนื้อ</strong>
+                      </p>
+                      <p class="p-bold">
+                          ประสบการณ์ <strong>: ได้รับการรับรองจากสถาบันเทรนเนอร์ฟิตเนส ACE</strong>
+                      </p>
+                  </div>
+          </div>
+      </p-card>
+    </div>
       <div class="background-156">
         <div class="content">
           <div>
@@ -174,7 +244,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 <!--dialog ยืนยันการสมัครสมาชิก -->
