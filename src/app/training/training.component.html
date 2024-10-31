@@ -46,20 +46,19 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
-                  [style]="{ width: '150px' }"
+                  subheader="Strength Training Basic"
+                  [style]="{ width: '150px'}"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture5.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
                       <p-button label="สมัคร" styleClass="button-training"
-                      (click)="goCoursetrainer()"
+                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',5)"
                       />
                     </div>
                   </ng-template>
@@ -71,19 +70,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Endurance Training"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture8.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',8)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -94,19 +94,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Advanced Strength Training"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture10.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',10)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -117,19 +118,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Pilates Training"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture12.jpg"
+                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',12)"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
+                      <p-button label="สมัคร" styleClass="button-training "
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -149,19 +151,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Basic Weight Loss"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture2.jpg"
+                      (click)="goPageCoursetrain('ลดไข้มัน',2)"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -172,19 +175,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Standard Cardio Fitness"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture4.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('ลดไข้มัน',4)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -195,19 +199,21 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Dance Fitness"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture6.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('ลดไข้มัน',6)"
+
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -218,19 +224,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Premium Cardio Interval Training"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture11.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('ลดไข้มัน',11)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -250,19 +257,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Beginner Fitness"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture1.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',1)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -273,19 +281,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Body Sculpting"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture7.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',7)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -296,19 +305,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Yoga for Relaxation"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture9.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training" />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',9)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -319,120 +329,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Flexibility & Stretching"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture3.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
-                    </div>
-                  </ng-template>
-                </p-card>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p-divider type="solid" />
-
-        <div class="flex justify-content-center pt-5">
-          <h2 class="font-color">ได้รับความนิยม</h2>
-        </div>
-
-        <div class="grid">
-          <div class="col-6">
-            <div class="text-center p-4 border-round-top-3xl">
-              <div class="card flex justify-content-center">
-                <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
-                  [style]="{ width: '150px' }"
-                >
-                  <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
-                    />
-                  </ng-template>
-                  <ng-template pTemplate="footer">
-                    <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
-                    </div>
-                  </ng-template>
-                </p-card>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="text-center p-4 border-round-top-3xl">
-              <div class="card flex justify-content-center">
-                <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
-                  [style]="{ width: '150px' }"
-                >
-                  <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
-                    />
-                  </ng-template>
-                  <ng-template pTemplate="footer">
-                    <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
-                    </div>
-                  </ng-template>
-                </p-card>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="text-center p-4 border-round-top-3xl">
-              <div class="card flex justify-content-center">
-                <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
-                  [style]="{ width: '150px' }"
-                >
-                  <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
-                    />
-                  </ng-template>
-                  <ng-template pTemplate="footer">
-                    <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
-                    </div>
-                  </ng-template>
-                </p-card>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="text-center p-4 border-round-top-3xl">
-              <div class="card flex justify-content-center">
-                <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
-                  [style]="{ width: '150px' }"
-                >
-                  <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
-                    />
-                  </ng-template>
-                  <ng-template pTemplate="footer">
-                    <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',3)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -444,7 +354,7 @@
         <p-divider type="solid" />
 
         <div class="flex justify-content-center pt-5">
-          <h2 class="font-color">VIP</h2>
+          <h2 class="font-color">พรีเมี่ยม</h2>
         </div>
 
         <div class="grid">
@@ -452,19 +362,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Sports Conditioning"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture13.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('พรีเมี่ยม',13)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
@@ -475,19 +386,20 @@
             <div class="text-center p-4 border-round-top-3xl">
               <div class="card flex justify-content-center">
                 <p-card
-                  header="เพิ่มกล้ามเนื้อ"
-                  subheader="BODYPUMP"
+                  subheader="Functional Training"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
                     <img
                       alt="Card"
-                      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+                      src="assets/program/Picture14.jpg"
                     />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="สมัคร" styleClass="button-training " />
+                      <p-button label="สมัคร" styleClass="button-training"
+                      (click)="goPageCoursetrain('พรีเมี่ยม',14)"
+                      />
                     </div>
                   </ng-template>
                 </p-card>
