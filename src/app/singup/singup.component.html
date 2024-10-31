@@ -83,92 +83,91 @@
           </div>
           &nbsp;
         </div>
-
-        <!--dialog ยืนยันการสมัครสมาชิก -->
-        <p-dialog
-          [(visible)]="confirmSubscription"
-          [modal]="true"
-          [closable]="false"
-          [breakpoints]="{ '2000px': '350px' }"
-          [style]="{ width: '300px', textAlign: 'center' }"
-        >
-          <div class="header-dialog">
-            <h2>ยืนยันการสมัครสมาชิก</h2>
-          </div>
-          <div class="flex justify-content-center gap-3">
-            <p-button
-              label="ยกเลิก"
-              styleClass="cancel-button"
-              (click)="confirmSubscription = false"
-            ></p-button>
-            <p-button
-              label="ยืนยัน"
-              styleClass="confirm-button"
-              (click)="saveUser()"
-            ></p-button>
-          </div>
-        </p-dialog>
-
-        <!--dialog กรอกข้อมูลไม่ครบ -->
-        <p-dialog
-          [(visible)]="Incomplete_information"
-          [modal]="true"
-          [closable]="false"
-          [breakpoints]="{ '2000px': '350px' }"
-          [style]="{ width: '300px', textAlign: 'center' }"
-        >
-          <div class="header-dialog">
-            <h2>กรุณากรอกข้อมูลให้ครบ</h2>
-          </div>
-          <div class="flex justify-content-center gap-3">
-            <p-button
-              label="ตกลง"
-              styleClass="confirm-button"
-              (click)="Incomplete_information = false"
-            ></p-button>
-          </div>
-        </p-dialog>
-
-        <!--dialog username นี้มีผู้ใช้งานแล้ว -->
-        <p-dialog
-          [(visible)]="username_already"
-          [modal]="true"
-          [closable]="false"
-          [breakpoints]="{ '2000px': '350px' }"
-          [style]="{ width: '300px', textAlign: 'center' }"
-        >
-          <div class="header-dialog">
-            <h2>Username นี้มีผู้ใช้งานแล้ว</h2>
-          </div>
-          <div class="flex justify-content-center gap-3">
-            <p-button
-              label="ตกลง"
-              styleClass="confirm-button"
-              (click)="username_already = false"
-            ></p-button>
-          </div>
-        </p-dialog>
-
-        <!--dialog สมัครสมาชิกสำเร็จ -->
-        <p-dialog
-          [(visible)]="successful"
-          [modal]="true"
-          [closable]="false"
-          [breakpoints]="{ '2000px': '350px' }"
-          [style]="{ width: '300px', textAlign: 'center' }"
-        >
-          <div class="header-dialog">
-            <h2>สมัครสมาชิกสำเร็จ</h2>
-          </div>
-          <div class="flex justify-content-center gap-3">
-            <p-button
-              label="ตกลง"
-              styleClass="confirm-button"
-              (click)="successful = false"
-            ></p-button>
-          </div>
-        </p-dialog>
       </div>
     </div>
 
 </div>
+<!--dialog ยืนยันการสมัครสมาชิก -->
+<p-dialog
+  [(visible)]="confirmSubscription"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>ยืนยันการสมัครสมาชิก</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ยกเลิก"
+      styleClass="cancel-button"
+      (click)="confirmSubscription = false"
+    ></p-button>
+    <p-button
+      label="ยืนยัน"
+      styleClass="confirm-button"
+      (click)="saveUser()"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog กรอกข้อมูลไม่ครบ -->
+<p-dialog
+  [(visible)]="Incomplete_information"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>กรุณากรอกข้อมูลให้ครบ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="Incomplete_information = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog username นี้มีผู้ใช้งานแล้ว -->
+<p-dialog
+  [(visible)]="username_already"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>Username นี้มีผู้ใช้งานแล้ว</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="username_already = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog สมัครสมาชิกสำเร็จ -->
+<p-dialog
+  [(visible)]="successful"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>สมัครสมาชิกสำเร็จ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="successful = false"
+    ></p-button>
+  </div>
+</p-dialog>

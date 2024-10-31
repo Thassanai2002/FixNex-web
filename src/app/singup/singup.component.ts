@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SingUpService } from '../singup/service/sing-up.service';
 import { Router } from '@angular/router';
-import { DialogComponent } from '../shared/dialog/dialog.component';
 
 @Component({
   selector: 'app-singup',

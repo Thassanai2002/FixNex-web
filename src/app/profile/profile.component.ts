@@ -69,13 +69,6 @@ export class ProfileComponent {
     });
   }
 
-  // goPageOrder(orderItems: any) {
-  //   this.state.user = this.user;
-  //   this.state.criteriaData = orderItems;
-  //   console.log(this.state);
-  //   this.router.navigate(['/oderItem', this.state]);
-  // }
-
   goPageOrder(orderItems: any) {
     this.state.user = this.user; // เก็บข้อมูลผู้ใช้
     this.state.data = orderItems; // เก็บ orderItems

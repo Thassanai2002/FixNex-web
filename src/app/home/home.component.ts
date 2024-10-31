@@ -120,6 +120,10 @@ export class HomeComponent {
     this.router.navigate(['/programInfo']);
   }
 
+  gotraining(): void {
+    this.router.navigate(['/training']);
+  }
+
   public gocalInfo(): void {
     this.router.navigate(['/calInfo']);
   }

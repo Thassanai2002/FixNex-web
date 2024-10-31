@@ -105,6 +105,14 @@ body {
 .text-center {
   text-align: center !important;
 }
+
+.text-center-bold {
+  text-align: center;
+  font-weight: bold;
+  color: #333; /* เปลี่ยนสีตัวอักษรตามต้องการ */
+  font-size: 20px;
+}
+
 .png {
   width: 43vw; /* ปรับขนาดความกว้างให้เป็น 80% ของความกว้างหน้าจอ */
   height: auto; /* ปรับขนาดความสูงตามอัตราส่วนของรูปภาพ */
@@ -381,6 +389,7 @@ body {
 
 .text-left {
   text-align: left;
+  font-size: 17px;
   font-weight: bold;
   color: #333; /* เปลี่ยนสีตัวอักษรตามต้องการ */
 }
@@ -405,15 +414,14 @@ body {
   display: flex;
   font-weight: bold;
   color: #FA1A1A;
-  font-size: 20px;
+  font-size: 17px;
   margin-left: auto;
 }
 
 .text-right3 {
   display: flex;
-  font-weight: bold;
   color: #333;
-  font-size: 20px;
+  font-size: 17px;
   margin-left: auto;
 }
 
@@ -450,10 +458,6 @@ body {
 .item-center {
   justify-content: center;
   justify-items: center;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .galleria-image {
