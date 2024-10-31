@@ -20,4 +20,7 @@ export class ProgramInformationComponent {
   public gohome(): void {
     this.router.navigate(['/home']); }
 
+  public goprogram(): void {
+      this.router.navigate(['/training']); }
+
 }
