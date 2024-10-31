@@ -17,7 +17,7 @@ p {
 
 body {
   font-family: "Prompt", sans-serif;
-  background: #FA1A1A;
+  background: linear-gradient(#FA1A1A 0%, #000000 100%);
   background-attachment: fixed;
 }
 
@@ -51,6 +51,7 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  align-items: center;
   height: 100%;
 }
 
@@ -102,8 +103,16 @@ body {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
+
+.text-center-bold {
+  text-align: center;
+  font-weight: bold;
+  color: #333; /* เปลี่ยนสีตัวอักษรตามต้องการ */
+  font-size: 20px;
+}
+
 .png {
   width: 43vw; /* ปรับขนาดความกว้างให้เป็น 80% ของความกว้างหน้าจอ */
   height: auto; /* ปรับขนาดความสูงตามอัตราส่วนของรูปภาพ */
@@ -123,8 +132,7 @@ body {
   }
 
   h2 {
-    margin: 0rem;
-    font-size: 40px;
+    font-size: 26px;
   }
 }
 .fixed-card {
@@ -180,6 +188,10 @@ body {
 
 .text-white {
   color: #ffffff !important;
+}
+
+.text-black {
+  color: #000000;
 }
 
 .width100 {
@@ -377,6 +389,7 @@ body {
 
 .text-left {
   text-align: left;
+  font-size: 17px;
   font-weight: bold;
   color: #333; /* เปลี่ยนสีตัวอักษรตามต้องการ */
 }
@@ -385,20 +398,56 @@ body {
   display: flex;
   font-weight: bold;
   color: #FA1A1A;
-  font-size: 50px;
+  font-size: 36px;
   margin-left: auto;
 }
 
-.flex-container {
+.text-right1 {
   display: flex;
-  align-items: center;
-  font-size: 24px;
+  font-weight: bold;
+  color: #FA1A1A;
+  font-size: 22px;
+  margin-left: auto;
 }
 
-.flex-container2 {
+.text-right2 {
+  display: flex;
+  font-weight: bold;
+  color: #FA1A1A;
+  font-size: 17px;
+  margin-left: auto;
+}
+
+.text-right3 {
+  display: flex;
+  color: #333;
+  font-size: 17px;
+  margin-left: auto;
+}
+
+.flex-container,.flex-container2 {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+
+.flex-container3,.flex-container4  {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.flex-container5,.flex-container6 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.flex-container7,.flex-container8 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
 }
 
 .content {
@@ -409,10 +458,6 @@ body {
 .item-center {
   justify-content: center;
   justify-items: center;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .galleria-image {
@@ -536,6 +581,7 @@ label {
 .font{
   justify-content: center; /* จัดให้อยู่กลางแนวนอน */
   font-weight: bold;
+  font-size: 14px;
 }
 
 .cancel-button {
@@ -567,181 +613,125 @@ label {
   margin-top: 0; /* ลดระยะห่างด้านบนของ h2 */
 }
 
-.hr.solid {
-  margin-left: -30px;
-  margin-right: -30px;
-  color: #000;
+.p-bold {
+  font-weight: bold;
 }
 
-.tile-content {
+strong {
+  font-weight: normal; /* เปลี่ยนเป็นตัวอักษรปกติ */
+}
+
+/* ของmenu */
+.font-size-30-menu {
+  font-size: 30px;
+}
+
+.font-size-60-icon {
+  font-size: 60px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
+.font-size-34 {
+  font-size: 34px;
+}
+
+.menubar {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.menu-button {
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  margin-top: -40px;
+}
+
+.p-sidebar {
+  position: fixed;
+  transition: transform .3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #FA1A1A;
+  color: #ffffff;
 }
 
-.tile-image {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 0px;
+.px-4 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
-.tile-text {
-  font-size: 16px;
-  color: #333;
-  text-align: center;
+.pt-3 {
+  padding-top: 1rem !important;
 }
 
-.custom-select {
-  border: 1px solid black;
-  border-radius: 10px;               
-  padding: 10px 12px;                
-  font-size: 14px;                 
-  width: 100%;                       
-  transition: all 0.3s ease;          
+.p-3 {
+  padding: 1rem !important;
 }
 
-.gender-toggle {
-  border: 1px solid black;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 100%;
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
 }
 
-.gender-toggle input[type="radio"] {
-  display: none;
+.align-items-center {
+  align-items: center !important;
 }
 
-.gender-toggle .toggle-option {
-  padding: 53px;
-  cursor: pointer;
-  font-size: 20px;
-  background-color: #f0f0f0;
-  color: red;
-  transition: background-color 0.2s, color 0.2s;
+.justify-content-start {
+  justify-content: flex-start !important;
 }
 
-.gender-toggle .toggle-option:hover {
-  background-color: red;
-  color: white;
+.ml-2 {
+  margin-left: 0.5rem !important;
 }
 
-.gender-toggle input[type="radio"]:checked + label {
-  background-color: red;
-  color: white;
+.ml-2-font {
+  margin-left: 1.5rem !important;
 }
 
-.product-card {
-  padding: 16px;
-  width: 100%;
-  text-align: center;
-  font-family: Arial, sans-serif;
+.max-w-full {
+  max-width: 100% !important;
 }
 
-.image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
+.transition-duration-150 {
+  transition-duration: 150ms !important;
 }
 
-.main-image {
-  width: 100px;
-  max-width: 100px;
-  margin-bottom: 10px;
+.cursor-pointer {
+  cursor: pointer !important;
 }
 
-.product-name {
-  font-size: 16px;
-  margin: 8px 0;
+.border-round {
+  border-radius: var(--border-radius) !important;
 }
 
-.price {
-  color: red;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 8px 0;
+.list-none {
+  list-style: none !important;
+  padding-left: 0; /* ตั้งค่าขอบซ้ายให้เป็น 0 เพื่อให้ชิดซ้าย */
+  margin-left: 0; /* ตั้งค่าชิดซ้ายเต็มที่ */
 }
 
-.stock-info {
-  font-size: 14px;
-  color: #666;
-  margin: 4px 0;
+.flex {
+  display: flex !important;
 }
 
-.thumbnail-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 8px 0;
+.mt-auto {
+  margin-top: auto !important;
 }
 
-.thumbnail {
-  width: 40px;
-  max-width: 40px;
-  margin-bottom: 2px;
+.font-medium {
+  font-weight: 500 !important;
 }
 
-.quantity-selector {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px 0;
-  gap: 8px;
+.png-menu {
+  max-height: 150px;
+  max-width: 150px;
 }
 
-.quantity-selector span {
-  font-size: 14px;
-  margin: 0 4px;
+.font-bold {
+  font-weight: 700 !important;
 }
-
-.quantity-selector button {
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.quantity-selector button:hover {
-  background-color: #ccc;
-}
-
-.quantity-selector input {
-  width: 40px;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.cart-button {
-  background-color: white;
-  border: 1px solid black;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 100%;
-}
-
-.buy-now-button {
-  background-color: #00cec9;
-  border: 1px solid black;
-  color: white;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 100%;
-}
-
-
+/* ของmenu */

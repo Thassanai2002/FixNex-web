@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  public name!: string;
 
 
   images: string[] = [
@@ -117,6 +118,10 @@ export class HomeComponent {
 
   public goprogramInfo(): void {
     this.router.navigate(['/programInfo']);
+  }
+
+  gotraining(): void {
+    this.router.navigate(['/training']);
   }
 
   public gocalInfo(): void {

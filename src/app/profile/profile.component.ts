@@ -12,6 +12,7 @@ import { StateDataInterface } from '../shared/interfaces/interfaceAll';
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
+  public name!: string;
   // user_id!: number;
   user_name!: string;
   email!: string;
@@ -68,12 +69,38 @@ export class ProfileComponent {
     });
   }
 
-  // goPageOrder(orderItems: any) {
-  //   this.state.user = this.user;
-  //   this.state.criteriaData = orderItems;
-  //   console.log(this.state);
-  //   this.router.navigate(['/oderItem', this.state]);
-  // }
+  getImageProgram(trainerId: number): string {
+    switch (trainerId) {
+      case 1:
+        return '/assets/program/Picture1.jpg'; // รูปสำหรับ trainer_id = 1
+      case 2:
+        return '/assets/program/Picture2.jpg'; // รูปสำหรับ trainer_id = 2
+      case 3:
+        return '/assets/program/Picture3.jpg'; // รูปสำหรับ trainer_id = 3
+      case 4:
+        return '/assets/program/Picture4.jpg'; // รูปสำหรับ trainer_id = 3
+      case 5:
+        return '/assets/program/Picture5.jpg';
+      case 6:
+        return '/assets/program/Picture6.jpg';
+      case 7:
+        return '/assets/program/Picture7.jpg';
+      case 8:
+        return '/assets/program/Picture8.jpg';
+      case 9:
+        return '/assets/program/Picture9.jpg';
+      case 10:
+        return '/assets/program/Picture10.jpg';
+      case 11:
+        return '/assets/program/Picture11.jpg';
+      case 12:
+        return '/assets/program/Picture12.jpg';
+      case 13:
+        return '/assets/program/Picture13.jpg';
+      default:
+        return '/assets/program/Picture14.jpg'; // รูปสำหรับ trainer_id อื่น ๆ
+    }
+  }
 
   goPageOrder(orderItems: any) {
     this.state.user = this.user; // เก็บข้อมูลผู้ใช้

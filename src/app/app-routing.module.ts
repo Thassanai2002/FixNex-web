@@ -13,9 +13,7 @@ import { SingupComponent } from './singup/singup.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
-import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-
+import { CoursetrainComponent } from './coursetrain/coursetrain.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -31,8 +29,7 @@ const routes: Routes = [
   { path: 'training', component: TrainingComponent },
   { path: 'trainer', component: TrainerComponent },
   { path: 'Dialog', component: DialogComponent },
-  {path: 'recfood', component: RecommendFoodComponent},
-  {path: 'product', component: ProductPageComponent}
+  { path: 'coursetrain', component: CoursetrainComponent },
 ];
 
 @NgModule({

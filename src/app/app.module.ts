@@ -31,10 +31,9 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // เพิ่มการ import นี้
-import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-import { SplitterModule } from 'primeng/splitter';
-import { DataViewModule } from 'primeng/dataview';
+import { CoursetrainComponent } from './coursetrain/coursetrain.component';
+import { MenuComponent } from './shared/menu/menu.component';
+
 
 @NgModule({
   declarations: [
@@ -52,8 +51,8 @@ import { DataViewModule } from 'primeng/dataview';
     TrainingComponent,
     TrainerComponent,
     DialogComponent,
-    RecommendFoodComponent,
-    ProductPageComponent
+    CoursetrainComponent,
+    MenuComponent,
 
   ],
   imports: [
@@ -76,9 +75,6 @@ import { DataViewModule } from 'primeng/dataview';
     ImageModule,
     DialogModule,
     BrowserAnimationsModule,
-    SplitterModule,
-    DataViewModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

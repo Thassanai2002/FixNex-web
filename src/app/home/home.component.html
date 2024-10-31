@@ -1,6 +1,11 @@
 <div class="grid container h-screen">
+
   <div class="col-12">
-    <div class="content item-center center text-white">
+    <div><app-menu [name]="name"></app-menu></div>
+  </div> 
+
+  <div class="col-12">
+    <div class="text-center font-bold text-white center">
       <h2>หน้าหลัก</h2>
     </div>
   </div>
@@ -70,6 +75,7 @@
               [text]="true"
               [raised]="true"
               class="custom-button-red"
+              (click)="gotraining()"
             />
           </div>
         </p-card>
