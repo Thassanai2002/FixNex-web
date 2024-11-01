@@ -1,9 +1,8 @@
 <div class="grid container h-screen">
-
   <div class="col-12">
     <div><app-menu [name]="name"></app-menu></div>
   </div>
-  
+
   <div class="content item-center center text-white">
     <h2>คำนวณสารอาหาร</h2>
   </div>
@@ -37,7 +36,7 @@
       <div class="content text-center">
         <form name="form">
           <div class="row mt-3">
-              <h3 class="text-black cal-label">เพศ</h3>
+            <h3 class="text-black cal-label">เพศ</h3>
             <div class="col-7">
               <div class="cal-radio-wrapper">
                 <div class="cal-radio mr3 gender-toggle">
@@ -49,7 +48,7 @@
                     value="male"
                   />
                   <label for="male" class="toggle-option">ชาย</label>
-                
+
                   <input
                     type="radio"
                     id="female"
@@ -64,7 +63,7 @@
           </div>
 
           <div class="row mt-3">
-              <h3 class="text-black cal-label">อายุ</h3>
+            <h3 class="text-black cal-label">อายุ</h3>
             <div class="col-7">
               <div class="cal-input-wrapper">
                 <input
@@ -72,14 +71,21 @@
                   class="form-control"
                   type="text"
                   [(ngModel)]="age"
-                  style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
+                  style="
+                    border-radius: 10px;
+                    padding: 8px 12px;
+                    font-size: 14px;
+                    border: 1px solid black;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                  "
                 />
               </div>
             </div>
           </div>
 
           <div class="row mt-3">
-              <h3 class="text-black cal-label">ความสูง (ซม.)</h3>
+            <h3 class="text-black cal-label">ความสูง (ซม.)</h3>
             <div class="col-7">
               <div class="d-flex">
                 <div class="cal-input-wrapper">
@@ -88,7 +94,14 @@
                     class="form-control"
                     type="text"
                     [(ngModel)]="height"
-                    style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
+                    style="
+                      border-radius: 10px;
+                      padding: 8px 12px;
+                      font-size: 14px;
+                      border: 1px solid black;
+                      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                      width: 100%;
+                    "
                   />
                 </div>
               </div>
@@ -96,7 +109,7 @@
           </div>
 
           <div class="row mt-3">
-              <h3 class="text-black cal-label">น้ำหนัก (กก.)</h3>
+            <h3 class="text-black cal-label">น้ำหนัก (กก.)</h3>
             <div class="col-7">
               <div class="d-flex">
                 <div class="cal-input-wrapper">
@@ -105,7 +118,14 @@
                     class="form-control"
                     type="text"
                     [(ngModel)]="weight"
-                    style="border-radius: 10px; padding: 8px 12px; font-size: 14px; border: 1px solid black; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 100%;"
+                    style="
+                      border-radius: 10px;
+                      padding: 8px 12px;
+                      font-size: 14px;
+                      border: 1px solid black;
+                      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                      width: 100%;
+                    "
                   />
                 </div>
               </div>
@@ -113,7 +133,7 @@
           </div>
 
           <div class="row mt-3">
-              <h3 class="text-black cal-label">ระดับการออกกำลังกายของคุณ</h3>
+            <h3 class="text-black cal-label">ระดับการออกกำลังกายของคุณ</h3>
             <div class="col-7">
               <div class="select-wrapper cal-select-wrapper">
                 <select
@@ -140,7 +160,7 @@
           </div>
 
           <div class="row mt-3">
-              <h3 class="text-black cal-label">เป้าหมาย</h3>
+            <h3 class="text-black cal-label">เป้าหมาย</h3>
             <div class="col-7">
               <div class="select-wrapper cal-select-wrapper">
                 <select
@@ -161,9 +181,10 @@
           <div class="row mt-5">
             <div class="col-12 text-center">
               <p-button
-              label="คำนวณ"
-              styleClass="custom-button-blue-login"
-              (click)="CalcDCI()">
+                label="คำนวณ"
+                styleClass="custom-button-blue-login"
+                (click)="CalcDCI()"
+              >
               </p-button>
             </div>
           </div>
@@ -276,43 +297,6 @@
     &nbsp;
 
     <hr class="solid" />
-
-    <div class="item-center content">
-      <div class="content text-center">
-          <h2 style="color: grey;">แนะนำสำหรับคุณ</h2>
-      </div>
-    </div>
-
-  <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
-    <ng-template pTemplate>
-        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-          <div class="tile-content">
-            <img src="assets/PNG/optigold.png" class="tile-image" />
-            <p class="tile-text">Optimum Nutrition Gold<br>
-                <strong>2800 ฿</strong></p>
-          </div>
-        </div>
-    </ng-template>
-    <ng-template pTemplate>
-        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-          <div class="tile-content">
-            <img src="assets/PNG/optigold.png" class="tile-image" />
-            <p class="tile-text">Optimum Nutrition Gold<br>
-                <strong>2800 ฿</strong></p>
-          </div>
-        </div>
-    </ng-template>
-    <ng-template pTemplate>
-      <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-        <div class="tile-content">
-          <img src="assets/PNG/optigold.png" class="tile-image" />
-          <p class="tile-text">Optimum Nutrition Gold<br>
-              <strong>2800 ฿</strong></p>
-        </div>
-      </div>
-    </ng-template>
-  </p-splitter>
-
   </div>
   <div class="background-156">
     <div class="content">
@@ -332,6 +316,9 @@
         <p>โปรโมชั่น</p>
         <p>สมัครสมาชิก</p>
       </div>
+    </div>
+    <div class="mt-auto flex align-items-center justify-content-center">
+      <img src="assets/PNG/Logo.png" class="png-menu" />
     </div>
   </div>
 </div>

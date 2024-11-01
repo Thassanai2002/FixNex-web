@@ -1,11 +1,10 @@
 <div class="grid container h-screen">
-
   <div class="col-12">
     <div><app-menu [name]="name"></app-menu></div>
   </div>
-  
+
   <div class="col-12">
-    <div class=" text-center font-bold text-white center">
+    <div class="text-center font-bold text-white center">
       <h2>อาหารเสริม</h2>
     </div>
   </div>
@@ -16,51 +15,74 @@
         &nbsp;
         <div class="contentlogo item-center">
           <div class="contentlogo">
-            <img src="assets/PNG/FoodInfo1.png" class="png" style="width: 350px; height: auto;" />
+            <img
+              src="assets/PNG/FoodInfo1.png"
+              class="png"
+              style="width: 350px; height: auto"
+            />
           </div>
         </div>
-    
+
         <div class="item-center content">
           <div class="content text-center">
             <p-card p-card class="font-card">
               <h1>อาหารเสริม ช่วยอะไร?</h1>
-              <p style="color: black;">
+              <p style="color: black">
                 อาหารเสริมเพิ่มกล้ามเนื้อเหล่านี้ได้รับการออกแบบมาเพื่อช่วยสนับสนุนการฝึกซ้อมและการสร้างกล้ามเนื้อของคุณ
-                อาหารเสริมประเภทนี้มีประโยชน์ในการเพิ่มความแข็งแรง ความทนทาน และช่วยในการฟื้นฟูกล้ามเนื้อหลังการออกกำลังกาย
-                สารอาหารสำคัญ เช่น โปรตีน เวย์โปรตีน ครีเอทีน และบีซีเอเอ (BCAA)
-                ทำงานร่วมกันเพื่อส่งเสริมการเจริญเติบโตของกล้ามเนื้อ และช่วยรักษามวลกล้ามเนื้อให้คงอยู่
-                นอกจากนี้ยังมีผลิตภัณฑ์ที่ช่วยในการเผาผลาญไขมัน ควบคุมการลดน้ำหนัก
+                อาหารเสริมประเภทนี้มีประโยชน์ในการเพิ่มความแข็งแรง ความทนทาน
+                และช่วยในการฟื้นฟูกล้ามเนื้อหลังการออกกำลังกาย สารอาหารสำคัญ
+                เช่น โปรตีน เวย์โปรตีน ครีเอทีน และบีซีเอเอ (BCAA)
+                ทำงานร่วมกันเพื่อส่งเสริมการเจริญเติบโตของกล้ามเนื้อ
+                และช่วยรักษามวลกล้ามเนื้อให้คงอยู่
+                นอกจากนี้ยังมีผลิตภัณฑ์ที่ช่วยในการเผาผลาญไขมัน
+                ควบคุมการลดน้ำหนัก
                 เพื่อให้คุณสามารถเพิ่มกล้ามเนื้อในขณะที่ลดไขมันไปพร้อมกันได้อย่างมีประสิทธิภาพ
-                การเลือกอาหารเสริมที่เหมาะสมควรสอดคล้องกับเป้าหมายการออกกำลังกายและสภาพร่างกายของแต่ละบุคคล</p>
+                การเลือกอาหารเสริมที่เหมาะสมควรสอดคล้องกับเป้าหมายการออกกำลังกายและสภาพร่างกายของแต่ละบุคคล
+              </p>
               <div class="button-card card">
-                <p-button label="กลับหน้าหลัก" [text]="true" [raised]="true" severity="secondary" (click)="gohome()"
-                  class="custom-button-white" />
-                <p-button label="ทดลอง" [text]="true" [raised]="true" class="custom-button-red" (click)="gorecfood()" />
+                <p-button
+                  label="กลับหน้าหลัก"
+                  [text]="true"
+                  [raised]="true"
+                  severity="secondary"
+                  (click)="gohome()"
+                  class="custom-button-white"
+                />
+                <p-button
+                  label="ทดลอง"
+                  [text]="true"
+                  [raised]="true"
+                  class="custom-button-red"
+                  (click)="gorecfood()"
+                />
               </div>
             </p-card>
           </div>
         </div>
       </div>
-      <div class="background-156">
-        <div class="content">
-          <div>
-            <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-            <p>เกี่ยวกับเรา</p>
-            <p>ติดต่อเรา</p>
-            <p>ทำไมต้องเลือกเรา</p>
-          </div>
-        </div>
-  
-        <div class="content">
-          <div>
-            <h3 class="text-left-underline">สมาชิก</h3>
-            <p>สิทธิพิเศษของสมาชิก</p>
-            <p>กฎระเบียบการใช้งาน</p>
-            <p>โปรโมชั่น</p>
-            <p>สมัครสมาชิก</p>
-          </div>
-        </div>
+  <div class="background-156">
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+        <p>เกี่ยวกับเรา</p>
+        <p>ติดต่อเรา</p>
+        <p>ทำไมต้องเลือกเรา</p>
       </div>
+    </div>
+
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">สมาชิก</h3>
+        <p>สิทธิพิเศษของสมาชิก</p>
+        <p>กฎระเบียบการใช้งาน</p>
+        <p>โปรโมชั่น</p>
+        <p>สมัครสมาชิก</p>
+      </div>
+    </div>
+    <div class="mt-auto flex align-items-center justify-content-center">
+      <img src="assets/PNG/Logo.png" class="png-menu" />
+    </div>
+  </div>
     </div>
   </div>
 </div>
