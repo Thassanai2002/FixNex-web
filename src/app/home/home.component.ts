@@ -132,4 +132,8 @@ export class HomeComponent {
     this.router.navigate(['/calfood']);
   }
 
+  public gorecfood(): void {
+    this.router.navigate(['/recfood']);
+  }
+
 }

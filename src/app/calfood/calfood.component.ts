@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./calfood.component.scss'],
 })
 export class CalfoodComponent {
+  public name!: string;
   gender: string | null = null;
   age: number | null = null;
   height: number | null = null;

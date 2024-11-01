@@ -24,7 +24,7 @@ export class MenuComponent {
     switch (path) {
       case 'home': this.router.navigate(['home']);
         break;
-      case 'order-food': this.router.navigate(['order-food']);
+      case 'recfood': this.router.navigate(['recfood']);
         break;
       case 'training': this.router.navigate(['training']);
         break;

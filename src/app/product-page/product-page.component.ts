@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent {
+  public name!: string;
   product = {
     name: 'Optimum Nutrition Whey Protein Gold 5 LBS',
     price: 2800,
     stock: 20,
     quantity: 1,
+    
     imageUrl: 'path/to/main-image.jpg',
     thumbnailUrls: [
       'path/to/thumb1.jpg',
@@ -18,6 +20,7 @@ export class ProductPageComponent {
       'path/to/thumb3.jpg'
     ]
   };
+  product_data: any;
 
   incrementQuantity() {
     this.product.quantity++;
