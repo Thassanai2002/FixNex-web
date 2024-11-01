@@ -74,10 +74,7 @@ export class PaymentComponent implements OnInit {
         { value: this.state.data.quantity, disabled: false },
         Validators.required,
       ],
-      price: [
-        { value: this.total, disabled: false },
-        Validators.required,
-      ],
+      price: [{ value: this.total, disabled: false }, Validators.required],
     });
 
     this.UserSpending = this.formBuilder.group({
@@ -107,7 +104,7 @@ export class PaymentComponent implements OnInit {
 
   // Function to execute when user confirms the subscription
   public async saveOrderData() {
-    this.confirmSubscription = false
+    this.confirmSubscription = false;
     try {
       const orderData = await this.saveOrder(this.Order.value);
       if (!orderData) {
@@ -117,7 +114,7 @@ export class PaymentComponent implements OnInit {
 
       this.OrderItem.patchValue({ order_id: this.Id_order });
       await this.saveOrderItem(this.OrderItem.value);
-      await this.saveUserSpending(this.UserSpending.value);
+      await this.saveUserSpending();
 
       // Show success dialog
       this.successful = true;
@@ -126,31 +123,48 @@ export class PaymentComponent implements OnInit {
     }
   }
 
-
   private saveOrder(order: Order): Promise<Order> {
-    return this.paymaentService.saveOrder(order).toPromise().then((result) => {
-      if (!result) {
-        throw new Error('ไม่สามารถสร้างคำสั่งซื้อได้');
-      }
-      return result;
-    });
+    return this.paymaentService
+      .saveOrder(order)
+      .toPromise()
+      .then((result) => {
+        if (!result) {
+          throw new Error('ไม่สามารถสร้างคำสั่งซื้อได้');
+        }
+        return result;
+      });
   }
 
   private saveOrderItem(orderItem: OrderItem): Promise<OrderItem> {
-    return this.paymaentService.saveOrderItem(orderItem).toPromise().then((result) => {
-      if (!result) {
-        throw new Error('ไม่สามารถบันทึก OrderItem ได้');
-      }
-      return result;
-    });
+    return this.paymaentService
+      .saveOrderItem(orderItem)
+      .toPromise()
+      .then((result) => {
+        if (!result) {
+          throw new Error('ไม่สามารถบันทึก OrderItem ได้');
+        }
+        return result;
+      });
   }
 
-  private saveUserSpending(userSpending: UserSpending): Promise<UserSpending> {
-    return this.paymaentService.saveUserSpending(userSpending).toPromise().then((result) => {
+  private saveUserSpending() {
+    this.paymaentService.getUserSpending(this.user_id).subscribe((result) => {
       if (!result) {
-        throw new Error('ไม่สามารถบันทึก UserSpending ได้');
+        this.paymaentService
+          .postUserSpending(this.UserSpending.value)
+          .subscribe((data) => {
+            console.log('data:postUserSpending :', data);
+          });
+      } else {
+        result.total_spending += this.total;
+        result.last_purchas_date = new Date();
+        console.log('result.total_spending += this.total :', result.total_spending);
+        this.paymaentService
+          .patchUserSpending(result.spending_id, result)
+          .subscribe((data) => {
+            console.log('data:patchUserSpending :', data);
+          });
       }
-      return result;
     });
   }
 
