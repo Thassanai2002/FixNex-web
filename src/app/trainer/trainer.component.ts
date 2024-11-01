@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RantalsService } from './service/rantals.service';
+import { AuthService } from '../shared/user_id/id-user.service';
 
 interface Goal {
   name: string;
@@ -23,13 +24,14 @@ export class TrainerComponent {
   confirmSubscription: boolean = false;
   Incomplete_information: boolean = false;
   successful: boolean = false;
-  user_id = 2;
+  user_id = this.authService.getUserId();
   Rantals: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private rantalsService: RantalsService
+    private rantalsService: RantalsService,
+    private authService: AuthService
   ) {
     window.scrollTo(0, 0);
   }
