@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CoursetrainService } from './service/coursetrain.service';
 import { programsEnrollments } from './interface/coursetrain';
 import { FormBuilder, Validators } from '@angular/forms';
+import { PaymaentService } from '../payment/service/paymaent.service';
 @Component({
   selector: 'app-coursetrain',
   templateUrl: './coursetrain.component.html',
@@ -18,10 +19,12 @@ export class CoursetrainComponent {
   confirmSubscription: boolean = false;
   Incomplete_information: boolean = false;
   successful: boolean = false;
+  Vip_user!: string;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private CoursetrainService: CoursetrainService,
+    private paymaentService: PaymaentService,
     private formBuilder: FormBuilder,
   ) {
     window.scrollTo(0, 0);
@@ -34,6 +37,12 @@ export class CoursetrainComponent {
   }
 
   ngOnInit() {
+    this.paymaentService.getUser(this.state.user).subscribe((data) => {
+      if (data) {
+        this.Vip_user = data.vip_level;
+        console.log('this.Vip_user--------------', this.Vip_user);
+      }
+    })
     console.log(this.state);
     this.CoursetrainService.getProgram(this.state.data).subscribe((data) => {
       if (data) {

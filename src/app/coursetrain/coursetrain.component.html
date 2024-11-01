@@ -30,6 +30,10 @@
                 ระยะ(สัปดาห์)
                 <span class="text-right3">{{ progarm_data.duration }}</span>
               </div>
+              <div class="flex-container8">
+                VIP ที่ต้องการ
+                <span class="text-right3">{{ progarm_data.vip_required }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -65,34 +69,35 @@
             <p-button
               label="ลงทะเบียน"
               styleClass="custom-button-blue-login"
+              [disabled]="this.Vip_user < this.progarm_data.vip_required"
               (click)="confirmSubscription = true"
             ></p-button>
           </div>
         </div>
       </div>
-  <div class="background-156">
-    <div class="content">
-      <div>
-        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-        <p>เกี่ยวกับเรา</p>
-        <p>ติดต่อเรา</p>
-        <p>ทำไมต้องเลือกเรา</p>
-      </div>
-    </div>
+      <div class="background-156">
+        <div class="content">
+          <div>
+            <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+            <p>เกี่ยวกับเรา</p>
+            <p>ติดต่อเรา</p>
+            <p>ทำไมต้องเลือกเรา</p>
+          </div>
+        </div>
 
-    <div class="content">
-      <div>
-        <h3 class="text-left-underline">สมาชิก</h3>
-        <p>สิทธิพิเศษของสมาชิก</p>
-        <p>กฎระเบียบการใช้งาน</p>
-        <p>โปรโมชั่น</p>
-        <p>สมัครสมาชิก</p>
+        <div class="content">
+          <div>
+            <h3 class="text-left-underline">สมาชิก</h3>
+            <p>สิทธิพิเศษของสมาชิก</p>
+            <p>กฎระเบียบการใช้งาน</p>
+            <p>โปรโมชั่น</p>
+            <p>สมัครสมาชิก</p>
+          </div>
+        </div>
+        <div class="mt-auto flex align-items-center justify-content-center">
+          <img src="assets/PNG/Logo.png" class="png-menu" />
+        </div>
       </div>
-    </div>
-    <div class="mt-auto flex align-items-center justify-content-center">
-      <img src="assets/PNG/Logo.png" class="png-menu" />
-    </div>
-  </div>
     </div>
   </div>
 </div>
