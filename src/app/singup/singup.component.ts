@@ -65,26 +65,6 @@ export class SingupComponent {
     }
   }
 
-  // saveSignup(): void {
-  //   this.signUp.value.join_date = new Date();
-  //   this.signUp.value.vip_level = 0;
-  //   console.log(this.signUp.value);
-  //   if (this.signUp.valid) {
-  //     console.log('กรอกข้อมูลครบ');
-  //     this.SingUpService.saveUser(this.signUp.value).subscribe(
-  //       (data) => {
-  //         console.log('สมัครสมาชิกสําเร็จ');
-  //         this.signUp.reset();
-  //       },
-  //       (error) => {
-  //         console.log(error.error.message);
-  //       }
-  //     );
-  //   } else {
-  //     console.log('กรุณากรอกข้อมูลให้ครบ');
-  //   }
-  // }
-
   gologin() {
     this.router.navigate(['/login']);
   }

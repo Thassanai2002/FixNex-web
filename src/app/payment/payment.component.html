@@ -1,80 +1,166 @@
 <div class="grid container h-screen">
+  <div class="col-12">
+    <div><app-menu [name]="name"></app-menu></div>
+  </div>
 
-    <div class="col-12">
-        <div><app-menu [name]="name"></app-menu></div>
+  <div class="content item-center center text-white">
+    <h2>ทำการสั่งซื้อ</h2>
+  </div>
+
+  <div class="col-12 border-round-top-3xl surface-0 h-screen">
+    <div>
+      <div class="content text-center">
+        <img src="{{ this.state.src }}" height="100px" width="100px" />
+        <p style="text-align: left">
+          {{ this.state.data.product_name }}<br />
+          <strong>{{ this.state.data.unit_price }} ฿</strong>
+        </p>
+      </div>
     </div>
 
-    <div class="content item-center center text-white">
-        <h2>ทำการสั่งซื้อ</h2>
+    <div>
+      <div>
+        <p style="text-align: right; padding-right: 30px">
+          X{{ this.state.data.quantity }}
+        </p>
+      </div>
     </div>
 
-    <div class="col-12 border-round-top-3xl surface-0 h-screen"> 
+    <hr class="solid" />
 
-        <div>
-            <div class="content text-center">
-                <img src="assets/PNG/optigold.png" height="100px" width="100px"/>
-                <p style="text-align: left;">Optimum Gold Standard Whey Protein 5 LBS<br>
-                <strong>2800 ฿</strong>
-                </p>
-            </div>
-        </div>
-
-        <div>
-            <div>
-                <p style="text-align: right; padding-right: 30px;">X1</p>
-            </div>
-        </div>
-
-        <hr class="solid">  
-
-        <div class="item-center content">
-            <div class="content text-center">
-                <p>
-                    รวมเป็นราคา 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    2800 ฿   
-                </p>
-            </div>
-        </div>
-
-        <hr class="solid"> 
-
-        <div class="item-center content">
-                <div class="content text-center">
-                  <p-card p-card class="font-card">  
-                    <p style="font-size: 20px; font-weight: 600;">ช่องทางการชำระ</p>
-                    <p style="font-size: 20px; font-weight: 600;">นายคุณภัทร บัวประดิษฐ์</p>
-                    <p>แนบหลักฐานการชำระ</p>
-                    <div class="buttons">
-                        <button class="back-button">
-                            <span class="circle">
-                              <i class="pi pi-arrow-left"></i>
-                            </span>
-                            <span class="button-text" >กลับหน้าต่างเดิม</span>
-                        </button>
-                        <p-button label="ชำระเงิน" styleClass="button-training"></p-button>
-                    </div>
-                  </p-card>
-                </div>                 
-        </div>
+    <div class="item-center content">
+      <div class="content text-center">
+        <p>
+          รวมเป็นราคา
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {{ this.total }} ฿
+        </p>
+      </div>
     </div>
-<div class="background-156">
+
+    <hr class="solid" />
+
+    <div class="item-center content">
+      <div class="content text-center">
+        <p-card p-card class="font-card">
+          <p style="font-size: 20px; font-weight: 600">ช่องทางการชำระ</p>
+          <div class="grid flex flex-column justify-content-center">
+            <p-image src="assets/QR.jpg" alt="Image" width="60%"> </p-image>
+          </div>
+          <p style="font-size: 20px; font-weight: 600">นายคุณภัทร บัวประดิษฐ์</p>
+          <div class="card flex justify-content-center">
+            <p-toast />
+            <p-fileUpload
+              #fileUpload
+              mode="basic"
+              chooseLabel="Choose"
+              chooseIcon="pi pi-upload"
+              name="demo[]"
+              url="https://www.primefaces.org/cdn/api/upload.php"
+              accept="image/*"
+              maxFileSize="1000000"
+              (onUpload)="onUpload()"
+            />
+          </div>
+          <p>แนบหลักฐานการชำระ</p>
+          <div class="buttons">
+            <button class="back-button">
+              <span class="circle">
+                <i class="pi pi-arrow-left"></i>
+              </span>
+              <span class="button-text">กลับหน้าต่างเดิม</span>
+            </button>
+            <p-button label="ชำระเงิน" styleClass="button-training" (click)="Payment(fileUpload)"></p-button>
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+  </div>
+  <div class="background-156">
     <div class="content">
-        <div>
-            <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-            <p>เกี่ยวกับเรา</p>
-            <p>ติดต่อเรา</p>
-            <p>ทำไมต้องเลือกเรา</p>
-        </div>
+      <div>
+        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+        <p>เกี่ยวกับเรา</p>
+        <p>ติดต่อเรา</p>
+        <p>ทำไมต้องเลือกเรา</p>
+      </div>
     </div>
 
     <div class="content">
-        <div>
-            <h3 class="text-left-underline">สมาชิก</h3>
-            <p>สิทธิพิเศษของสมาชิก</p>
-            <p>กฎระเบียบการใช้งาน</p>
-            <p>โปรโมชั่น</p>
-            <p>สมัครสมาชิก</p>
-        </div>
+      <div>
+        <h3 class="text-left-underline">สมาชิก</h3>
+        <p>สิทธิพิเศษของสมาชิก</p>
+        <p>กฎระเบียบการใช้งาน</p>
+        <p>โปรโมชั่น</p>
+        <p>สมัครสมาชิก</p>
+      </div>
     </div>
+  </div>
 </div>
+
+<!--dialog กรุณากรอกแนบหลักฐาน -->
+<p-dialog
+  [(visible)]="Incomplete_information"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>กรุณากรอกแนบหลักฐาน</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="Incomplete_information = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog ซื้อสินค้าสําเร็จ -->
+<p-dialog
+  [(visible)]="successful"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>ซื้อสินค้าสําเร็จ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="successful = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog ยืนยันการสั่งซื้อ -->
+<p-dialog
+  [(visible)]="confirmSubscription"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>ยืนยันการสั่งซื้อ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ยกเลิก"
+      styleClass="cancel-button"
+      (click)="confirmSubscription = false"
+    ></p-button>
+    <p-button
+      label="ยืนยัน"
+      styleClass="confirm-button"
+      (click)="saveOrderData()"
+    ></p-button>
+  </div>
+</p-dialog>
+
