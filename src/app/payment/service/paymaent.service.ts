@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Order, OrderItem, UserSpending } from '../interface/payment';
+import { Order, OrderItem, UserSpending, User } from '../interface/payment';
 
 @Injectable({
   providedIn: 'root'
@@ -29,4 +29,12 @@ export class PaymaentService {
     return this.http.patch<UserSpending>(`http://localhost:3000/userSpending/${spending_id}`, data);
   }
 
+  patchUserVip(user_id: number, user: User) {
+    return this.http.patch<User>(`http://localhost:3000/users/${user_id}`, user);
+  }
+
+  getUser(user_id: number) {
+    return this.http.get<User>(`http://localhost:3000/users/userid/${user_id}`);
+  }
 }
+

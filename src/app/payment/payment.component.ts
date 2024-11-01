@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { PaymaentService } from './service/paymaent.service';
-import { Order, OrderItem, UserSpending } from './interface/payment';
+import { Order, OrderItem, User, UserSpending } from './interface/payment';
 import { StateDataInterface } from '../shared/interfaces/interfaceAll';
 import { AuthService } from '../shared/user_id/id-user.service';
 import { FileUpload } from 'primeng/fileupload';
@@ -26,7 +26,7 @@ export class PaymentComponent implements OnInit {
   Incomplete_information: boolean = false;
   successful: boolean = false;
   confirmSubscription: boolean = false;
-
+  user!: User;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -49,6 +49,10 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+    this.paymaentService.getUser(this.user_id).subscribe((data) => {
+      this.user = data;
+    })
+
     this.total = this.state.data.quantity * this.state.data.unit_price;
 
     this.Order = this.formBuilder.group({
@@ -158,14 +162,47 @@ export class PaymentComponent implements OnInit {
       } else {
         result.total_spending += this.total;
         result.last_purchas_date = new Date();
-        console.log('result.total_spending += this.total :', result.total_spending);
+        console.log(
+          'result.total_spending += this.total :',
+          result.total_spending
+        );
         this.paymaentService
           .patchUserSpending(result.spending_id, result)
           .subscribe((data) => {
             console.log('data:patchUserSpending :', data);
+            if(data.total_spending) {
+              console.log(data.total_spending);
+              this.patchVIPuser(data.total_spending);
+            } else {
+              console.log('data ไม่ เข้า if');
+            }
           });
       }
     });
+  }
+
+
+  public patchVIPuser(totalSpending: number) {
+    console.log('totalSpending :', totalSpending);
+    let vip_level = '0';
+    if (totalSpending >= 40000) {
+      vip_level = '4';
+    } else if (totalSpending >= 30000) {
+      vip_level = '3';
+    } else if (totalSpending >= 20000) {
+      vip_level = '2';
+    } else if (totalSpending >= 10000) {
+      vip_level = '1';
+    } else {
+      vip_level = '0';
+    }
+    this.user.vip_level = vip_level;
+    console.log('user :', this.user);
+    this.paymaentService
+      .patchUserVip(this.user_id, this.user) // ส่งค่า vip_level ในรูปแบบ string
+      .subscribe((data) => {
+        console.log('data:patchUserVip :', data);
+      });
   }
 
   public gohome(): void {

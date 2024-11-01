@@ -15,8 +15,8 @@ export class HomeComponent {
 
   images: string[] = [
     'assets/PNG/fixnex.png',
-    'assets/PNG/google-Photoroom.png',
-    'assets/PNG/facebook.png'
+    'assets/program/Picture3.jpg',
+    'assets/program/Picture13.jpg'
   ];
 
   responsiveOptions: any[] = [

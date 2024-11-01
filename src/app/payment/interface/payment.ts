@@ -19,3 +19,13 @@ export interface UserSpending {
   total_spending: number;
   last_purchas_date: Date;
 }
+
+export interface User {
+  user_id: number;
+  vip_level: string;
+  user_name: string;
+  email: string;
+  password: string;
+  phone: string;
+  join_date: Date;
+}
