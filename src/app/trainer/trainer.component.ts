@@ -24,9 +24,8 @@ export class TrainerComponent {
   confirmSubscription: boolean = false;
   Incomplete_information: boolean = false;
   successful: boolean = false;
-  user_id = this.authService.getUserId();
   Rantals: any;
-
+  user_id: any;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -40,6 +39,9 @@ export class TrainerComponent {
   selectedGoal: Goal | undefined;
 
   ngOnInit() {
+  this.user_id = this.authService.getUserId();
+  this.authService.setUserId(this.user_id);
+
     this.goals = [
       { name: 'รักษากล้ามเนื้อ', code: 1, day: 'จ. 18:00 - 20:00' },
       { name: 'การลดไขมัน', code: 2, day: 'อ. 18:00 - 20:00' },

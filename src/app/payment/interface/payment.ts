@@ -14,6 +14,7 @@ export interface OrderItem {
 }
 
 export interface UserSpending {
+  spending_id: number;
   user_id: number;
   total_spending: number;
   last_purchas_date: Date;

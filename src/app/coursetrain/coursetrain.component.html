@@ -1,7 +1,7 @@
 <div class="grid container h-screen">
   <div class="col-12">
     <div><app-menu [name]="name"></app-menu></div>
-  </div> 
+  </div>
 
   <div class="col-12">
     <div class="text-center font-bold text-white center">
@@ -112,7 +112,7 @@
     <p-button
       label="ตกลง"
       styleClass="confirm-button"
-      (click)="successful = false"
+      (click)="successful = false" [routerLink]="['/training']"
     ></p-button>
   </div>
 </p-dialog>

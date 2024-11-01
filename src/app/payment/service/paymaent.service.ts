@@ -17,7 +17,16 @@ export class PaymaentService {
     return this.http.post<OrderItem>('http://localhost:3000/orderItem',orderItem);
   }
 
-  saveUserSpending(userSpending:UserSpending) {
+  getUserSpending(user_id: number) {
+    return this.http.get<UserSpending>(`http://localhost:3000/userSpending/${user_id}`);
+  }
+
+  postUserSpending(userSpending:UserSpending) {
     return this.http.post<UserSpending>('http://localhost:3000/userSpending',userSpending);
   }
+
+  patchUserSpending(spending_id: number, data: UserSpending) {
+    return this.http.patch<UserSpending>(`http://localhost:3000/userSpending/${spending_id}`, data);
+  }
+
 }

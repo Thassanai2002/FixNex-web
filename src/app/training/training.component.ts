@@ -14,14 +14,14 @@ export class TrainingComponent {
   public form!: FormGroup;
   public visibleModal = false;
   state = {} as StateDataInterface<any>;
-  user_id = this.authService.getUserId();
-  เพิ่มกล้ามเนื้อ = "เพิ่มกล้ามเนื้อ";
+  เพิ่มกล้ามเนื้อ = 'เพิ่มกล้ามเนื้อ';
+  user_id!: any;
+
   public constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private authService: AuthService
-
   ) {
     window.scrollTo(0, 0);
     this.form = this.formBuilder.group({
@@ -33,6 +33,11 @@ export class TrainingComponent {
           ?.state as StateDataInterface<any>) ||
         ({} as StateDataInterface<any>);
     });
+  }
+
+  public ngOnInit() {
+    this.user_id = this.authService.getUserId();
+    this.authService.setUserId(this.user_id);
   }
 
   images: string[] = [
@@ -74,5 +79,4 @@ export class TrainingComponent {
 
     this.router.navigate(['/coursetrain'], { state: this.state }); // ส่ง state ในการนำทาง
   }
-
 }

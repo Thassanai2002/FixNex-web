@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="margin bg-white bg-login h-screen h-full">
+  <div class="margin bg-white bg-login">
     <div class="margin">
       <br />
       <form [formGroup]="signIn" class="flex flex-column">
@@ -34,12 +34,6 @@
         </div>
       </form>
 
-      <div class="margin">
-        <div class="flex flex-column text-right-login">
-          <small id="Forget account?"> Forget account? </small>
-        </div>
-      </div>
-
       <div class="margin margin-top-30px">
         <div class="item-center text-center">
           <p-button
@@ -47,34 +41,6 @@
             styleClass="custom-button-blue-login"
             (onClick)="chackLogin()"
           ></p-button>
-        </div>
-      </div>
-
-      <div class="margin margin-top-30px">
-        <div class="flex flex-column text-center">
-          <small id="Login with Social Media"> Login with Social Media </small>
-        </div>
-      </div>
-
-      <div class="margin margin-top-30px">
-        <div class="item-center text-center">
-          <p-button
-            label="Continue to Google Gmail"
-            styleClass="custom-button-google-login"
-          >
-            <img src="assets/PNG/google-Photoroom.png" class="img-icon" />
-          </p-button>
-        </div>
-      </div>
-
-      <div class="margin margin-top-30px">
-        <div class="item-center text-center">
-          <p-button
-            label="Continue to Facebook"
-            styleClass="custom-button-facebook-login"
-          >
-            <img src="assets/PNG/facebook.png" class="img-icon" />
-          </p-button>
         </div>
       </div>
 
