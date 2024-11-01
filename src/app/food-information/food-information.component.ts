@@ -22,4 +22,8 @@ export class FoodInformationComponent {
     this.router.navigate(['/home']);
   }
 
+  public gorecfood(): void {
+    this.router.navigate(['/recfood']);
+  }
+
 }

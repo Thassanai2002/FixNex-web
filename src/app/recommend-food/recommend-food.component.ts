@@ -18,6 +18,7 @@ export interface Tile {
   styleUrl: './recommend-food.component.scss',
 })
 export class RecommendFoodComponent {
+  public name!: string;
 
   images: string[] = [
     'assets/PNG/FoodInfo2.png',
@@ -100,6 +101,10 @@ export class RecommendFoodComponent {
           icon: 'pi pi-envelope',
         },
       ];
+    }
+
+    goproduct(): void {
+      this.router.navigate(['/product']);
     }
 }
 
