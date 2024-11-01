@@ -1,101 +1,150 @@
 <div class="grid container h-screen">
-    <div class="col-12">
-      <div class="text-center font-bold text-white center">
-        <h2>Login</h2>
-      </div>
+  <div class="col-12">
+    <div class="text-center font-bold text-white center">
+      <h2>Login</h2>
     </div>
+  </div>
 
-    <div class="margin bg-white bg-login h-screen h-full">
-      <div class="margin">
-        <br />
-        <form [formGroup]="signIn" class="flex flex-column">
-          <div class="margin">
-            <div class="flex flex-column">
-              <label for="desc"><strong>Username</strong></label
-              >
-              <input
-                type="text"
-                pInputText
-                formControlName="user_name"
-                class="width100"
-              />
-            </div>
+  <div class="margin bg-white bg-login h-screen h-full">
+    <div class="margin">
+      <br />
+      <form [formGroup]="signIn" class="flex flex-column">
+        <div class="margin">
+          <div class="flex flex-column">
+            <label for="user_name"><strong>Username</strong></label>
+            <input
+              type="text"
+              pInputText
+              formControlName="user_name"
+              class="width100"
+            />
           </div>
-
-
-          <div class="margin">
-            <div class="flex flex-column">
-              <label for="desc"><strong>Password</strong></label
-              >
-              <input
-                type="text"
-                pInputText
-                formControlName="password"
-                class="width100"
-              />
-            </div>
-          </div>
-        </form>
+        </div>
 
         <div class="margin">
-          <div class="flex flex-column text-right-login">
-            <small id="Forget account?"> Forget account? </small>
+          <div class="flex flex-column">
+            <label for="password"><strong>Password</strong></label>
+            <input
+              type="text"
+              pInputText
+              formControlName="password"
+              class="width100"
+            />
           </div>
         </div>
+      </form>
 
-        <div class="margin margin-top-30px">
-          <div class="item-center text-center">
-            <p-button
-              label="Login"
-              styleClass="custom-button-blue-login"
-              (onClick)="save()"
-            ></p-button>
-          </div>
+      <div class="margin">
+        <div class="flex flex-column text-right-login">
+          <small id="Forget account?"> Forget account? </small>
         </div>
-
-        <div class="margin margin-top-30px">
-          <div class="flex flex-column text-center">
-            <small id="Login with Social Media">
-              Login with Social Media
-            </small>
-          </div>
-        </div>
-
-        <div class="margin margin-top-30px">
-          <div class="item-center text-center">
-            <p-button
-              label="Continue to Google Gmail"
-              styleClass="custom-button-google-login"
-            >
-              <img src="assets/PNG/google-Photoroom.png" class="img-icon" />
-            </p-button>
-          </div>
-        </div>
-
-        <div class="margin margin-top-30px">
-          <div class="item-center text-center">
-            <p-button
-              label="Continue to Facebook"
-              styleClass="custom-button-facebook-login"
-            >
-              <img src="assets/PNG/facebook.png" class="img-icon" />
-            </p-button>
-          </div>
-        </div>
-
-        <div class="margin margin-top-30px">
-          <div class="flex flex-column text-center">
-            <small id="Don’t have account?">
-              Don’t have account?
-            </small>
-            <small class="text-bule" (click)="goSignup()">
-              Sign Up
-            </small>
-          </div>
-        </div><br>
-
       </div>
+
+      <div class="margin margin-top-30px">
+        <div class="item-center text-center">
+          <p-button
+            label="Login"
+            styleClass="custom-button-blue-login"
+            (onClick)="chackLogin()"
+          ></p-button>
+        </div>
+      </div>
+
+      <div class="margin margin-top-30px">
+        <div class="flex flex-column text-center">
+          <small id="Login with Social Media"> Login with Social Media </small>
+        </div>
+      </div>
+
+      <div class="margin margin-top-30px">
+        <div class="item-center text-center">
+          <p-button
+            label="Continue to Google Gmail"
+            styleClass="custom-button-google-login"
+          >
+            <img src="assets/PNG/google-Photoroom.png" class="img-icon" />
+          </p-button>
+        </div>
+      </div>
+
+      <div class="margin margin-top-30px">
+        <div class="item-center text-center">
+          <p-button
+            label="Continue to Facebook"
+            styleClass="custom-button-facebook-login"
+          >
+            <img src="assets/PNG/facebook.png" class="img-icon" />
+          </p-button>
+        </div>
+      </div>
+
+      <div class="margin margin-top-30px">
+        <div class="flex flex-column text-center">
+          <small id="Don’t have account?"> Don’t have account? </small>
+          <small class="text-bule" (click)="goSignup()"> Sign Up </small>
+        </div>
+      </div>
+      <br />
     </div>
-
-
+  </div>
 </div>
+
+<!--dialog กรอกข้อมูลไม่ครบ -->
+<p-dialog
+  [(visible)]="Incomplete_information"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>กรุณากรอกข้อมูลให้ครบ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="Incomplete_information = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog ไม่มี Username นี้ -->
+<p-dialog
+  [(visible)]="notUsernameindatabase"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>ไม่มี Username นี้ในระบบ</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="notUsernameindatabase = false"
+    ></p-button>
+  </div>
+</p-dialog>
+
+<!--dialog pasword ไม่ถูกต้อง -->
+<p-dialog
+  [(visible)]="password_notincorrect"
+  [modal]="true"
+  [closable]="false"
+  [breakpoints]="{ '2000px': '350px' }"
+  [style]="{ width: '300px', textAlign: 'center' }"
+>
+  <div class="header-dialog">
+    <h2>pasword ไม่ถูกต้อง</h2>
+  </div>
+  <div class="flex justify-content-center gap-3">
+    <p-button
+      label="ตกลง"
+      styleClass="confirm-button"
+      (click)="password_notincorrect = false"
+    ></p-button>
+  </div>
+</p-dialog>

@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TrainerRantals } from './interface/TrainerRantals';
 import { StateDataInterface } from '../shared/interfaces/interfaceAll';
+import { AuthService } from '../shared/user_id/id-user.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +14,6 @@ import { StateDataInterface } from '../shared/interfaces/interfaceAll';
 })
 export class ProfileComponent {
   public name!: string;
-  // user_id!: number;
   user_name!: string;
   email!: string;
   password!: string;
@@ -38,7 +38,8 @@ export class ProfileComponent {
     private ProfileService: ProfileService,
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
   ) {
     this.route.queryParams.forEach(() => {
       this.state =
@@ -51,9 +52,10 @@ export class ProfileComponent {
   ngOnInit() {
     window.scrollTo(0, 0);
 
-    let user_id = 2;
+    const userId = this.authService.getUserId();
+    this.authService.setUserId(userId!);
 
-    this.ProfileService.getProfile(user_id).subscribe((data) => {
+    this.ProfileService.getProfile(userId!).subscribe((data) => {
       this.user = data.user;
       this.rentals = data.rentals; // เก็บข้อมูล rentals เป็นอาร์เรย์
       this.enrollments = data.enrollments; // เก็บข้อมูล enrollments เป็นอาร์เรย์

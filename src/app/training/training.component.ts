@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StateDataInterface } from '../shared/interfaces/interfaceAll';
+import { AuthService } from '../shared/user_id/id-user.service';
 
 @Component({
   selector: 'app-training',
@@ -13,12 +14,14 @@ export class TrainingComponent {
   public form!: FormGroup;
   public visibleModal = false;
   state = {} as StateDataInterface<any>;
-  user_id = 2;
+  user_id = this.authService.getUserId();
   เพิ่มกล้ามเนื้อ = "เพิ่มกล้ามเนื้อ";
   public constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
+
   ) {
     window.scrollTo(0, 0);
     this.form = this.formBuilder.group({
