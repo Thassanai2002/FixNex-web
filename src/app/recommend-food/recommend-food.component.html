@@ -3,7 +3,7 @@
     <div class="col-12">
         <div><app-menu [name]="name"></app-menu></div>
       </div>
-    
+
     <div class="col-12">
         <div class="content item-center center text-white">
             <h2>อาหารเสริม</h2>
@@ -29,11 +29,11 @@
             </p-galleria>
           </div>
 
-        <p-splitter 
-          [style]="{ height: '120px', border: 'none' }" 
-          [panelSizes]="[40, 30, 30]" 
+        <p-splitter
+          [style]="{ height: '120px', border: 'none' }"
+          [panelSizes]="[40, 30, 30]"
           [panelStyle]="{ backgroundColor: '#c6c6c6' }"
-          [gutterSize]="0" 
+          [gutterSize]="0"
           styleClass="mb-5">
           <ng-template pTemplate>
             <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
@@ -65,8 +65,8 @@
                     </div>
                 </div>
             </ng-template>
-        </p-splitter>  
-          
+        </p-splitter>
+
         <div class="item-center content">
             <div class="content text-center">
                 <h2 style="color: grey;">เพิ่มกล้ามเนื้อ</h2>
@@ -75,7 +75,7 @@
 
         <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(2,'assets/PNG/megamass.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content" >
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/megamass.png" class="tile-image" />
@@ -87,7 +87,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(1,'assets/PNG/supermass.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/supermass.png" class="tile-image" />
@@ -99,7 +99,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-              <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+              <div (click)="goproduct(3,'assets/PNG/gainfast.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                 <div class="tile-content">
                     <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                         <img src="assets/PNG/gainfast.png" class="tile-image" />
@@ -114,7 +114,7 @@
 
         <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(4,'assets/PNG/baammass.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/baammass.png" class="tile-image" />
@@ -126,7 +126,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(5,'assets/PNG/elitemass.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/elitemass.png" class="tile-image" />
@@ -137,9 +137,9 @@
                     </div>
                 </div>
             </ng-template>
-        </p-splitter>  
+        </p-splitter>
 
-        <hr class="solid">     
+        <hr class="solid">
 
         <div class="item-center content">
             <div class="content text-center">
@@ -149,7 +149,7 @@
 
         <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(6,'assets/PNG/dymatize.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/dymatize.png" class="tile-image" />
@@ -161,7 +161,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(7,'assets/PNG/optigold.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/optigold.png" class="tile-image" />
@@ -173,7 +173,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(8,'assets/PNG/scitec.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/scitec.png" class="tile-image" />
@@ -184,11 +184,11 @@
                     </div>
                 </div>
             </ng-template>
-        </p-splitter>  
+        </p-splitter>
 
         <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(9,'assets/PNG/bpisports.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/bpisports.png" class="tile-image" />
@@ -200,7 +200,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(10,'assets/PNG/baamiso.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/baamiso.png" class="tile-image" />
@@ -211,9 +211,9 @@
                     </div>
                 </div>
             </ng-template>
-        </p-splitter>  
+        </p-splitter>
 
-        <hr class="solid">  
+        <hr class="solid">
 
         <div class="item-center content">
             <div class="content text-center">
@@ -223,7 +223,7 @@
 
         <p-splitter [panelSizes]="[33, 33, 33]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(11,'assets/PNG/bsnsyntha.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/bsnsyntha.png" class="tile-image" />
@@ -235,7 +235,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()"  style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(12,'assets/PNG/myprotein.png')"  style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/myprotein.png" class="tile-image" />
@@ -247,7 +247,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(13,'assets/PNG/cellucor.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/cellucor.png" class="tile-image" />
@@ -258,11 +258,11 @@
                     </div>
                 </div>
             </ng-template>
-        </p-splitter>  
+        </p-splitter>
 
         <p-splitter [panelSizes]="[50, 50]" [style]="{ height: '300px', border: 'none' }" styleClass="mb-5" [gutterSize]="0">
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(14,'assets/PNG/eas100.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/eas100.png" class="tile-image" />
@@ -274,7 +274,7 @@
                 </div>
             </ng-template>
             <ng-template pTemplate>
-                <div (click)="goproduct()" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div (click)="goproduct(15,'assets/PNG/vegasport.png')" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
                     <div class="tile-content">
                         <div style="border: 2px solid black; padding: 5px; border-radius: 8px;">
                             <img src="assets/PNG/vegasport.png" class="tile-image" />

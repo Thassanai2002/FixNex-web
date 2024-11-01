@@ -16,6 +16,8 @@ import { DialogComponent } from './shared/dialog/dialog.component';
 import { CoursetrainComponent } from './coursetrain/coursetrain.component';
 import { RecommendFoodComponent } from './recommend-food/recommend-food.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { PaymentComponent } from './payment/payment.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -32,8 +34,10 @@ const routes: Routes = [
   { path: 'trainer', component: TrainerComponent },
   { path: 'Dialog', component: DialogComponent },
   { path: 'coursetrain', component: CoursetrainComponent },
-  {path: 'recfood', component: RecommendFoodComponent},
-  {path: 'product', component: ProductPageComponent}
+  { path: 'recfood', component: RecommendFoodComponent},
+  { path: 'product', component: ProductPageComponent},
+  { path: 'payment', component: PaymentComponent}
+  
 ];
 
 @NgModule({

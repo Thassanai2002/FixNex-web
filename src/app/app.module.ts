@@ -37,6 +37,11 @@ import { RecommendFoodComponent } from './recommend-food/recommend-food.componen
 import { ProductPageComponent } from './product-page/product-page.component';
 import { SplitterModule } from 'primeng/splitter';
 import { DataViewModule } from 'primeng/dataview';
+import { PaymentComponent } from './payment/payment.component';
+import { FileUploadModule } from 'primeng/fileupload';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +62,8 @@ import { DataViewModule } from 'primeng/dataview';
     CoursetrainComponent,
     MenuComponent,
     RecommendFoodComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    PaymentComponent
 
   ],
   imports: [
@@ -81,10 +87,12 @@ import { DataViewModule } from 'primeng/dataview';
     DialogModule,
     BrowserAnimationsModule,
     SplitterModule,
-    DataViewModule
+    DataViewModule,
+    FileUploadModule,
+    ToastModule
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

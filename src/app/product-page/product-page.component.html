@@ -1,110 +1,106 @@
 <div class="grid container h-screen">
+  <div class="col-12">
+    <div><app-menu [name]="name"></app-menu></div>
+  </div>
 
-    <div class="col-12">
-        <div><app-menu [name]="name"></app-menu></div>
-      </div>
+  <div class="content item-center center text-white">
+    <h2>รายการสินค้า</h2>
+  </div>
 
-    <div class="content item-center center text-white">
-        <h2>รายการสินค้า</h2>
-    </div>
-
-    <div class="col-12 border-round-top-3xl surface-0 h-screen">
-
-        <div class="item-center content">
-            <div class="product-card">
-                <div class="image-container">
-                    <div style="border: 2px solid black; padding: 5px; ">
-                        <img src="assets/PNG/optigold.png" class="main-image" />
-                    </div>
-                </div>
-            
-                <h3 class="product-name">{{ product.name }}</h3>
-                <p class="price">{{ product.price | currency: 'THB' }}</p>
-                <p class="stock-info">สินค้าคงเหลือ {{ product.stock }} ชิ้น</p>
-            
-                <div class="thumbnail-gallery">
-                    <div style="border: 2px solid black; padding: 5px; ">
-                        <img src="assets/PNG/optigold.png" class="thumbnail" />
-                    </div>
-                    <div style="border: 2px solid black; padding: 5px; ">
-                        <img src="assets/PNG/optigold.png" class="thumbnail" />
-                    </div>
-                    <div style="border: 2px solid black; padding: 5px; ">
-                        <img src="assets/PNG/optigold.png" class="thumbnail" />
-                    </div>
-                </div>
-            
-                <div class="quantity-selector">
-                <span>จำนวนซื้อ</span>
-                <button (click)="decrementQuantity()">-</button>
-                <input [(ngModel)]="product.quantity" type="number" />
-                <button (click)="incrementQuantity()">+</button>
-                <span>ชิ้น</span>
-                </div>
-            
-                <div class="buttons">
-                <button class="buy-now-button">ซื้อสินค้า</button>
-                </div>
-            </div>      
-        </div>              
-          
-        <hr class="solid">  
-
-        <div class="item-center content">
-            <div class="content text-center">
-                <h2 style="color: grey;">จุดเด่นของสินค้า</h2>  
-            </div> 
-        </div>
-        <div class="text-left gap-2 mt-1">
-            <div class="flex-container7">
-              เพิ่มกล้ามเนื้อ
-              <span class="text-right3">{{ "ดี" }}</span>
-            </div>
-            <div class="flex-container8">
-              เพิ่มแรง
-              <span class="text-right3">{{ "ดี" }}</span>
-            </div>
-            <div class="flex-container8">
-                ฟื้นฟูกล้ามเนื้อ
-                <span class="text-right3">{{ "ดี" }}</span>
-            </div>
-            <div class="flex-container8">
-                ความเร็วในการดูดซึม
-                <span class="text-right3">{{ "ดี" }}</span>
-              </div>
+  <div class="col-12 border-round-top-3xl surface-0 h-screen">
+    <div class="item-center content">
+      <div class="product-card">
+        <div class="image-container">
+          <div style="border: 2px solid black; padding: 5px">
+            <img src="{{ this.state.src }}" class="main-image" />
           </div>
-
-        <hr class="solid">     
-
-        <div class="item-center content">
-            <div class="content text-center">
-                <h2>Optimum Nutrition Whey Protein Gold</h2>
-                
-            </div>
         </div>
 
-        <hr class="solid">  
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="price">{{ product.price | currency : "THB" }}</p>
+        <p class="stock-info">สินค้าคงเหลือ {{ product.stock }} ชิ้น</p>
 
-        
+        <div class="thumbnail-gallery">
+          <div style="border: 2px solid black; padding: 5px">
+            <img src="{{ this.state.src }}" class="thumbnail" />
+          </div>
+          <div style="border: 2px solid black; padding: 5px">
+            <img src="{{ this.state.src }}" class="thumbnail" />
+          </div>
+          <div style="border: 2px solid black; padding: 5px">
+            <img src="{{ this.state.src }}" class="thumbnail" />
+          </div>
+        </div>
+
+        <div class="quantity-selector">
+          <span>จำนวนซื้อ</span>
+          <button (click)="decrementQuantity()">-</button>
+          <input [(ngModel)]="product.quantity" type="number" />
+          <button (click)="incrementQuantity()">+</button>
+          <span>ชิ้น</span>
+        </div>
+
+        <div class="buttons">
+          <button class="buy-now-button" (click)="goPayment()">ซื้อสินค้า</button>
+        </div>
+      </div>
     </div>
-    <div class="background-156">
-        <div class="content">
-            <div>
-                <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-                <p>เกี่ยวกับเรา</p>
-                <p>ติดต่อเรา</p>
-                <p>ทำไมต้องเลือกเรา</p>
-            </div>
-        </div>
 
-        <div class="content">
-            <div>
-                <h3 class="text-left-underline">สมาชิก</h3>
-                <p>สิทธิพิเศษของสมาชิก</p>
-                <p>กฎระเบียบการใช้งาน</p>
-                <p>โปรโมชั่น</p>
-                <p>สมัครสมาชิก</p>
-            </div>
-        </div>
+    <hr class="solid" />
+
+    <div class="item-center content">
+      <div class="content text-center">
+        <h2 style="color: grey">จุดเด่นของสินค้า</h2>
+      </div>
     </div>
+    <div class="text-left gap-2 mt-1">
+      <div class="flex-container7">
+        เพิ่มกล้ามเนื้อ
+        <span class="text-right3">{{ product_data.gain_muscle }}</span>
+      </div>
+      <div class="flex-container8">
+        เพิ่มแรง
+        <span class="text-right3">{{ product_data.increase_power }}</span>
+      </div>
+      <div class="flex-container8">
+        ฟื้นฟูกล้ามเนื้อ
+        <span class="text-right3">{{ product_data.muscle_recovery }}</span>
+      </div>
+      <div class="flex-container8">
+        ความเร็วในการดูดซึม
+        <span class="text-right3">{{ product_data.absorption_speed }}</span>
+      </div>
+    </div>
+
+    <hr class="solid" />
+
+    <div class="item-center">
+      <div class="content text-center">
+        <h2>{{ product_data.product_name }}</h2>
+      </div>
+      <h3 class="text-center">{{ product_data.description }}</h3>
+    </div>
+
+    <hr class="solid" />
+  </div>
+  <div class="background-156">
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+        <p>เกี่ยวกับเรา</p>
+        <p>ติดต่อเรา</p>
+        <p>ทำไมต้องเลือกเรา</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div>
+        <h3 class="text-left-underline">สมาชิก</h3>
+        <p>สิทธิพิเศษของสมาชิก</p>
+        <p>กฎระเบียบการใช้งาน</p>
+        <p>โปรโมชั่น</p>
+        <p>สมัครสมาชิก</p>
+      </div>
+    </div>
+  </div>
 </div>
