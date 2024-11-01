@@ -97,7 +97,6 @@ export class HomeComponent {
   public testapi(): void {
     this.HemoService.testapi().subscribe((data) => {
       console.log(data);
-      console.log("kuy");
     })
   }
 

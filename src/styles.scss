@@ -7,6 +7,10 @@ p {
   color: #000;
 }
 
+.black-subheader {
+  color: black; /* กำหนดสีเป็นสีดำ */
+}
+
 .container {
   min-height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
   flex-direction: column;
@@ -762,11 +766,11 @@ strong {
 
 .custom-select {
   border: 1px solid black;
-  border-radius: 10px;               
-  padding: 10px 12px;                
-  font-size: 14px;                 
-  width: 100%;                       
-  transition: all 0.3s ease;          
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 .gender-toggle {
