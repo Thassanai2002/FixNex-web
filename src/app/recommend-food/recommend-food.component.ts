@@ -55,6 +55,7 @@ export class RecommendFoodComponent {
     private router: Router,
     private route: ActivatedRoute
   ) {
+    window.scrollTo(0, 0);
     this.route.queryParams.forEach(() => {
       this.state =
         (this.router.getCurrentNavigation()?.extras
