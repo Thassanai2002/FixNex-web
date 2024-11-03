@@ -328,6 +328,18 @@ body {
   margin-top: -0.5rem;
 }
 
+.grid-login-signup {
+  // display: flow-root;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.custom-card-header .p-card-subtitle {
+  color: black;
+}
+
 .surface-0 {
   background-color: var(--surface-0, #f5f5f5) !important; /* เผื่อกรณีที่ตัวแปรไม่ได้กำหนด */
 }

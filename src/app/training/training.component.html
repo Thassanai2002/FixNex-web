@@ -4,9 +4,9 @@
   </div>
 
   <div class="col-12">
-      <div class="text-center font-bold text-white center">
-        <h2>คอร์สออกกำลังกาย</h2>
-      </div>
+    <div class="text-center font-bold text-white center">
+      <h2>คอร์สออกกำลังกาย</h2>
+    </div>
   </div>
 
   <div class="col-12">
@@ -51,18 +51,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Strength Training Basic"
-                  [style]="{ width: '150px'}"
+                  [style]="{ width: '150px' }"
+                  styleClass="custom-card-header"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture5.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture5.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',5,'assets/program/Picture5.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'เพิ่มกล้ามเนื้อ',
+                            5,
+                            'assets/program/Picture5.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -75,18 +81,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Endurance Training"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture8.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture8.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',8,'assets/program/Picture8.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'เพิ่มกล้ามเนื้อ',
+                            8,
+                            'assets/program/Picture8.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -99,18 +111,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Advanced Strength Training"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture10.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture10.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',10,'assets/program/Picture10.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'เพิ่มกล้ามเนื้อ',
+                            10,
+                            'assets/program/Picture10.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -123,18 +141,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Pilates Training"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture12.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture12.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training "
-                      (click)="goPageCoursetrain('เพิ่มกล้ามเนื้อ',12,'assets/program/Picture12.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training "
+                        (click)="
+                          goPageCoursetrain(
+                            'เพิ่มกล้ามเนื้อ',
+                            12,
+                            'assets/program/Picture12.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -157,17 +181,23 @@
                 <p-card
                   subheader="Basic Weight Loss"
                   [style]="{ width: '150px' }"
+                  styleClass="custom-card-header"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture2.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture2.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('ลดไขมัน',2,'assets/program/Picture2.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'ลดไขมัน',
+                            2,
+                            'assets/program/Picture2.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -180,18 +210,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Standard Cardio Fitness"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture4.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture4.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('ลดไขมัน',4,'assets/program/Picture4.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'ลดไขมัน',
+                            4,
+                            'assets/program/Picture4.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -205,18 +241,23 @@
                 <p-card
                   subheader="Dance Fitness"
                   [style]="{ width: '150px' }"
+                  styleClass="custom-card-header"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture6.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture6.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('ลดไขมัน',6,'assets/program/Picture6.jpg')"
-
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'ลดไขมัน',
+                            6,
+                            'assets/program/Picture6.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -229,18 +270,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Cardio Interval Training"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture11.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture11.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('ลดไขมัน',11,'assets/program/Picture11.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'ลดไขมัน',
+                            11,
+                            'assets/program/Picture11.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -262,18 +309,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Beginner Fitness"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture1.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture1.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',1,'assets/program/Picture1.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'น้ำหนักคงสภาพ',
+                            1,
+                            'assets/program/Picture1.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -287,17 +340,23 @@
                 <p-card
                   subheader="Body Sculpting"
                   [style]="{ width: '150px' }"
+                  styleClass="custom-card-header"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture7.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture7.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',7,'assets/program/Picture7.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'น้ำหนักคงสภาพ',
+                            7,
+                            'assets/program/Picture7.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -310,18 +369,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Yoga for Relaxation"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture9.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture9.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',9,'assets/program/Picture9.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'น้ำหนักคงสภาพ',
+                            9,
+                            'assets/program/Picture9.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -334,18 +399,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Flexibility & Stretching"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture3.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture3.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('น้ำหนักคงสภาพ',3,'assets/program/Picture3.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'น้ำหนักคงสภาพ',
+                            3,
+                            'assets/program/Picture3.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -367,18 +438,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Sports Conditioning"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture13.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture13.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('พรีเมี่ยม',13,'assets/program/Picture13.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'พรีเมี่ยม',
+                            13,
+                            'assets/program/Picture13.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -391,18 +468,24 @@
               <div class="card flex justify-content-center">
                 <p-card
                   subheader="Functional Training"
+                  styleClass="custom-card-header"
                   [style]="{ width: '150px' }"
                 >
                   <ng-template pTemplate="header">
-                    <img
-                      alt="Card"
-                      src="assets/program/Picture14.jpg"
-                    />
+                    <img alt="Card" src="assets/program/Picture14.jpg" />
                   </ng-template>
                   <ng-template pTemplate="footer">
                     <div class="flex justify-content-center gap-2 mt-4">
-                      <p-button label="ชมคอส" styleClass="button-training"
-                      (click)="goPageCoursetrain('พรีเมี่ยม',14,'assets/program/Picture14.jpg')"
+                      <p-button
+                        label="ชมคอส"
+                        styleClass="button-training"
+                        (click)="
+                          goPageCoursetrain(
+                            'พรีเมี่ยม',
+                            14,
+                            'assets/program/Picture14.jpg'
+                          )
+                        "
                       />
                     </div>
                   </ng-template>
@@ -447,29 +530,29 @@
           </div>
         </div>
       </div>
-  <div class="background-156">
-    <div class="content">
-      <div>
-        <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
-        <p>เกี่ยวกับเรา</p>
-        <p>ติดต่อเรา</p>
-        <p>ทำไมต้องเลือกเรา</p>
-      </div>
-    </div>
+      <div class="background-156">
+        <div class="content">
+          <div>
+            <h3 class="text-left-underline">เกี่ยวกับพวกเรา</h3>
+            <p>เกี่ยวกับเรา</p>
+            <p>ติดต่อเรา</p>
+            <p>ทำไมต้องเลือกเรา</p>
+          </div>
+        </div>
 
-    <div class="content">
-      <div>
-        <h3 class="text-left-underline">สมาชิก</h3>
-        <p>สิทธิพิเศษของสมาชิก</p>
-        <p>กฎระเบียบการใช้งาน</p>
-        <p>โปรโมชั่น</p>
-        <p>ชมคอสสมาชิก</p>
+        <div class="content">
+          <div>
+            <h3 class="text-left-underline">สมาชิก</h3>
+            <p>สิทธิพิเศษของสมาชิก</p>
+            <p>กฎระเบียบการใช้งาน</p>
+            <p>โปรโมชั่น</p>
+            <p>ชมคอสสมาชิก</p>
+          </div>
+        </div>
+        <div class="mt-auto flex align-items-center justify-content-center">
+          <img src="assets/PNG/Logo.png" class="png-menu" />
+        </div>
       </div>
-    </div>
-    <div class="mt-auto flex align-items-center justify-content-center">
-      <img src="assets/PNG/Logo.png" class="png-menu" />
-    </div>
-  </div>
     </div>
   </div>
 </div>
