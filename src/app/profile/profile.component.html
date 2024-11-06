@@ -1,11 +1,10 @@
 <div class="grid container h-screen">
-
   <div class="col-12">
     <div><app-menu [name]="name"></app-menu></div>
   </div>
 
   <div class="col-12">
-    <div class=" text-center font-bold text-white center">
+    <div class="text-center font-bold text-white center">
       <h2>บัญชีผู้ใช้</h2>
     </div>
   </div>
@@ -40,7 +39,7 @@
 
     <div *ngFor="let order of orders" class="content item-center">
       <ng-container *ngIf="orders.length > 0">
-        <p-card (click)="goPageOrder(order.orderItems)" p-card>
+        <p-card p-card>
           <div
             class="p-card-content"
             style="display: flex; align-items: center; height: 150px"

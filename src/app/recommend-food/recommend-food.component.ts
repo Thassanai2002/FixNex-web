@@ -3,6 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { RecfoodService } from './service/recfood.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StateDataInterface } from '../shared/interfaces/interfaceAll';
+import { Refood } from './interface/refood';
 
 export interface Tile {
   color: string;
@@ -21,6 +22,7 @@ export interface Tile {
 export class RecommendFoodComponent {
   public name!: string;
   state = {} as StateDataInterface<any>;
+  product!: Refood;
 
   images: string[] = [
     'assets/PNG/FoodInfo2.png',
@@ -51,10 +53,11 @@ export class RecommendFoodComponent {
   items: MenuItem[] | undefined;
 
   constructor(
-    private RecfoodService: RecfoodService,
+    private recfoodService: RecfoodService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {
+    window.scrollTo(0, 0);
     this.route.queryParams.forEach(() => {
       this.state =
         (this.router.getCurrentNavigation()?.extras
@@ -64,6 +67,14 @@ export class RecommendFoodComponent {
   }
 
   ngOnInit() {
+
+    this.recfoodService.getRecommendFood().subscribe((data) => {
+      if (data) {
+        this.product = data;
+        console.log(this.product);
+      }
+    });
+
     this.items = [
       {
         label: 'Home',
